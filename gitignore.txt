@@ -1,0 +1,4 @@
+
+---
+
+## **File 5: `.gitignore`** (Git Configuration)

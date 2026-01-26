@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en-ZA">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sacks Law Firm | Expert Legal Representation in Johannesburg</title>
+    <meta name="description" content="Johannesburg law firm specializing in conveyancing and legal services. 15+ years experience. Registered with Law Society of South Africa. Free consultation.">
+    
+    <!-- SEO TAGS -->
+    <link rel="canonical" href="https://www.sackslaw.co.za/" />
+    <meta name="robots" content="index,follow" />
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="https://www.sackslaw.co.za/sitemap.xml" />
+
+    <meta property="og:title" content="Johannesburg Attorneys & Conveyancers | Sacks Law Firm" />
+    <meta property="og:description" content="Legal services in Johannesburg: conveyancing, litigation, family law, estates." />
+    <meta property="og:url" content="https://www.sackslaw.co.za/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://www.sackslaw.co.za/images/social-preview.jpg" />
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LegalService",
+      "name": "Sacks Law Firm",
+      "url": "https://www.sackslaw.co.za/",
+      "telephone": "+27111234567",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "123 Sandton City, 2nd Floor",
+        "addressLocality": "Johannesburg",
+        "addressRegion": "Gauteng",
+        "postalCode": "2196",
+        "addressCountry": "ZA"
+      },
+      "areaServed": "Johannesburg",
+      "openingHours": "Mo-Fr 08:30-17:00",
+      "priceRange": "$$",
+      "serviceType": ["Conveyancing","Litigation","Family Law","Deceased Estates"]
+    }
+    </script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ===== CRAWL-FRIENDLY CSS ===== */
+        /* REMOVED display:none - All content now visible to search engines */
+        .page-section {
+            display: block !important; /* All sections visible for crawling */
+            opacity: 1 !important;
+            visibility: visible !important;
+            height: auto !important;
+            max-height: none !important;
+            overflow: visible !important;
+        }
+        
+        /* Visual UX for single-page navigation */
+        .page-section:not(.active) {
+            position: absolute;
+            left: -9999px;
+            top: -9999px;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+        }
+        
+        .page-section.active {
+            position: static;
+            width: auto;
+            height: auto;
+            left: auto;
+            top: auto;
+        }
+        
+        /* Rest of your CSS remains the same */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        :root {
+            --primary-blue: #1a365d;
+            --secondary-blue: #2d4a7c;
+            --accent-gold: #d4af37;
+            --light-gold: #f7e8c6;
+            --white: #ffffff;
+            --light-gray: #f8f9fa;
+            --dark-gray: #333333;
+            --text-color: #444444;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--white);
+        }
+        
+        /* ... [REST OF YOUR ORIGINAL CSS] ... */
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(26, 54, 93, 0.9), rgba(26, 54, 93, 0.8)), url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80');
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            padding: 200px 0 120px;
+            margin-top: 80px;
+            text-align: center;
+        }
+        
+        /* ... [CONTINUE WITH ALL YOUR ORIGINAL CSS] ... */
+    </style>
+</head>
+<body>
+    <!-- Your complete HTML body content goes here -->
+    <!-- Copy everything from <header> to <footer> from your original code -->
+    
+    <script>
+        // Updated JavaScript for crawl-friendly navigation
+        document.addEventListener('DOMContentLoaded', function() {
+            // Handle anchor clicks
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        // Hide all sections (visually)
+                        document.querySelectorAll('.page-section').forEach(section => {
+                            section.classList.remove('active');
+                            section.style.position = 'absolute';
+                            section.style.left = '-9999px';
+                            section.style.top = '-9999px';
+                        });
+                        
+                        // Show target section
+                        targetElement.classList.add('active');
+                        targetElement.style.position = 'static';
+                        targetElement.style.left = 'auto';
+                        targetElement.style.top = 'auto';
+                        
+                        // Update URL without page reload
+                        if (history.pushState) {
+                            history.pushState(null, '', targetId === '#home' ? '/' : targetId);
+                        }
+                        
+                        // Update active nav link
+                        document.querySelectorAll('nav a').forEach(link => {
+                            link.classList.remove('active');
+                        });
+                        this.classList.add('active');
+                        
+                        // Close mobile menu if open
+                        const menu = document.getElementById('mainMenu');
+                        if (menu && menu.classList.contains('active')) {
+                            menu.classList.remove('active');
+                            document.getElementById('mobileMenuBtn').querySelector('i').className = 'fas fa-bars';
+                        }
+                        
+                        // Smooth scroll to top
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }
+                });
+            });
+            
+            // Mobile menu toggle
+            document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+                const menu = document.getElementById('mainMenu');
+                menu.classList.toggle('active');
+                const icon = this.querySelector('i');
+                icon.className = menu.classList.contains('active') ? 'fas fa-times' : 'fas fa-bars';
+            });
+            
+            // Handle initial load
+            const hash = window.location.hash || '#home';
+            const targetElement = document.querySelector(hash);
+            if (targetElement) {
+                document.querySelectorAll('.page-section').forEach(section => {
+                    section.classList.remove('active');
+                    section.style.position = 'absolute';
+                    section.style.left = '-9999px';
+                    section.style.top = '-9999px';
+                });
+                targetElement.classList.add('active');
+                targetElement.style.position = 'static';
+                targetElement.style.left = 'auto';
+                targetElement.style.top = 'auto';
+                
+                // Set active nav link
+                document.querySelectorAll('nav a').forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === hash) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html><!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'GA_MEASUREMENT_ID');
+</script>

@@ -30,74 +30,78 @@
       --bg:#fff;
       --border:#eee;
     }
-    body{
-      font-family:'Inter',sans-serif;
-      line-height:1.6;
-      color:var(--text);
-      background:var(--bg);
-      margin:0;
-    }
-    nav{
-      padding:20px 40px;
-      border-bottom:1px solid var(--border);
-    }
-    nav a{
-      margin-right:15px;
-      text-decoration:none;
-      color:var(--primary);
-      font-weight:600;
-    }
-    .wrap{
-      padding:40px;
-    }
-    h1{
-      font-family:'Playfair Display',serif;
-      margin:0 0 10px 0;
-      font-size:56px;
-    }
-    p{
-      margin:0;
-      font-size:18px;
-    }
-  </style>
-</head>
+    body{<body>
 
-<body>
-
-  <!-- MENU -->
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="services.html">Services</a>
-    <a href="contact.html">Contact</a>
+  <nav style="padding:20px 40px; border-bottom:1px solid #eee; position:sticky; top:0; background:#fff;">
+    <a href="index.html" style="margin-right:15px; text-decoration:none; font-weight:600; color:#1a365d;">Home</a>
+    <a href="about.html" style="margin-right:15px; text-decoration:none; font-weight:600; color:#1a365d;">About</a>
+    <a href="services.html" style="margin-right:15px; text-decoration:none; font-weight:600; color:#1a365d;">Services</a>
+    <a href="contact.html" style="text-decoration:none; font-weight:600; color:#1a365d;">Contact</a>
   </nav>
 
-  <!-- PAGE CONTENT -->
-  <div class="wrap">
-    <h1>Sacks Law Firm</h1>
-    <p>Welcome to our website.</p>
-  </div>
+  <!-- HERO -->
+  <section style="padding:80px 40px; background:#1a365d; color:#fff;">
+    <h1 style="font-family:'Playfair Display',serif; font-size:56px; margin:0 0 15px;">Sacks Law Firm</h1>
+    <p style="font-size:20px; max-width:780px; margin:0 0 25px;">
+      Expert legal representation in Johannesburg — conveyancing, litigation, family law, and deceased estates.
+    </p>
+    <a href="contact.html" style="display:inline-block; background:#d4af37; color:#1a365d; padding:14px 20px; border-radius:8px; text-decoration:none; font-weight:700;">
+      Book a Consultation
+    </a>
+  </section>
+
+  <!-- SERVICES -->
+  <section style="padding:60px 40px;">
+    <h2 style="font-family:'Playfair Display',serif; font-size:36px; margin:0 0 20px;">Our Services</h2>
+
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:18px;">
+      <div style="border:1px solid #eee; border-radius:12px; padding:18px;">
+        <h3 style="margin:0 0 8px;">Conveyancing</h3>
+        <p style="margin:0;">Property transfers, registrations, and expert guidance.</p>
+      </div>
+      <div style="border:1px solid #eee; border-radius:12px; padding:18px;">
+        <h3 style="margin:0 0 8px;">Litigation</h3>
+        <p style="margin:0;">Practical representation for disputes and claims.</p>
+      </div>
+      <div style="border:1px solid #eee; border-radius:12px; padding:18px;">
+        <h3 style="margin:0 0 8px;">Family Law</h3>
+        <p style="margin:0;">Divorce, custody, maintenance, and protection orders.</p>
+      </div>
+      <div style="border:1px solid #eee; border-radius:12px; padding:18px;">
+        <h3 style="margin:0 0 8px;">Deceased Estates</h3>
+        <p style="margin:0;">Estate administration with care and professionalism.</p>
+      </div>
+    </div>
+
+    <div style="margin-top:20px;">
+      <a href="services.html" style="text-decoration:none; font-weight:700; color:#1a365d;">
+        View all services →
+      </a>
+    </div>
+  </section>
+
+  <!-- CONTACT STRIP -->
+  <section style="padding:40px; background:#f8f9fa; border-top:1px solid #eee; border-bottom:1px solid #eee;">
+    <h2 style="font-family:'Playfair Display',serif; margin:0 0 10px;">Contact Us</h2>
+    <p style="margin:0 0 10px;">Ready to speak to an attorney? We’ll respond as soon as possible.</p>
+    <a href="contact.html" style="display:inline-block; background:#1a365d; color:#fff; padding:12px 18px; border-radius:8px; text-decoration:none; font-weight:700;">
+      Contact Page
+    </a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="padding:25px 40px; color:#666;">
+    <small>© <span id="yr"></span> Sacks Law Firm. All rights reserved.</small>
+  </footer>
 
   <script>
-    // Safe JS (won't crash if menu elements aren't there yet)
-    document.addEventListener('DOMContentLoaded', function() {
-      const mobileBtn = document.getElementById('mobileMenuBtn');
-      const menu = document.getElementById('mainMenu');
-
-      if (mobileBtn && menu) {
-        mobileBtn.addEventListener('click', function() {
-          menu.classList.toggle('active');
-          const icon = this.querySelector('i');
-          if (icon) {
-            icon.className = menu.classList.contains('active') ? 'fas fa-times' : 'fas fa-bars';
-          }
-        });
-      }
-    });
+    document.getElementById('yr').textContent = new Date().getFullYear();
   </script>
+ 
 
 </body>
 </html>
+
 
 
 

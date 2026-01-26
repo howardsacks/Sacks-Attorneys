@@ -1,28 +1,83 @@
+
+
 <!DOCTYPE html>
 <html lang="en-ZA">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact | Sacks Law Firm</title>
-  <style>
-    body { font-family: Arial, sans-serif; margin: 0; }
-    nav { padding:20px 40px; border-bottom:1px solid #eee; }
-    nav a { margin-right:15px; text-decoration:none; font-weight:600; color:#1a365d; }
-    .wrap { padding:40px; }
-  </style>
+  <meta name="description" content="Contact Sacks Law Firm in Johannesburg. Request a call back or send a message." />
+  <link rel="canonical" href="https://howardsacks.github.io/Sacks-Attorneys/contact.html" />
+  <meta name="robots" content="index,follow" />
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="services.html">Services</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+  <header class="topbar">
+    <div class="container nav">
+      <a class="brand" href="index.html">
+        <div class="brand-mark">SL</div>
+        <div>
+          <div class="brand-name">Sacks Law Firm</div>
+          <div class="brand-tag">Johannesburg Attorneys & Conveyancers</div>
+        </div>
+      </a>
 
-  <div class="wrap">
-    <h1>Contact Us</h1>
-    <p>Email: <a href="mailto:info@sackslaw.co.za">info@sackslaw.co.za</a></p>
-    <p>Phone: <a href="tel:+27111234567">+27 11 123 4567</a></p>
-  </div>
+      <nav class="menu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a class="active" href="contact.html">Contact</a>
+      </nav>
+
+      <a class="cta" href="contact.html">Book a Consultation</a>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Contact</h2>
+        <p>Send a message — we’ll respond as soon as possible.</p>
+      </div>
+
+      <div class="split">
+        <div class="card">
+          <h3>Request a call back</h3>
+
+          <!-- This uses mailto (works on GitHub Pages). Replace the email address. -->
+          <form class="form" action="mailto:YOUR_EMAIL@example.com" method="post" enctype="text/plain">
+            <input class="input" name="name" placeholder="Your name" required />
+            <input class="input" name="phone" placeholder="Phone number" required />
+            <input class="input" name="email" type="email" placeholder="Email address" required />
+            <textarea class="input" name="message" placeholder="Briefly describe your matter..." required></textarea>
+            <button class="btn primary" type="submit">Send Message</button>
+            <div class="small">Tip: Replace <strong>YOUR_EMAIL@example.com</strong> with your real email.</div>
+          </form>
+        </div>
+
+        <div class="callout">
+          <h3>Office details</h3>
+          <p style="margin-bottom:12px;">
+            <strong>Johannesburg</strong><br/>
+            Replace with your physical address.
+          </p>
+          <p style="margin-bottom:12px;">
+            <strong>Phone:</strong> +27 XX XXX XXXX<br/>
+            <strong>Email:</strong> YOUR_EMAIL@example.com
+          </p>
+          <p class="small">Hours: Mon–Fri 08:30–17:00 (by appointment)</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container row">
+      <div>© <span id="yr"></span> Sacks Law Firm. All rights reserved.</div>
+      <div><a href="index.html">Home</a> • <a href="about.html">About</a> • <a href="services.html">Services</a></div>
+    </div>
+  </footer>
+  <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
 </body>
 </html>

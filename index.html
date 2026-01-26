@@ -4,13 +4,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!-- IMPORTANT: repo name is Sacks-Attorneys -->
+  <base href="/Sacks-Attorneys/">
+
   <title>Sacks Law Firm | Expert Legal Representation in Johannesburg</title>
   <meta name="description" content="Johannesburg law firm specializing in conveyancing and legal services. Clear strategy, professional execution. Book a consultation." />
+  <meta name="robots" content="index,follow" />
 
   <!-- Canonical for GitHub Pages -->
   <link rel="canonical" href="https://howardsacks.github.io/Sacks-Attorneys/" />
-  <meta name="robots" content="index,follow" />
-  <link rel="sitemap" type="application/xml" title="Sitemap" href="https://howardsacks.github.io/Sacks-Attorneys/sitemap.xml" />
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="sitemap.xml" />
 
   <!-- Open Graph -->
   <meta property="og:title" content="Sacks Law Firm | Johannesburg Attorneys & Conveyancers" />
@@ -20,6 +24,7 @@
   <meta property="og:image" content="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1600&q=80" />
 
   <!-- Google Analytics (optional) -->
+  <!-- Replace GA_MEASUREMENT_ID with your real ID OR delete these two scripts -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -43,7 +48,6 @@
       --line: rgba(255,255,255,.12);
       --gold:#d4af37;
       --gold2:#f3d77a;
-      --blue:#0f2b5b;
       --shadow: 0 18px 60px rgba(0,0,0,.45);
       --radius: 18px;
       --radius2: 26px;
@@ -640,6 +644,7 @@
           </div>
         </a>
 
+        <!-- FIXED: relative links -->
         <div class="links" aria-label="Primary navigation">
           <a href="index.html">Home</a>
           <a href="about.html">About</a>
@@ -718,7 +723,6 @@
     </div>
   </header>
 
-  <!-- SERVICES -->
   <section>
     <div class="container">
       <div class="section-head reveal">
@@ -767,112 +771,81 @@
     </div>
   </section>
 
-  <!-- WHY US / TESTIMONIALS -->
-  <section>
-    <div class="container">
-      <div class="section-head reveal">
-        <div>
-          <h2>Why Clients Choose Us</h2>
-          <p>We combine legal rigour with practical guidance — built for speed, clarity and results.</p>
-        </div>
-      </div>
-
-      <div class="two-col">
-        <div class="panel reveal">
-          <div class="quote">“Fast, clear and professional. Everything was explained plainly and handled on time.”</div>
-          <div class="who">— Client feedback (sample)</div>
-        </div>
-        <div class="panel reveal">
-          <div class="quote">“Strong representation with a calm approach. We always knew where we stood.”</div>
-          <div class="who">— Client feedback (sample)</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA BAND -->
   <section>
     <div class="container">
       <div class="cta-band reveal">
         <div>
-          <h3>Book a consultation</h3>
-          <p>
-            Tell us what you need help with. We’ll respond quickly and confirm the next steps and required documents.
-          </p>
+          <h3>Ready to talk?</h3>
+          <p>Send a short message describing your matter. We’ll reply with next steps and the documents required.</p>
         </div>
         <div style="display:flex; gap:10px; flex-wrap:wrap;">
-          <a class="btn gold" href="contact.html">Go to Contact</a>
-          <a class="btn" href="about.html">About the Firm</a>
+          <a class="btn gold" href="contact.html">Book a Consultation</a>
+          <a class="btn" href="services.html">View Services</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer>
     <div class="container">
       <div class="footer-grid">
         <div>
-          <div style="display:flex; align-items:center; gap:12px;">
+          <div class="brand" style="gap:10px;">
             <div class="mark">SL</div>
-            <div>
-              <strong style="font-family:'Playfair Display',serif; font-size:18px;">Sacks Law Firm</strong>
-              <div class="small">Johannesburg Attorneys & Conveyancers</div>
+            <div class="name">
+              <strong>Sacks Law Firm</strong>
+              <span>Johannesburg Attorneys & Conveyancers</span>
             </div>
           </div>
-          <div class="small" style="margin-top:10px;">
-            Serving clients with clarity, professionalism, and practical outcomes.
-          </div>
-          <div class="pill">© <span id="yr"></span> Sacks Law Firm</div>
+          <p class="small" style="margin-top:10px;">
+            Conveyancing • Litigation • Family Law • Deceased Estates • Commercial matters. Serving Johannesburg and Gauteng.
+          </p>
         </div>
 
-        <div>
-          <strong style="display:block; margin-bottom:8px;">Navigation</strong>
-          <div class="mini-links">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="services.html">Services</a>
-            <a href="contact.html">Contact</a>
-          </div>
+        <div class="mini-links">
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="contact.html">Contact</a>
+          <a href="sitemap.xml">Sitemap</a>
+          <a href="robots.txt">Robots</a>
         </div>
 
-        <div>
-          <strong style="display:block; margin-bottom:8px;">Contact</strong>
-          <div class="small">
-            Johannesburg, Gauteng<br>
-            Mon–Fri: 08:30–17:00<br>
-            <span style="opacity:.85;">(Add your phone/email in contact.html)</span>
-          </div>
-          <div style="margin-top:12px;">
-            <a class="btn gold" href="contact.html">Request a Call Back</a>
-          </div>
+        <div class="small">
+          <div><strong>Call:</strong> <a href="tel:+27111234567">011 123 4567</a></div>
+          <div style="margin-top:8px;"><strong>Email:</strong> <a href="mailto:info@sackslaw.co.za">info@sackslaw.co.za</a></div>
+          <div class="pill">Mon–Fri • 08:30–17:00</div>
         </div>
       </div>
+      <p class="small" style="margin-top:18px; opacity:.7;">© <span id="year"></span> Sacks Law Firm. All rights reserved.</p>
     </div>
   </footer>
 
   <script>
-    // Year
-    document.getElementById('yr').textContent = new Date().getFullYear();
-
     // Mobile menu toggle
     const hamburger = document.getElementById('hamburger');
     const mobileMenu = document.getElementById('mobileMenu');
-    if (hamburger && mobileMenu) {
+    if (hamburger && mobileMenu){
       hamburger.addEventListener('click', () => mobileMenu.classList.toggle('show'));
     }
 
     // Reveal on scroll
-    const items = document.querySelectorAll('.reveal');
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        if (e.isIntersecting) e.target.classList.add('show');
+    const revealEls = document.querySelectorAll('.reveal');
+    const reveal = () => {
+      const vh = window.innerHeight;
+      revealEls.forEach(el => {
+        const top = el.getBoundingClientRect().top;
+        if (top < vh - 80) el.classList.add('show');
       });
-    }, { threshold: 0.14 });
-    items.forEach(el => io.observe(el));
+    };
+    window.addEventListener('scroll', reveal);
+    reveal();
+
+    // Footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
+
 
 
 

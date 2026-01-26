@@ -1,30 +1,18 @@
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-ZA">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
-  <!-- IMPORTANT: repo name is Sacks-Attorneys -->
-  <base href="/Sacks-Attorneys/">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <title>Sacks Law Firm | Expert Legal Representation in Johannesburg</title>
-  <meta name="description" content="Johannesburg law firm specializing in conveyancing and legal services. Clear strategy, professional execution. Book a consultation." />
+  <meta name="description" content="Sacks Law Firm — Johannesburg Attorneys & Conveyancers. Conveyancing, litigation, family law, and deceased estates. Clear advice. Professional execution." />
+
+  <link rel="canonical" href="https://howardsacks.github.io/Sacks-Attorneys/v3/" />
   <meta name="robots" content="index,follow" />
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="https://howardsacks.github.io/Sacks-Attorneys/sitemap.xml" />
 
-  <!-- Canonical for GitHub Pages -->
-  <link rel="canonical" href="https://howardsacks.github.io/Sacks-Attorneys/" />
-  <link rel="sitemap" type="application/xml" title="Sitemap" href="sitemap.xml" />
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="Sacks Law Firm | Johannesburg Attorneys & Conveyancers" />
-  <meta property="og:description" content="Conveyancing, litigation, family law, deceased estates. Book a consultation." />
-  <meta property="og:url" content="https://howardsacks.github.io/Sacks-Attorneys/" />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1600&q=80" />
-
-  <!-- Google Analytics (optional) -->
-  <!-- Replace GA_MEASUREMENT_ID with your real ID OR delete these two scripts -->
+  <!-- Google Analytics (replace GA_MEASUREMENT_ID with your real ID) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -38,813 +26,238 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-  <style>
-    :root{
-      --bg:#0b1220;
-      --panel: rgba(255,255,255,.06);
-      --panel2: rgba(255,255,255,.10);
-      --text:#e8edf6;
-      --muted: rgba(232,237,246,.72);
-      --line: rgba(255,255,255,.12);
-      --gold:#d4af37;
-      --gold2:#f3d77a;
-      --shadow: 0 18px 60px rgba(0,0,0,.45);
-      --radius: 18px;
-      --radius2: 26px;
-      --max: 1120px;
-    }
-
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      color:var(--text);
-      background:
-        radial-gradient(1200px 800px at 12% 12%, rgba(212,175,55,.14), transparent 60%),
-        radial-gradient(1100px 700px at 92% 18%, rgba(59,130,246,.12), transparent 58%),
-        radial-gradient(900px 700px at 70% 92%, rgba(212,175,55,.08), transparent 55%),
-        linear-gradient(180deg, #070c15 0%, #0b1220 55%, #070c15 100%);
-      overflow-x:hidden;
-    }
-
-    a{color:inherit; text-decoration:none}
-    img{max-width:100%; display:block}
-
-    .container{
-      width: min(var(--max), calc(100% - 48px));
-      margin: 0 auto;
-    }
-
-    /* --- Top Bar / Nav --- */
-    .topbar{
-      position: sticky;
-      top:0;
-      z-index: 50;
-      backdrop-filter: blur(14px);
-      background: rgba(7,12,21,.62);
-      border-bottom: 1px solid var(--line);
-    }
-    .nav{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      padding: 14px 0;
-      gap: 16px;
-    }
-
-    .brand{
-      display:flex; align-items:center; gap:12px;
-    }
-    .mark{
-      width:40px; height:40px;
-      border-radius: 12px;
-      background:
-        radial-gradient(circle at 30% 25%, rgba(255,255,255,.35), transparent 55%),
-        linear-gradient(135deg, rgba(212,175,55,1), rgba(243,215,122,1));
-      box-shadow: 0 14px 30px rgba(212,175,55,.22);
-      display:grid; place-items:center;
-      color:#09101f;
-      font-weight:900;
-    }
-    .brand .name{
-      line-height:1.05;
-    }
-    .brand .name strong{
-      font-family: "Playfair Display", serif;
-      font-size: 16px;
-      letter-spacing: .2px;
-      display:block;
-    }
-    .brand .name span{
-      font-size: 12px;
-      color: var(--muted);
-      display:block;
-      margin-top: 3px;
-    }
-
-    .links{
-      display:flex;
-      gap: 18px;
-      align-items:center;
-    }
-    .links a{
-      font-size: 14px;
-      color: rgba(232,237,246,.86);
-      padding: 10px 10px;
-      border-radius: 12px;
-      border: 1px solid transparent;
-      transition: .25s ease;
-    }
-    .links a:hover{
-      border-color: rgba(255,255,255,.14);
-      background: rgba(255,255,255,.06);
-    }
-
-    .cta{
-      display:flex; gap:10px; align-items:center;
-    }
-    .btn{
-      display:inline-flex; align-items:center; justify-content:center;
-      gap:10px;
-      padding: 11px 14px;
-      border-radius: 14px;
-      border: 1px solid rgba(255,255,255,.14);
-      background: rgba(255,255,255,.06);
-      color: var(--text);
-      font-weight: 600;
-      font-size: 14px;
-      transition: .25s ease;
-      cursor:pointer;
-      white-space:nowrap;
-    }
-    .btn:hover{
-      transform: translateY(-1px);
-      background: rgba(255,255,255,.10);
-      border-color: rgba(255,255,255,.18);
-    }
-    .btn.gold{
-      background: linear-gradient(135deg, var(--gold), var(--gold2));
-      color:#09101f;
-      border-color: rgba(0,0,0,.12);
-      box-shadow: 0 18px 40px rgba(212,175,55,.18);
-    }
-    .btn.gold:hover{
-      background: linear-gradient(135deg, #e5c04b, #ffe29a);
-    }
-
-    .hamburger{
-      display:none;
-      width:44px; height:44px;
-      border-radius: 14px;
-      border:1px solid rgba(255,255,255,.14);
-      background: rgba(255,255,255,.06);
-      color: var(--text);
-    }
-
-    /* --- Hero --- */
-    .hero{
-      position:relative;
-      padding: 52px 0 30px;
-      overflow:hidden;
-    }
-    .hero-grid{
-      display:grid;
-      grid-template-columns: 1.15fr .85fr;
-      gap: 26px;
-      align-items: stretch;
-    }
-
-    .hero-left{
-      border-radius: var(--radius2);
-      background:
-        linear-gradient(180deg, rgba(255,255,255,.07), rgba(255,255,255,.03));
-      border: 1px solid rgba(255,255,255,.12);
-      box-shadow: var(--shadow);
-      overflow:hidden;
-      position:relative;
-      padding: 34px;
-      min-height: 520px;
-    }
-
-    .hero-left::before{
-      content:"";
-      position:absolute; inset:0;
-      background:
-        linear-gradient(90deg, rgba(7,12,21,.85), rgba(7,12,21,.55)),
-        url("https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1700&q=80");
-      background-size: cover;
-      background-position: center;
-      filter: saturate(1.05);
-      transform: scale(1.02);
-      z-index:0;
-    }
-    .hero-left > *{ position:relative; z-index:1; }
-
-    .tag{
-      display:inline-flex;
-      gap:10px;
-      align-items:center;
-      font-size: 12px;
-      color: rgba(232,237,246,.86);
-      border: 1px solid rgba(255,255,255,.14);
-      background: rgba(255,255,255,.07);
-      padding: 8px 12px;
-      border-radius: 999px;
-      margin-bottom: 18px;
-    }
-    .dot{
-      width:9px;height:9px;border-radius:99px;
-      background: radial-gradient(circle at 30% 30%, #fff, var(--gold));
-      box-shadow: 0 0 18px rgba(212,175,55,.35);
-    }
-
-    h1{
-      font-family: "Playfair Display", serif;
-      font-size: clamp(40px, 4vw, 58px);
-      line-height: 1.05;
-      margin: 0 0 14px;
-      letter-spacing: .2px;
-    }
-    .lead{
-      font-size: 16px;
-      color: rgba(232,237,246,.85);
-      max-width: 56ch;
-      margin: 0 0 22px;
-      line-height: 1.7;
-    }
-
-    .hero-actions{
-      display:flex;
-      gap: 12px;
-      flex-wrap: wrap;
-      margin-top: 10px;
-      margin-bottom: 18px;
-    }
-
-    .hero-bullets{
-      display:flex;
-      gap: 14px;
-      flex-wrap: wrap;
-      color: rgba(232,237,246,.78);
-      font-size: 13px;
-    }
-    .hero-bullets span{
-      display:inline-flex;
-      gap: 8px;
-      align-items:center;
-      padding: 8px 10px;
-      background: rgba(255,255,255,.06);
-      border: 1px solid rgba(255,255,255,.12);
-      border-radius: 999px;
-    }
-    .check{
-      width:18px;height:18px;border-radius: 999px;
-      background: rgba(212,175,55,.18);
-      border: 1px solid rgba(212,175,55,.35);
-      display:grid; place-items:center;
-      color: var(--gold2);
-      font-weight: 800;
-      font-size: 12px;
-    }
-
-    .hero-right{
-      display:grid;
-      grid-template-rows: 1fr 1fr;
-      gap: 16px;
-    }
-    .card{
-      border-radius: var(--radius);
-      background: rgba(255,255,255,.06);
-      border: 1px solid rgba(255,255,255,.12);
-      box-shadow: 0 12px 40px rgba(0,0,0,.30);
-      overflow:hidden;
-      position:relative;
-    }
-    .card .inner{
-      padding: 18px 18px 16px;
-    }
-    .card h3{
-      margin: 0 0 6px;
-      font-size: 14px;
-      letter-spacing: .2px;
-      color: rgba(232,237,246,.92);
-    }
-    .card p{
-      margin: 0;
-      font-size: 13px;
-      color: rgba(232,237,246,.74);
-      line-height: 1.6;
-    }
-
-    .image-card{
-      min-height: 250px;
-      display:flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      overflow:hidden;
-    }
-    .image-card::before{
-      content:"";
-      position:absolute; inset:0;
-      background:
-        linear-gradient(180deg, rgba(7,12,21,.10), rgba(7,12,21,.88)),
-        url("https://images.unsplash.com/photo-1528747008803-1f4f1a9b07de?auto=format&fit=crop&w=1400&q=80");
-      background-size: cover;
-      background-position: center;
-      transform: scale(1.02);
-      filter: saturate(1.05);
-    }
-    .image-card .inner{ position:relative; z-index:1; }
-
-    .stats{
-      display:grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 10px;
-      margin-top: 12px;
-    }
-    .stat{
-      padding: 12px 12px;
-      border-radius: 14px;
-      border: 1px solid rgba(255,255,255,.12);
-      background: rgba(255,255,255,.06);
-    }
-    .stat strong{
-      display:block;
-      font-size: 18px;
-      letter-spacing: .2px;
-    }
-    .stat span{
-      display:block;
-      font-size: 12px;
-      color: rgba(232,237,246,.72);
-      margin-top: 2px;
-    }
-
-    /* --- Sections --- */
-    section{
-      padding: 54px 0;
-    }
-    .section-head{
-      display:flex;
-      align-items:flex-end;
-      justify-content: space-between;
-      gap: 16px;
-      margin-bottom: 18px;
-    }
-    .section-head h2{
-      margin:0;
-      font-family: "Playfair Display", serif;
-      font-size: 34px;
-      line-height: 1.1;
-    }
-    .section-head p{
-      margin:0;
-      color: rgba(232,237,246,.75);
-      max-width: 60ch;
-      font-size: 14px;
-      line-height: 1.7;
-    }
-
-    .grid-4{
-      display:grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 14px;
-    }
-    .service{
-      padding: 16px;
-      border-radius: var(--radius);
-      border: 1px solid rgba(255,255,255,.12);
-      background: rgba(255,255,255,.06);
-      transition: .25s ease;
-      position: relative;
-      overflow:hidden;
-    }
-    .service:hover{
-      transform: translateY(-4px);
-      background: rgba(255,255,255,.09);
-      border-color: rgba(255,255,255,.18);
-    }
-    .service .icon{
-      width: 44px; height: 44px;
-      border-radius: 14px;
-      display:grid; place-items:center;
-      background: rgba(212,175,55,.14);
-      border: 1px solid rgba(212,175,55,.30);
-      margin-bottom: 10px;
-      color: var(--gold2);
-      font-weight: 900;
-    }
-    .service h3{ margin:0 0 6px; font-size: 15px; }
-    .service p{ margin:0; color: rgba(232,237,246,.72); font-size: 13px; line-height: 1.65; }
-    .service a{
-      display:inline-flex;
-      margin-top: 12px;
-      color: rgba(232,237,246,.92);
-      font-weight: 700;
-      font-size: 13px;
-      gap: 8px;
-      align-items:center;
-    }
-    .arrow{ opacity:.85 }
-
-    .photo-strip{
-      display:grid;
-      grid-template-columns: 1.2fr .9fr .9fr;
-      gap: 14px;
-      margin-top: 18px;
-    }
-    .ph{
-      border-radius: var(--radius);
-      border: 1px solid rgba(255,255,255,.12);
-      overflow:hidden;
-      min-height: 220px;
-      position:relative;
-      background: rgba(255,255,255,.06);
-    }
-    .ph::before{
-      content:"";
-      position:absolute; inset:0;
-      background-size: cover;
-      background-position: center;
-      filter: saturate(1.05);
-      transform: scale(1.02);
-    }
-    .ph.one::before{
-      background-image:
-        linear-gradient(180deg, rgba(7,12,21,.15), rgba(7,12,21,.78)),
-        url("https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&w=1400&q=80");
-    }
-    .ph.two::before{
-      background-image:
-        linear-gradient(180deg, rgba(7,12,21,.10), rgba(7,12,21,.74)),
-        url("https://images.unsplash.com/photo-1523287562758-66c7fc58967f?auto=format&fit=crop&w=1400&q=80");
-    }
-    .ph.three::before{
-      background-image:
-        linear-gradient(180deg, rgba(7,12,21,.10), rgba(7,12,21,.76)),
-        url("https://images.unsplash.com/photo-1560439514-4e9645039924?auto=format&fit=crop&w=1400&q=80");
-    }
-    .ph .cap{
-      position:absolute;
-      left: 14px;
-      bottom: 14px;
-      right: 14px;
-      padding: 12px 14px;
-      background: rgba(255,255,255,.08);
-      border: 1px solid rgba(255,255,255,.14);
-      border-radius: 14px;
-      backdrop-filter: blur(10px);
-      color: rgba(232,237,246,.92);
-      font-size: 13px;
-      line-height: 1.45;
-    }
-
-    .two-col{
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-      align-items: stretch;
-      margin-top: 18px;
-    }
-    .panel{
-      border-radius: var(--radius);
-      border: 1px solid rgba(255,255,255,.12);
-      background: rgba(255,255,255,.06);
-      padding: 18px;
-    }
-    .panel h3{
-      margin:0 0 8px;
-      font-size: 15px;
-    }
-    .panel p{
-      margin:0;
-      color: rgba(232,237,246,.74);
-      font-size: 13px;
-      line-height: 1.7;
-    }
-
-    .quote{
-      font-family: "Playfair Display", serif;
-      font-size: 22px;
-      line-height: 1.35;
-      margin: 0 0 10px;
-    }
-    .who{
-      font-size: 13px;
-      color: rgba(232,237,246,.72);
-    }
-
-    /* --- CTA band --- */
-    .cta-band{
-      border-radius: var(--radius2);
-      border: 1px solid rgba(255,255,255,.12);
-      background:
-        radial-gradient(900px 500px at 10% 20%, rgba(212,175,55,.16), transparent 60%),
-        linear-gradient(135deg, rgba(255,255,255,.07), rgba(255,255,255,.03));
-      box-shadow: var(--shadow);
-      padding: 22px;
-      display:flex;
-      align-items:center;
-      justify-content: space-between;
-      gap: 16px;
-      overflow:hidden;
-      position:relative;
-    }
-    .cta-band::before{
-      content:"";
-      position:absolute; inset:-1px;
-      background:
-        linear-gradient(90deg, rgba(7,12,21,.25), rgba(7,12,21,.65)),
-        url("https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1600&q=80");
-      background-size: cover;
-      background-position: center;
-      opacity: .55;
-      z-index:0;
-    }
-    .cta-band > *{ position:relative; z-index:1; }
-
-    .cta-band h3{
-      margin:0 0 6px;
-      font-family:"Playfair Display", serif;
-      font-size: 26px;
-    }
-    .cta-band p{
-      margin:0;
-      color: rgba(232,237,246,.78);
-      font-size: 14px;
-      line-height: 1.7;
-      max-width: 70ch;
-    }
-
-    /* --- Footer --- */
-    footer{
-      padding: 36px 0 60px;
-      color: rgba(232,237,246,.70);
-      border-top: 1px solid rgba(255,255,255,.10);
-      margin-top: 20px;
-    }
-    .footer-grid{
-      display:grid;
-      grid-template-columns: 1.2fr .8fr .8fr;
-      gap: 18px;
-    }
-    .small{
-      font-size: 13px;
-      line-height: 1.7;
-      color: rgba(232,237,246,.70);
-    }
-    .mini-links a{
-      display:block;
-      padding: 8px 0;
-      color: rgba(232,237,246,.82);
-      font-size: 13px;
-    }
-    .mini-links a:hover{ color:#fff; }
-    .pill{
-      display:inline-flex;
-      gap:10px;
-      padding: 10px 12px;
-      border-radius: 999px;
-      border: 1px solid rgba(255,255,255,.12);
-      background: rgba(255,255,255,.06);
-      font-size: 13px;
-      color: rgba(232,237,246,.78);
-      margin-top: 10px;
-    }
-
-    /* --- Reveal animation --- */
-    .reveal{
-      opacity:0;
-      transform: translateY(14px);
-      transition: .7s ease;
-    }
-    .reveal.show{
-      opacity:1;
-      transform: translateY(0);
-    }
-
-    /* --- Mobile --- */
-    @media (max-width: 920px){
-      .hero-grid{ grid-template-columns: 1fr; }
-      .hero-left{ min-height: unset; }
-      .grid-4{ grid-template-columns: repeat(2, 1fr); }
-      .photo-strip{ grid-template-columns: 1fr; }
-      .two-col{ grid-template-columns: 1fr; }
-      .footer-grid{ grid-template-columns: 1fr; }
-      .links{ display:none; }
-      .hamburger{ display:inline-grid; place-items:center; }
-      .mobile-menu{
-        display:none;
-        border-top:1px solid rgba(255,255,255,.10);
-        padding: 10px 0 14px;
-      }
-      .mobile-menu a{
-        display:block;
-        padding: 12px 0;
-        color: rgba(232,237,246,.90);
-        border-bottom: 1px solid rgba(255,255,255,.08);
-      }
-      .mobile-menu a:last-child{ border-bottom:none; }
-      .mobile-menu.show{ display:block; }
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-  <!-- NAV -->
-  <div class="topbar">
-    <div class="container">
-      <div class="nav">
-        <a class="brand" href="index.html" aria-label="Sacks Law Firm Home">
-          <div class="mark">SL</div>
-          <div class="name">
-            <strong>Sacks Law Firm</strong>
-            <span>Johannesburg Attorneys & Conveyancers</span>
-          </div>
-        </a>
+  <!-- Top Bar -->
+  <header class="topbar" role="banner">
+    <div class="container navwrap">
+      <a class="brand" href="index.html" aria-label="Sacks Law Firm Home">
+        <div class="brandMark">SL</div>
+        <div class="brandText">
+          <div class="brandName">Sacks Law Firm</div>
+          <div class="brandTag">Johannesburg Attorneys & Conveyancers</div>
+        </div>
+      </a>
 
-        <!-- FIXED: relative links -->
-        <div class="links" aria-label="Primary navigation">
-          <a href="index.html">Home</a>
-          <a href="about.html">About</a>
-          <a href="services.html">Services</a>
-          <a href="contact.html">Contact</a>
+      <button class="menuBtn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="menu" id="menu" role="navigation" aria-label="Main menu">
+        <a class="active" href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html" class="btn btnGold">Book a Consultation</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main>
+    <section class="hero">
+      <div class="heroMedia" aria-hidden="true"></div>
+      <div class="container heroGrid">
+        <div class="heroCopy">
+          <p class="kicker">Trusted guidance • Clear strategy • Professional execution</p>
+          <h1>Expert legal representation in Johannesburg.</h1>
+          <p class="lead">
+            Conveyancing, litigation, family law and deceased estates — handled with discretion, precision and urgency.
+          </p>
+
+          <div class="heroCtas">
+            <a class="btn btnGold" href="contact.html">Request a Call Back</a>
+            <a class="btn btnGhost" href="services.html">Explore Services</a>
+          </div>
+
+          <div class="trustRow" aria-label="Highlights">
+            <div class="pill">15+ years experience</div>
+            <div class="pill">Client-focused advice</div>
+            <div class="pill">Fast, clear communication</div>
+          </div>
         </div>
 
-        <div class="cta">
-          <a class="btn" href="services.html">Explore Services</a>
-          <a class="btn gold" href="contact.html">Book a Consultation</a>
-          <button class="hamburger" id="hamburger" aria-label="Open menu">☰</button>
+        <div class="heroCard" aria-label="Quick contact">
+          <h3>Quick Contact</h3>
+          <p class="muted">Tell us what you need — we’ll respond as soon as possible.</p>
+          <div class="cardGrid">
+            <div class="cardMini">
+              <div class="miniTitle">Phone</div>
+              <div class="miniValue">+27 XX XXX XXXX</div>
+              <div class="miniHint">Replace with your number</div>
+            </div>
+            <div class="cardMini">
+              <div class="miniTitle">Email</div>
+              <div class="miniValue">info@sackslaw.co.za</div>
+              <div class="miniHint">Replace with your email</div>
+            </div>
+            <div class="cardMini">
+              <div class="miniTitle">Office</div>
+              <div class="miniValue">Johannesburg</div>
+              <div class="miniHint">By appointment</div>
+            </div>
+            <div class="cardMini">
+              <div class="miniTitle">Hours</div>
+              <div class="miniValue">Mon–Fri</div>
+              <div class="miniHint">08:30 – 17:00</div>
+            </div>
+          </div>
+          <a class="btn btnPrimary full" href="contact.html">Go to Contact Page</a>
         </div>
       </div>
+    </section>
 
-      <div class="mobile-menu" id="mobileMenu">
-        <a href="index.html">Home</a>
+    <!-- Services Preview -->
+    <section class="section">
+      <div class="container">
+        <div class="sectionHead">
+          <div>
+            <h2>Our Services</h2>
+            <p class="muted">Practical legal solutions for individuals and businesses — from property matters to complex disputes.</p>
+          </div>
+          <a class="textLink" href="services.html">View all services →</a>
+        </div>
+
+        <div class="grid4">
+          <article class="serviceCard">
+            <div class="serviceImg img1" aria-hidden="true"></div>
+            <div class="serviceBody">
+              <h3>Conveyancing</h3>
+              <p>Property transfers, registrations, and dependable guidance through the process.</p>
+              <a href="services.html#conveyancing">Learn more</a>
+            </div>
+          </article>
+
+          <article class="serviceCard">
+            <div class="serviceImg img2" aria-hidden="true"></div>
+            <div class="serviceBody">
+              <h3>Litigation</h3>
+              <p>Strategic representation for disputes, claims, enforcement and negotiations.</p>
+              <a href="services.html#litigation">Learn more</a>
+            </div>
+          </article>
+
+          <article class="serviceCard">
+            <div class="serviceImg img3" aria-hidden="true"></div>
+            <div class="serviceBody">
+              <h3>Family Law</h3>
+              <p>Divorce, custody, maintenance and protection orders handled with care.</p>
+              <a href="services.html#family">Learn more</a>
+            </div>
+          </article>
+
+          <article class="serviceCard">
+            <div class="serviceImg img4" aria-hidden="true"></div>
+            <div class="serviceBody">
+              <h3>Deceased Estates</h3>
+              <p>Estate administration with professionalism, empathy and attention to detail.</p>
+              <a href="services.html#estates">Learn more</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Image + Copy -->
+    <section class="section alt">
+      <div class="container split">
+        <div class="splitImg imgOffice" aria-hidden="true"></div>
+        <div class="splitCopy">
+          <h2>A firm built on clarity and results</h2>
+          <p class="muted">
+            We focus on direct communication, realistic timelines, and disciplined execution.
+            You’ll always know what’s happening, what’s needed, and what comes next.
+          </p>
+          <ul class="checklist">
+            <li>Clear advice & documented next steps</li>
+            <li>Professional handling of sensitive matters</li>
+            <li>Efficient turnaround where possible</li>
+          </ul>
+          <div class="row">
+            <a class="btn btnPrimary" href="about.html">About the firm</a>
+            <a class="btn btnGhost" href="contact.html">Speak to us</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section">
+      <div class="container">
+        <div class="sectionHead">
+          <div>
+            <h2>What clients value</h2>
+            <p class="muted">Replace these with real testimonials when ready.</p>
+          </div>
+        </div>
+
+        <div class="grid3">
+          <figure class="quote">
+            <blockquote>“Fast, clear guidance and excellent communication throughout.”</blockquote>
+            <figcaption>— Client, Johannesburg</figcaption>
+          </figure>
+          <figure class="quote">
+            <blockquote>“Professional handling with strong attention to detail.”</blockquote>
+            <figcaption>— Property transfer client</figcaption>
+          </figure>
+          <figure class="quote">
+            <blockquote>“Practical advice and a calm, confident approach.”</blockquote>
+            <figcaption>— Family law client</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+      <div class="container ctaBox">
+        <div>
+          <h2>Ready to move forward?</h2>
+          <p class="muted">Send a short message and we’ll guide you on the best next step.</p>
+        </div>
+        <a class="btn btnGold" href="contact.html">Book a Consultation</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footGrid">
+      <div>
+        <div class="footBrand">
+          <span class="brandMark small">SL</span>
+          <div>
+            <div class="brandName">Sacks Law Firm</div>
+            <div class="muted">Johannesburg Attorneys & Conveyancers</div>
+          </div>
+        </div>
+        <p class="muted tiny">© <span id="yr"></span> Sacks Law Firm. All rights reserved.</p>
+      </div>
+
+      <div class="footLinks">
         <a href="about.html">About</a>
         <a href="services.html">Services</a>
         <a href="contact.html">Contact</a>
       </div>
     </div>
-  </div>
-
-  <!-- HERO -->
-  <header class="hero">
-    <div class="container">
-      <div class="hero-grid">
-        <div class="hero-left reveal">
-          <div class="tag"><span class="dot"></span> Clear strategy • Professional execution • Discreet guidance</div>
-          <h1>Expert legal representation in Johannesburg.</h1>
-          <p class="lead">
-            Conveyancing, litigation, family law and deceased estates — handled with discretion, precision and urgency.
-            We focus on practical outcomes and clear communication from start to finish.
-          </p>
-
-          <div class="hero-actions">
-            <a class="btn gold" href="contact.html">Request a Call Back</a>
-            <a class="btn" href="services.html">Explore Services</a>
-          </div>
-
-          <div class="hero-bullets">
-            <span><span class="check">✓</span> 15+ years experience</span>
-            <span><span class="check">✓</span> Client-focused advice</span>
-            <span><span class="check">✓</span> Fast, clear communication</span>
-          </div>
-        </div>
-
-        <div class="hero-right">
-          <div class="card image-card reveal">
-            <div class="inner">
-              <h3>Trusted legal support</h3>
-              <p>From property transfers to complex disputes — we keep your matter moving with confidence.</p>
-              <div class="stats">
-                <div class="stat"><strong>4.9★</strong><span>Client rating</span></div>
-                <div class="stat"><strong>24–48h</strong><span>Response goal</span></div>
-                <div class="stat"><strong>Johannesburg</strong><span>Local focus</span></div>
-              </div>
-            </div>
-          </div>
-
-          <div class="card reveal">
-            <div class="inner">
-              <h3>Need help today?</h3>
-              <p>
-                Start with a short description of your matter. We’ll confirm next steps and the documents needed.
-              </p>
-              <div style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;">
-                <a class="btn gold" href="contact.html">Contact Us</a>
-                <a class="btn" href="about.html">Meet the Firm</a>
-              </div>
-              <div class="pill">Business hours: Mon–Fri • 08:30–17:00</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <section>
-    <div class="container">
-      <div class="section-head reveal">
-        <div>
-          <h2>Our Services</h2>
-          <p>Practical legal solutions for individuals and businesses — from property matters to complex disputes.</p>
-        </div>
-        <a class="btn" href="services.html">View all services →</a>
-      </div>
-
-      <div class="grid-4">
-        <div class="service reveal">
-          <div class="icon">⚖</div>
-          <h3>Conveyancing</h3>
-          <p>Property transfers, registrations, and timelines you can trust — handled end-to-end.</p>
-          <a href="services.html">Learn more <span class="arrow">→</span></a>
-        </div>
-
-        <div class="service reveal">
-          <div class="icon">⚔</div>
-          <h3>Litigation</h3>
-          <p>Sound strategy, clear advice, and strong representation for disputes and claims.</p>
-          <a href="services.html">Learn more <span class="arrow">→</span></a>
-        </div>
-
-        <div class="service reveal">
-          <div class="icon">👥</div>
-          <h3>Family Law</h3>
-          <p>Divorce, custody, maintenance and protection orders — handled with discretion and care.</p>
-          <a href="services.html">Learn more <span class="arrow">→</span></a>
-        </div>
-
-        <div class="service reveal">
-          <div class="icon">🕊</div>
-          <h3>Deceased Estates</h3>
-          <p>Estate administration with empathy, accuracy, and professional execution.</p>
-          <a href="services.html">Learn more <span class="arrow">→</span></a>
-        </div>
-      </div>
-
-      <div class="photo-strip">
-        <div class="ph one reveal"><div class="cap"><strong>Precision paperwork.</strong><br>We handle documents and deadlines meticulously.</div></div>
-        <div class="ph two reveal"><div class="cap"><strong>Clear communication.</strong><br>No surprises — you always know the next step.</div></div>
-        <div class="ph three reveal"><div class="cap"><strong>Practical outcomes.</strong><br>Advice focused on what works in the real world.</div></div>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="container">
-      <div class="cta-band reveal">
-        <div>
-          <h3>Ready to talk?</h3>
-          <p>Send a short message describing your matter. We’ll reply with next steps and the documents required.</p>
-        </div>
-        <div style="display:flex; gap:10px; flex-wrap:wrap;">
-          <a class="btn gold" href="contact.html">Book a Consultation</a>
-          <a class="btn" href="services.html">View Services</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <div class="container">
-      <div class="footer-grid">
-        <div>
-          <div class="brand" style="gap:10px;">
-            <div class="mark">SL</div>
-            <div class="name">
-              <strong>Sacks Law Firm</strong>
-              <span>Johannesburg Attorneys & Conveyancers</span>
-            </div>
-          </div>
-          <p class="small" style="margin-top:10px;">
-            Conveyancing • Litigation • Family Law • Deceased Estates • Commercial matters. Serving Johannesburg and Gauteng.
-          </p>
-        </div>
-
-        <div class="mini-links">
-          <a href="about.html">About</a>
-          <a href="services.html">Services</a>
-          <a href="contact.html">Contact</a>
-          <a href="sitemap.xml">Sitemap</a>
-          <a href="robots.txt">Robots</a>
-        </div>
-
-        <div class="small">
-          <div><strong>Call:</strong> <a href="tel:+27111234567">011 123 4567</a></div>
-          <div style="margin-top:8px;"><strong>Email:</strong> <a href="mailto:info@sackslaw.co.za">info@sackslaw.co.za</a></div>
-          <div class="pill">Mon–Fri • 08:30–17:00</div>
-        </div>
-      </div>
-      <p class="small" style="margin-top:18px; opacity:.7;">© <span id="year"></span> Sacks Law Firm. All rights reserved.</p>
-    </div>
   </footer>
 
   <script>
-    // Mobile menu toggle
-    const hamburger = document.getElementById('hamburger');
-    const mobileMenu = document.getElementById('mobileMenu');
-    if (hamburger && mobileMenu){
-      hamburger.addEventListener('click', () => mobileMenu.classList.toggle('show'));
-    }
+    // year
+    document.getElementById('yr').textContent = new Date().getFullYear();
 
-    // Reveal on scroll
-    const revealEls = document.querySelectorAll('.reveal');
-    const reveal = () => {
-      const vh = window.innerHeight;
-      revealEls.forEach(el => {
-        const top = el.getBoundingClientRect().top;
-        if (top < vh - 80) el.classList.add('show');
-      });
-    };
-    window.addEventListener('scroll', reveal);
-    reveal();
-
-    // Footer year
-    document.getElementById('year').textContent = new Date().getFullYear();
+    // mobile menu
+    const btn = document.getElementById('menuBtn');
+    const menu = document.getElementById('menu');
+    btn.addEventListener('click', () => {
+      const open = menu.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      btn.classList.toggle('open', open);
+    });
   </script>
 </body>
 </html>
+
 
 
 

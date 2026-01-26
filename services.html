@@ -1,85 +1,160 @@
-<!DOCTYPE html>
+
+
+<!doctype html>
 <html lang="en-ZA">
-<head><link rel="stylesheet" href="styles.css">
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Services | Sacks Law Firm</title>
-  <meta name="description" content="Legal services: conveyancing, litigation, family law and deceased estates." />
-  <link rel="canonical" href="https://howardsacks.github.io/Sacks-Attorneys/services.html" />
+  <meta name="description" content="Legal services: conveyancing, litigation, family law and deceased estates. Sacks Law Firm — Johannesburg Attorneys & Conveyancers." />
+  <link rel="canonical" href="https://howardsacks.github.io/Sacks-Attorneys/v3/services.html" />
   <meta name="robots" content="index,follow" />
+
+  <!-- Google Analytics (replace GA_MEASUREMENT_ID with your real ID) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'GA_MEASUREMENT_ID');
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600;800&display=swap" rel="stylesheet">
 </head>
+
 <body>
   <header class="topbar">
-    <div class="container nav">
+    <div class="container navwrap">
       <a class="brand" href="index.html">
-        <div class="brand-mark">SL</div>
-        <div>
-          <div class="brand-name">Sacks Law Firm</div>
-          <div class="brand-tag">Johannesburg Attorneys & Conveyancers</div>
+        <div class="brandMark">SL</div>
+        <div class="brandText">
+          <div class="brandName">Sacks Law Firm</div>
+          <div class="brandTag">Johannesburg Attorneys & Conveyancers</div>
         </div>
       </a>
 
-      <nav class="menu">
+      <button class="menuBtn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="menu" id="menu">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a class="active" href="services.html">Services</a>
-        <a href="contact.html">Contact</a>
+        <a href="contact.html" class="btn btnGold">Book a Consultation</a>
       </nav>
-
-      <a class="cta" href="contact.html">Book a Consultation</a>
     </div>
   </header>
 
-  <section class="section">
-    <div class="container">
-      <div class="section-title">
-        <h2>Services</h2>
-        <p>Select a service area below — we’ll guide you on the best next step.</p>
+  <main>
+    <section class="pageHero">
+      <div class="container">
+        <p class="kicker">Focused practice • Efficient process</p>
+        <h1>Services</h1>
+        <p class="lead muted">Below are the main service areas. Replace/expand the text with your real offering.</p>
       </div>
+    </section>
 
-      <div class="grid">
-        <div class="card col-6">
-          <span class="badge">Conveyancing</span>
-          <h3>Property Transfers & Related Work</h3>
-          <p>Transfers, bond registrations, compliance documents, and transaction support.</p>
-        </div>
+    <section class="section">
+      <div class="container">
+        <div class="serviceList">
 
-        <div class="card col-6">
-          <span class="badge">Litigation</span>
-          <h3>Disputes & Court Representation</h3>
-          <p>Claims, defence, negotiations, and procedure-driven representation.</p>
-        </div>
+          <article class="serviceRow" id="conveyancing">
+            <div class="rowImg rowImg1" aria-hidden="true"></div>
+            <div class="rowCopy">
+              <h2>Conveyancing</h2>
+              <p class="muted">Property transfers & registrations for buyers, sellers and developers — with timelines you can trust.</p>
+              <ul class="checklist">
+                <li>Transfers & registrations</li>
+                <li>Bond registrations & cancellations</li>
+                <li>Document preparation & compliance</li>
+              </ul>
+              <a class="btn btnPrimary" href="contact.html">Discuss a property matter</a>
+            </div>
+          </article>
 
-        <div class="card col-6">
-          <span class="badge">Family Law</span>
-          <h3>Family Matters</h3>
-          <p>Divorce, parenting plans, maintenance, and protection orders.</p>
-        </div>
+          <article class="serviceRow" id="litigation">
+            <div class="rowImg rowImg2" aria-hidden="true"></div>
+            <div class="rowCopy">
+              <h2>Litigation</h2>
+              <p class="muted">Strategic representation for disputes, claims and enforcement — from early negotiation to court process.</p>
+              <ul class="checklist">
+                <li>Demand letters & settlement strategy</li>
+                <li>Claims, defences & enforcement</li>
+                <li>Commercial and civil disputes</li>
+              </ul>
+              <a class="btn btnPrimary" href="contact.html">Request guidance</a>
+            </div>
+          </article>
 
-        <div class="card col-6">
-          <span class="badge">Deceased Estates</span>
-          <h3>Estate Administration</h3>
-          <p>Guidance through reporting, administration, and documentation.</p>
+          <article class="serviceRow" id="family">
+            <div class="rowImg rowImg3" aria-hidden="true"></div>
+            <div class="rowCopy">
+              <h2>Family Law</h2>
+              <p class="muted">Handled with care and discretion — focused on practical outcomes and clear advice.</p>
+              <ul class="checklist">
+                <li>Divorce & settlement agreements</li>
+                <li>Custody & maintenance</li>
+                <li>Protection orders</li>
+              </ul>
+              <a class="btn btnPrimary" href="contact.html">Speak confidentially</a>
+            </div>
+          </article>
+
+          <article class="serviceRow" id="estates">
+            <div class="rowImg rowImg4" aria-hidden="true"></div>
+            <div class="rowCopy">
+              <h2>Deceased Estates</h2>
+              <p class="muted">Administration of estates with professionalism, empathy and thorough attention to detail.</p>
+              <ul class="checklist">
+                <li>Reporting and administration</li>
+                <li>Letters of Executorship/Authority support</li>
+                <li>Beneficiary communication & finalisation</li>
+              </ul>
+              <a class="btn btnPrimary" href="contact.html">Get help with an estate</a>
+            </div>
+          </article>
+
         </div>
       </div>
+    </section>
 
-      <div class="callout" style="margin-top:18px;">
-        <h3>Not sure what you need?</h3>
-        <p>Send a brief description and we’ll respond with recommended next steps.</p>
-        <a class="btn primary" href="contact.html">Contact the Firm</a>
+    <section class="cta">
+      <div class="container ctaBox">
+        <div>
+          <h2>Not sure which service applies?</h2>
+          <p class="muted">Send a message and we’ll guide you to the right next step.</p>
+        </div>
+        <a class="btn btnGold" href="contact.html">Contact us</a>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
   <footer class="footer">
-    <div class="container row">
-      <div>© <span id="yr"></span> Sacks Law Firm. All rights reserved.</div>
-      <div><a href="index.html">Home</a> • <a href="about.html">About</a> • <a href="contact.html">Contact</a></div>
+    <div class="container footGrid">
+      <div class="muted tiny">© <span id="yr"></span> Sacks Law Firm</div>
+      <div class="footLinks">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
     </div>
   </footer>
-  <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+
+  <script>
+    document.getElementById('yr').textContent = new Date().getFullYear();
+    const btn = document.getElementById('menuBtn');
+    const menu = document.getElementById('menu');
+    btn.addEventListener('click', () => {
+      const open = menu.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      btn.classList.toggle('open', open);
+    });
+  </script>
 </body>
 </html>
 

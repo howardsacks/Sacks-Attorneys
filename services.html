@@ -4,30 +4,83 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Services | Sacks Law Firm</title>
-  <style>
-    body { font-family: Arial, sans-serif; margin: 0; }
-    nav { padding:20px 40px; border-bottom:1px solid #eee; }
-    nav a { margin-right:15px; text-decoration:none; font-weight:600; color:#1a365d; }
-    .wrap { padding:40px; }
-    ul { line-height: 2; }
-  </style>
+  <meta name="description" content="Legal services: conveyancing, litigation, family law and deceased estates." />
+  <link rel="canonical" href="https://howardsacks.github.io/Sacks-Attorneys/services.html" />
+  <meta name="robots" content="index,follow" />
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="services.html">Services</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+  <header class="topbar">
+    <div class="container nav">
+      <a class="brand" href="index.html">
+        <div class="brand-mark">SL</div>
+        <div>
+          <div class="brand-name">Sacks Law Firm</div>
+          <div class="brand-tag">Johannesburg Attorneys & Conveyancers</div>
+        </div>
+      </a>
 
-  <div class="wrap">
-    <h1>Our Legal Services</h1>
-    <ul>
-      <li>Conveyancing</li>
-      <li>Litigation</li>
-      <li>Family Law</li>
-      <li>Deceased Estates</li>
-    </ul>
-  </div>
+      <nav class="menu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a class="active" href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <a class="cta" href="contact.html">Book a Consultation</a>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Services</h2>
+        <p>Select a service area below — we’ll guide you on the best next step.</p>
+      </div>
+
+      <div class="grid">
+        <div class="card col-6">
+          <span class="badge">Conveyancing</span>
+          <h3>Property Transfers & Related Work</h3>
+          <p>Transfers, bond registrations, compliance documents, and transaction support.</p>
+        </div>
+
+        <div class="card col-6">
+          <span class="badge">Litigation</span>
+          <h3>Disputes & Court Representation</h3>
+          <p>Claims, defence, negotiations, and procedure-driven representation.</p>
+        </div>
+
+        <div class="card col-6">
+          <span class="badge">Family Law</span>
+          <h3>Family Matters</h3>
+          <p>Divorce, parenting plans, maintenance, and protection orders.</p>
+        </div>
+
+        <div class="card col-6">
+          <span class="badge">Deceased Estates</span>
+          <h3>Estate Administration</h3>
+          <p>Guidance through reporting, administration, and documentation.</p>
+        </div>
+      </div>
+
+      <div class="callout" style="margin-top:18px;">
+        <h3>Not sure what you need?</h3>
+        <p>Send a brief description and we’ll respond with recommended next steps.</p>
+        <a class="btn primary" href="contact.html">Contact the Firm</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container row">
+      <div>© <span id="yr"></span> Sacks Law Firm. All rights reserved.</div>
+      <div><a href="index.html">Home</a> • <a href="about.html">About</a> • <a href="contact.html">Contact</a></div>
+    </div>
+  </footer>
+  <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
 </body>
 </html>
+
+

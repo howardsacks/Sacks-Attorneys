@@ -1,83 +1,140 @@
 
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-ZA">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Contact | Sacks Law Firm</title>
-  <meta name="description" content="Contact Sacks Law Firm in Johannesburg. Request a call back or send a message." />
-  <link rel="canonical" href="https://howardsacks.github.io/Sacks-Attorneys/contact.html" />
+  <meta name="description" content="Contact Sacks Law Firm — Johannesburg Attorneys & Conveyancers. Request a call back or send an enquiry." />
+  <link rel="canonical" href="https://howardsacks.github.io/Sacks-Attorneys/v3/contact.html" />
   <meta name="robots" content="index,follow" />
+
+  <!-- Google Analytics (replace GA_MEASUREMENT_ID with your real ID) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'GA_MEASUREMENT_ID');
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600;800&display=swap" rel="stylesheet">
 </head>
+
 <body>
   <header class="topbar">
-    <div class="container nav">
+    <div class="container navwrap">
       <a class="brand" href="index.html">
-        <div class="brand-mark">SL</div>
-        <div>
-          <div class="brand-name">Sacks Law Firm</div>
-          <div class="brand-tag">Johannesburg Attorneys & Conveyancers</div>
+        <div class="brandMark">SL</div>
+        <div class="brandText">
+          <div class="brandName">Sacks Law Firm</div>
+          <div class="brandTag">Johannesburg Attorneys & Conveyancers</div>
         </div>
       </a>
 
-      <nav class="menu">
+      <button class="menuBtn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="menu" id="menu">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="services.html">Services</a>
         <a class="active" href="contact.html">Contact</a>
       </nav>
-
-      <a class="cta" href="contact.html">Book a Consultation</a>
     </div>
   </header>
 
-  <section class="section">
-    <div class="container">
-      <div class="section-title">
-        <h2>Contact</h2>
-        <p>Send a message — we’ll respond as soon as possible.</p>
+  <main>
+    <section class="pageHero">
+      <div class="container">
+        <p class="kicker">Fast response • Clear next step</p>
+        <h1>Contact</h1>
+        <p class="lead muted">Replace the details below with your real phone, email, address and form link.</p>
       </div>
+    </section>
 
-      <div class="split">
-        <div class="card">
-          <h3>Request a call back</h3>
+    <section class="section">
+      <div class="container split">
+        <div class="splitCopy">
+          <h2>Request a call back</h2>
+          <p class="muted">This simple form uses mailto (works on any static site). You can later replace with a proper form service.</p>
 
-          <!-- This uses mailto (works on GitHub Pages). Replace the email address. -->
-          <form class="form" action="mailto:YOUR_EMAIL@example.com" method="post" enctype="text/plain">
-            <input class="input" name="name" placeholder="Your name" required />
-            <input class="input" name="phone" placeholder="Phone number" required />
-            <input class="input" name="email" type="email" placeholder="Email address" required />
-            <textarea class="input" name="message" placeholder="Briefly describe your matter..." required></textarea>
-            <button class="btn primary" type="submit">Send Message</button>
-            <div class="small">Tip: Replace <strong>YOUR_EMAIL@example.com</strong> with your real email.</div>
+          <form class="form" action="mailto:info@sackslaw.co.za" method="post" enctype="text/plain">
+            <label>
+              Full name
+              <input name="name" type="text" required placeholder="Your name" />
+            </label>
+
+            <label>
+              Phone
+              <input name="phone" type="text" required placeholder="+27..." />
+            </label>
+
+            <label>
+              Email
+              <input name="email" type="email" placeholder="you@example.com" />
+            </label>
+
+            <label>
+              Message
+              <textarea name="message" rows="5" required placeholder="Briefly describe your matter..."></textarea>
+            </label>
+
+            <button class="btn btnGold" type="submit">Send</button>
+            <p class="muted tiny">Tip: Replace “info@sackslaw.co.za” above with your real email.</p>
           </form>
         </div>
 
-        <div class="callout">
-          <h3>Office details</h3>
-          <p style="margin-bottom:12px;">
-            <strong>Johannesburg</strong><br/>
-            Replace with your physical address.
-          </p>
-          <p style="margin-bottom:12px;">
-            <strong>Phone:</strong> +27 XX XXX XXXX<br/>
-            <strong>Email:</strong> YOUR_EMAIL@example.com
-          </p>
-          <p class="small">Hours: Mon–Fri 08:30–17:00 (by appointment)</p>
+        <div class="splitImg imgContact" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container">
+        <div class="grid3">
+          <div class="infoCard">
+            <h3>Phone</h3>
+            <p class="muted">+27 XX XXX XXXX</p>
+          </div>
+          <div class="infoCard">
+            <h3>Email</h3>
+            <p class="muted">info@sackslaw.co.za</p>
+          </div>
+          <div class="infoCard">
+            <h3>Location</h3>
+            <p class="muted">Johannesburg • By appointment</p>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
   <footer class="footer">
-    <div class="container row">
-      <div>© <span id="yr"></span> Sacks Law Firm. All rights reserved.</div>
-      <div><a href="index.html">Home</a> • <a href="about.html">About</a> • <a href="services.html">Services</a></div>
+    <div class="container footGrid">
+      <div class="muted tiny">© <span id="yr"></span> Sacks Law Firm</div>
+      <div class="footLinks">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+      </div>
     </div>
   </footer>
-  <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+
+  <script>
+    document.getElementById('yr').textContent = new Date().getFullYear();
+    const btn = document.getElementById('menuBtn');
+    const menu = document.getElementById('menu');
+    btn.addEventListener('click', () => {
+      const open = menu.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      btn.classList.toggle('open', open);
+    });
+  </script>
 </body>
 </html>
+

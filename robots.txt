@@ -1,7 +1,5 @@
 User-agent: *
-Allow: /
-Sitemap: https://www.sackslaw.co.za/sitemap.xml
+Disallow:
 
-# Crawl-delay: 10
-# Disallow: /admin/
-# Disallow: /private/
+Sitemap: https://howardsacks.github.io/Sacks-Attorneys/sitemap.xml
+Host: howardsacks.github.io

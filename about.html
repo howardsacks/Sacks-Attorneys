@@ -4,24 +4,73 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About | Sacks Law Firm</title>
-  <style>
-    body { font-family: Arial, sans-serif; margin: 0; }
-    nav { padding:20px 40px; border-bottom:1px solid #eee; }
-    nav a { margin-right:15px; text-decoration:none; font-weight:600; color:#1a365d; }
-    .wrap { padding:40px; }
-  </style>
+  <meta name="description" content="About Sacks Law Firm — Johannesburg attorneys focused on practical strategy, professionalism and results." />
+  <link rel="canonical" href="https://howardsacks.github.io/Sacks-Attorneys/about.html" />
+  <meta name="robots" content="index,follow" />
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="services.html">Services</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+  <header class="topbar">
+    <div class="container nav">
+      <a class="brand" href="index.html">
+        <div class="brand-mark">SL</div>
+        <div>
+          <div class="brand-name">Sacks Law Firm</div>
+          <div class="brand-tag">Johannesburg Attorneys & Conveyancers</div>
+        </div>
+      </a>
 
-  <div class="wrap">
-    <h1>About Sacks Law Firm</h1>
-    <p>We provide trusted legal services in Johannesburg and surrounding areas.</p>
-  </div>
+      <nav class="menu">
+        <a href="index.html">Home</a>
+        <a class="active" href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <a class="cta" href="contact.html">Book a Consultation</a>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-title">
+        <h2>About the Firm</h2>
+        <p>Professional, discreet and committed to clear legal outcomes.</p>
+      </div>
+
+      <div class="split">
+        <div class="card">
+          <h3>Our approach</h3>
+          <p>
+            We provide practical legal guidance grounded in strategy, clarity and responsiveness.
+            Clients value our direct communication and meticulous handling of documents and process.
+          </p>
+          <p style="margin-top:12px;">
+            <strong>Replace this text</strong> with your true firm story, credentials, and focus areas.
+          </p>
+          <div class="mini" style="margin-top:14px;">
+            <span class="badge">Clear advice</span>
+            <span class="badge">Professional standards</span>
+            <span class="badge">Client-first service</span>
+          </div>
+        </div>
+
+        <div class="photo">
+          <img alt="Legal documents and pen" src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1400&q=80">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container row">
+      <div>© <span id="yr"></span> Sacks Law Firm. All rights reserved.</div>
+      <div><a href="index.html">Home</a> • <a href="services.html">Services</a> • <a href="contact.html">Contact</a></div>
+    </div>
+  </footer>
+  <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
 </body>
 </html>
+
+

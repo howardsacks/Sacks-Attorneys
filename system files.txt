@@ -1,0 +1,22 @@
+
+## **File 6: `netlify.toml`** (Optional - for Netlify deployment)
+```toml
+[build]
+  publish = "."
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Netlify Forms configuration
+[context.production.environment]
+  FORM_NAME = "contact"
+
+# Security headers
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"

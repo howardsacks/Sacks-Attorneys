@@ -6,7 +6,7 @@
   <title>Sacks Law Firm | Expert Legal Representation in Johannesburg</title>
   <meta name="description" content="Johannesburg law firm specializing in conveyancing and legal services. 15+ years experience. Registered with Law Society of South Africa. Free consultation.">
 
-  <!-- Google Analytics (KEEP ONCE, INSIDE HEAD) -->
+  <!-- Google Analytics (replace GA_MEASUREMENT_ID with your real ID) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -15,44 +15,56 @@
     gtag('config', 'GA_MEASUREMENT_ID');
   </script>
 
-  <!-- SEO TAGS -->
+  <!-- SEO -->
   <link rel="canonical" href="https://howardsacks.github.io/Sacks-Attorneys/" />
   <meta name="robots" content="index,follow" />
   <link rel="sitemap" type="application/xml" title="Sitemap" href="https://howardsacks.github.io/Sacks-Attorneys/sitemap.xml" />
 
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <!-- Google Fonts -->
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <style>
-    :root {
-      --text-color: #444444;
-      --white: #ffffff;
+    :root{
+      --primary:#1a365d;
+      --text:#444;
+      --bg:#fff;
+      --border:#eee;
     }
-    body {
-      font-family: 'Inter', sans-serif;
-      line-height: 1.6;
-      color: var(--text-color);
-      background-color: var(--white);
-      margin: 0;
+    body{
+      font-family:'Inter',sans-serif;
+      line-height:1.6;
+      color:var(--text);
+      background:var(--bg);
+      margin:0;
     }
-    nav {
-      padding: 20px 40px;
-      border-bottom: 1px solid #eee;
+    nav{
+      padding:20px 40px;
+      border-bottom:1px solid var(--border);
     }
-    nav a {
-      margin-right: 15px;
-      text-decoration: none;
-      color: #1a365d;
-      font-weight: 600;
+    nav a{
+      margin-right:15px;
+      text-decoration:none;
+      color:var(--primary);
+      font-weight:600;
+    }
+    .wrap{
+      padding:40px;
+    }
+    h1{
+      font-family:'Playfair Display',serif;
+      margin:0 0 10px 0;
+      font-size:56px;
+    }
+    p{
+      margin:0;
+      font-size:18px;
     }
   </style>
 </head>
 
 <body>
 
-  <!-- ✅ MENU (THIS MUST BE IN BODY) -->
+  <!-- MENU -->
   <nav>
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
@@ -60,8 +72,11 @@
     <a href="contact.html">Contact</a>
   </nav>
 
-  <h1 style="padding:40px;">Sacks Law Firm</h1>
-  <p style="padding:0 40px;">Welcome to our website.</p>
+  <!-- PAGE CONTENT -->
+  <div class="wrap">
+    <h1>Sacks Law Firm</h1>
+    <p>Welcome to our website.</p>
+  </div>
 
   <script>
     // Safe JS (won't crash if menu elements aren't there yet)
@@ -83,6 +98,7 @@
 
 </body>
 </html>
+
 
 
 

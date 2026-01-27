@@ -482,10 +482,6 @@ input:focus, textarea:focus{border-color:rgba(212,175,55,.8)}
 }
 .footLinks a:hover{text-decoration:underline}
 /* SEO content block (homepage) */
-#content {
-  max-width: var(--container);
-  margin: 0 auto;
-  padding: 16px 16px 0 16px;
 }
 
 #content h1 {
@@ -517,4 +513,5 @@ input:focus, textarea:focus{border-color:rgba(212,175,55,.8)}
   color: var(--text);
   line-height: 1.55;
 }
+
 

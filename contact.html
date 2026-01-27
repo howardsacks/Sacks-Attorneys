@@ -1,15 +1,24 @@
 
+
 <!doctype html>
 <html lang="en-ZA">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Contact | Sacks Law Firm</title>
-  <meta name="description" content="Contact Sacks Law Firm — Johannesburg Attorneys & Conveyancers. Request a call back or send an enquiry." />
-  <link rel="canonical" href="https://howardsacks.github.io/Sacks-Attorneys/v3/contact.html" />
-  <meta name="robots" content="index,follow" />
 
-  <!-- Google Analytics (replace GA_MEASUREMENT_ID with your real ID) -->
+  <title>Contact a Johannesburg Attorney | Sacks Law Firm</title>
+  <meta name="description" content="Contact Sacks Law Firm — Johannesburg attorneys & lawyers (Bedfordview). Call 010 007 5151 to request a consultation for conveyancing, litigation, family law or deceased estates." />
+
+  <link rel="canonical" href="https://howardsacks.github.io/Sacks-Attorneys/contact.html" />
+  <meta name="robots" content="index,follow" />
+  <link rel="sitemap" type="application/xml" href="https://howardsacks.github.io/Sacks-Attorneys/sitemap.xml" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+
   <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -18,98 +27,120 @@
     gtag('config', 'GA_MEASUREMENT_ID');
   </script>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="styles.css" />
+  <!-- Schema: ContactPage + LegalService -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"ContactPage",
+    "name":"Contact Sacks Law Firm",
+    "url":"https://howardsacks.github.io/Sacks-Attorneys/contact.html",
+    "about":{
+      "@type":"LegalService",
+      "name":"Sacks Law Firm",
+      "url":"https://howardsacks.github.io/Sacks-Attorneys/",
+      "telephone":"+27100075151",
+      "address":{
+        "@type":"PostalAddress",
+        "streetAddress":"Amr Office Park, 3 Concorde E Rd",
+        "addressLocality":"Bedfordview",
+        "addressRegion":"Gauteng",
+        "postalCode":"2008",
+        "addressCountry":"ZA"
+      },
+      "areaServed":[
+        {"@type":"City","name":"Johannesburg"},
+        {"@type":"City","name":"Bedfordview"},
+        {"@type":"City","name":"Germiston"}
+      ]
+    }
+  }
+  </script>
 </head>
 
 <body>
-  <header class="topbar">
+  <header class="topbar" role="banner">
     <div class="container navwrap">
-      <a class="brand" href="index.html">
+      <a class="brand" href="index.html" aria-label="Sacks Law Firm Home">
         <div class="brandMark">SL</div>
         <div class="brandText">
           <div class="brandName">Sacks Law Firm</div>
-          <div class="brandTag">Johannesburg Attorneys & Conveyancers</div>
+          <div class="brandTag">Johannesburg Attorneys &amp; Conveyancers</div>
         </div>
       </a>
 
-      <button class="menuBtn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
+      <button class="menuBtn" id="menuBtn" aria-label="Open menu" aria-expanded="false" type="button">
         <span></span><span></span><span></span>
       </button>
 
-      <nav class="menu" id="menu">
+      <nav class="menu" id="menu" role="navigation" aria-label="Main menu">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="services.html">Services</a>
-        <a class="active" href="contact.html">Contact</a>
+        <a class="active btn btnGold" href="contact.html">Book a Consultation</a>
       </nav>
     </div>
   </header>
 
   <main>
-    <section class="pageHero">
+    <section class="section">
       <div class="container">
         <p class="kicker">Fast response • Clear next step</p>
-        <h1>Contact</h1>
-        <p class="lead muted">Replace the details below with your real phone, email, address and form link.</p>
-      </div>
-    </section>
+        <h1>Contact a Johannesburg attorney</h1>
+        <p class="lead">
+          Tell us what you need (conveyancing, litigation, family law or deceased estates) and we’ll guide you on the next step.
+        </p>
 
-    <section class="section">
-      <div class="container split">
-        <div class="splitCopy">
-          <h2>Request a call back</h2>
-          <p class="muted">This simple form uses mailto (works on any static site). You can later replace with a proper form service.</p>
+        <div class="grid4" style="margin-top:18px;">
+          <article class="serviceCard">
+            <div class="serviceBody">
+              <h3>Call</h3>
+              <p><strong>010 007 5151</strong></p>
+              <p class="muted">Mon–Fri, 08:30–17:00</p>
+              <a href="tel:+27100075151">Call now</a>
+            </div>
+          </article>
 
-          <form class="form" action="mailto:info@sackslaw.co.za" method="post" enctype="text/plain">
-            <label>
-              Full name
-              <input name="name" type="text" required placeholder="Your name" />
-            </label>
+          <article class="serviceCard">
+            <div class="serviceBody">
+              <h3>Email</h3>
+              <p><strong>info@sackslaw.co.za</strong></p>
+              <p class="muted">Replace if different</p>
+              <a href="mailto:info@sackslaw.co.za">Email us</a>
+            </div>
+          </article>
 
-            <label>
-              Phone
-              <input name="phone" type="text" required placeholder="+27..." />
-            </label>
+          <article class="serviceCard">
+            <div class="serviceBody">
+              <h3>Address</h3>
+              <p><strong>Amr Office Park</strong><br/>3 Concorde E Rd<br/>Bedfordview, Germiston, 2008</p>
+              <p class="muted">By appointment</p>
+            </div>
+          </article>
 
-            <label>
-              Email
-              <input name="email" type="email" placeholder="you@example.com" />
-            </label>
-
-            <label>
-              Message
-              <textarea name="message" rows="5" required placeholder="Briefly describe your matter..."></textarea>
-            </label>
-
-            <button class="btn btnGold" type="submit">Send</button>
-            <p class="muted tiny">Tip: Replace “info@sackslaw.co.za” above with your real email.</p>
-          </form>
+          <article class="serviceCard">
+            <div class="serviceBody">
+              <h3>Areas served</h3>
+              <p>Johannesburg • Bedfordview • Germiston • Gauteng</p>
+              <p class="muted">And surrounding areas</p>
+            </div>
+          </article>
         </div>
 
-        <div class="splitImg imgContact" aria-hidden="true"></div>
-      </div>
-    </section>
-
-    <section class="section alt">
-      <div class="container">
-        <div class="grid3">
-          <div class="infoCard">
-            <h3>Phone</h3>
-            <p class="muted">+27 XX XXX XXXX</p>
-          </div>
-          <div class="infoCard">
-            <h3>Email</h3>
-            <p class="muted">info@sackslaw.co.za</p>
-          </div>
-          <div class="infoCard">
-            <h3>Location</h3>
-            <p class="muted">Johannesburg • By appointment</p>
+        <div class="section" style="padding-top:18px;">
+          <div class="container" style="padding:0;">
+            <div class="ctaBox" style="align-items:flex-start;">
+              <div>
+                <h2>Quick message template</h2>
+                <p class="muted">Copy/paste into email or WhatsApp:</p>
+                <p>
+                  “Hi Sacks Law Firm, I need help with [service]. My matter relates to [short summary]. Please advise next steps and documents needed.”
+                </p>
+              </div>
+              <a class="btn btnGold" href="services.html">View services</a>
+            </div>
           </div>
         </div>
+
       </div>
     </section>
   </main>
@@ -119,8 +150,8 @@
       <div class="muted tiny">© <span id="yr"></span> Sacks Law Firm</div>
       <div class="footLinks">
         <a href="index.html">Home</a>
-        <a href="services.html">Services</a>
         <a href="about.html">About</a>
+        <a href="services.html">Services</a>
       </div>
     </div>
   </footer>

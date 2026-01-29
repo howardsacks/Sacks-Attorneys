@@ -522,6 +522,16 @@ input:focus, textarea:focus{border-color:rgba(212,175,55,.8)}
   font-size: 1.1rem;
   letter-spacing: 0.5px;
 }
+/* FORCE phone number onto one line (overrides everything) */
+.phoneOneLine {
+  white-space: nowrap !important;
+  word-break: keep-all !important;
+  overflow-wrap: normal !important;
+  letter-spacing: 0.5px;
+  line-height: 1.2;
+}
+
+
 
 
 

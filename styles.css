@@ -513,5 +513,15 @@ input:focus, textarea:focus{border-color:rgba(212,175,55,.8)}
   color: var(--text);
   line-height: 1.55;
 }
+/* FIX: Phone number wrapping */
+.miniValue,
+.cardMini .miniValue {
+  white-space: nowrap;
+  word-break: normal;
+  overflow-wrap: normal;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+}
+
 
 

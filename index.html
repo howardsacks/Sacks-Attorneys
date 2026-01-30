@@ -1,207 +1,667 @@
 
 
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-ZA">
 <head>
-<meta charset="UTF-8">
-<title>Sacks Law Firm | Lawyer Johannesburg | Attorney in Johannesburg</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
 
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Sacks Law Firm – trusted lawyer Johannesburg and attorney in Johannesburg providing conveyancing, litigation and family law services.">
+  <title>Sacks Law Firm | Lawyer Johannesburg | Attorney in Johannesburg</title>
+  <meta name="description" content="Sacks Law Firm is a Johannesburg attorney and lawyer practice offering conveyancing, litigation, family law, and deceased estates services." />
+  <link rel="canonical" href="https://sackattorney.co.za/" />
+  <meta name="robots" content="index,follow" />
 
-<link rel="canonical" href="https://sackattorney.co.za/">
+  <!-- Allow external images -->
+  <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self' https: data:;
+                 img-src 'self' https: data: blob:;
+                 style-src 'self' 'unsafe-inline' https:;
+                 script-src 'self' 'unsafe-inline' https:;">
 
-<style>
-body{
-  margin:0;
-  font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
-  background:#0c1420;
-  color:#e9edf2;
-}
+  <style>
+    :root{
+      --bg:#0b1220;
+      --panel: rgba(255,255,255,.06);
+      --panel2: rgba(255,255,255,.04);
+      --line: rgba(255,255,255,.12);
+      --text:#eaf0ff;
+      --muted:#b8c3df;
+      --brand:#f5c25c;
+      --shadow: 0 18px 45px rgba(0,0,0,.40);
+      --radius:22px;
+      --max:1180px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background:
+        radial-gradient(1100px 600px at 10% 0%, rgba(103,183,255,.16), transparent 60%),
+        radial-gradient(900px 600px at 92% 12%, rgba(245,194,92,.16), transparent 55%),
+        var(--bg);
+      color:var(--text);
+      line-height:1.55;
+    }
+    a{color:inherit; text-decoration:none}
+    .wrap{max-width:var(--max); margin:0 auto; padding:0 18px}
+    header{
+      position:sticky; top:0; z-index:80;
+      background: rgba(11,18,32,.62);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+    }
+    .topbar{
+      display:flex; align-items:center; justify-content:space-between;
+      gap:14px; padding:14px 0;
+    }
+    .brand{
+      display:flex; align-items:center; gap:10px;
+      font-weight:800;
+    }
+    .logo{
+      width:40px;height:40px;border-radius:14px;
+      display:grid;place-items:center;
+      border:1px solid var(--line);
+      background: linear-gradient(135deg, rgba(245,194,92,.20), rgba(103,183,255,.16));
+      box-shadow: 0 10px 22px rgba(0,0,0,.25);
+    }
+    .brand small{display:block; font-weight:700; color:var(--muted)}
+    nav{display:flex; gap:12px; flex-wrap:wrap; justify-content:flex-end; align-items:center}
+    nav a{
+      color:var(--muted);
+      padding:8px 10px;
+      border-radius:14px;
+      transition:.2s ease;
+      font-weight:700;
+    }
+    nav a:hover{color:var(--text); background: rgba(255,255,255,.07)}
+    .cta{display:flex; gap:10px; align-items:center}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      gap:10px; white-space:nowrap;
+      padding:10px 14px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.06);
+      color:var(--text);
+      font-weight:800;
+      transition:.18s ease;
+    }
+    .btn:hover{transform:translateY(-1px); background: rgba(255,255,255,.09)}
+    .btn.primary{
+      background: linear-gradient(135deg, rgba(245,194,92,.95), rgba(245,194,92,.70));
+      color:#171104;
+      border-color: rgba(245,194,92,.38);
+    }
 
-header{
-  position:sticky;
-  top:0;
-  background:rgba(10,18,32,.85);
-  backdrop-filter: blur(10px);
-  border-bottom:1px solid rgba(255,255,255,.08);
-  z-index:100;
-}
+    /* HERO */
+    .hero{padding:30px 0 18px}
+    .heroGrid{
+      display:grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap:18px;
+      align-items:stretch;
+    }
+    .panel{
+      background: linear-gradient(180deg, var(--panel), var(--panel2));
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+    .heroLeft{padding:26px}
+    .kicker{
+      display:inline-flex; gap:10px; align-items:center;
+      padding:8px 12px;
+      border:1px solid var(--line);
+      border-radius:999px;
+      background: rgba(255,255,255,.05);
+      color:var(--muted);
+      font-weight:800;
+    }
+    .kicker b{color:var(--brand)}
+    h1{
+      margin:14px 0 10px;
+      font-size: clamp(30px, 3.2vw, 48px);
+      line-height:1.08;
+      letter-spacing:-.5px;
+    }
+    .sub{color:var(--muted); font-size:16.5px; max-width:60ch}
+    .heroActions{display:flex; gap:12px; flex-wrap:wrap; margin-top:18px}
+    .heroRight{overflow:hidden; position:relative}
+    .heroImg{
+      width:100%; height:100%;
+      min-height:320px;
+      object-fit:cover;
+      display:block;
+      border-radius: var(--radius);
+      filter:saturate(1.05) contrast(1.05);
+    }
+    .heroBadge{
+      position:absolute; left:14px; right:14px; bottom:14px;
+      padding:14px;
+      border-radius:18px;
+      background: rgba(11,18,32,.72);
+      border:1px solid var(--line);
+      backdrop-filter: blur(10px);
+    }
+    .heroBadge small{color:var(--muted)}
 
-.navwrap{
-  max-width:1200px;
-  margin:auto;
-  padding:14px 20px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-}
+    section{padding:26px 0}
+    .sectionHead{
+      display:flex; justify-content:space-between; align-items:flex-end;
+      gap:14px; margin-bottom:12px;
+    }
+    .sectionHead h2{
+      margin:0;
+      font-size: clamp(22px, 2.3vw, 32px);
+      letter-spacing:-.3px;
+    }
+    .sectionHead p{margin:0; color:var(--muted); max-width:64ch}
 
-nav a{
-  color:#dfe7f2;
-  text-decoration:none;
-  margin-left:18px;
-  font-weight:500;
-}
+    /* SERVICES GRID */
+    .grid3{display:grid; grid-template-columns: repeat(3, 1fr); gap:14px}
+    .card{
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.05);
+      border:1px solid var(--line);
+      box-shadow: 0 12px 30px rgba(0,0,0,.25);
+      overflow:hidden;
+    }
+    .cardBody{padding:16px 16px 18px}
+    .card h3{margin:8px 0 6px; font-size:18px}
+    .card p{margin:0; color:var(--muted)}
+    .card-img{
+      width:100%;
+      height:190px;
+      object-fit:cover;
+      display:block;
+      filter:saturate(1.05) contrast(1.05);
+    }
+    .pill{
+      display:inline-flex; align-items:center; gap:10px;
+      color:var(--muted);
+      border:1px solid rgba(255,255,255,.16);
+      padding:7px 10px;
+      border-radius:999px;
+      background: rgba(0,0,0,.12);
+      font-weight:800;
+      font-size:13px;
+    }
+    .pill i{
+      width:10px; height:10px; border-radius:99px;
+      background: var(--brand);
+      box-shadow: 0 0 0 6px rgba(245,194,92,.14);
+      display:inline-block;
+    }
 
-nav a:hover{color:#ffd27a}
+    /* APPROACH */
+    .miniGrid{display:grid; grid-template-columns: repeat(3, 1fr); gap:14px}
+    .mini{padding:18px}
+    .mini h3{margin:0 0 6px; font-size:18px}
+    .mini p{margin:0; color:var(--muted)}
 
-.wrap{
-  max-width:1200px;
-  margin:auto;
-  padding:70px 20px;
-}
+    /* ARTICLES */
+    .articlesGrid{display:grid; grid-template-columns: 1fr 1fr; gap:14px}
+    details.article{
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.05);
+      border:1px solid var(--line);
+      box-shadow: 0 12px 30px rgba(0,0,0,.25);
+      overflow:hidden;
+    }
+    summary{
+      list-style:none;
+      cursor:pointer;
+      padding:18px;
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap:12px;
+    }
+    summary::-webkit-details-marker{display:none}
+    .sumTitle{font-weight:900; font-size:18px}
+    .sumMeta{color:var(--muted); font-size:13.5px; margin-top:4px}
+    .chev{
+      flex:0 0 auto;
+      width:36px;height:36px;border-radius:14px;
+      display:grid;place-items:center;
+      border:1px solid rgba(255,255,255,.16);
+      background: rgba(0,0,0,.10);
+    }
+    details[open] .chev{transform: rotate(180deg)}
+    .articleBody{
+      padding:0 18px 18px;
+      color:var(--muted);
+    }
+    .articleBody h4{color:var(--text); margin:14px 0 6px}
+    .articleBody p{margin:0 0 10px}
+    .articleBody ul, .articleBody ol{margin:8px 0 12px 18px}
 
-h1,h2,h3{color:#ffffff}
+    /* CONTACT */
+    .contactGrid{display:grid; grid-template-columns: 1fr 1fr; gap:14px; align-items:start}
+    form{display:grid; gap:10px}
+    label{font-weight:900; color:var(--muted); font-size:14px}
+    input, textarea, select{
+      width:100%;
+      padding:12px;
+      border-radius:14px;
+      border:1px solid rgba(255,255,255,.16);
+      background: rgba(0,0,0,.14);
+      color:var(--text);
+      outline:none;
+    }
+    textarea{min-height:120px; resize:vertical}
+    .help{color:var(--muted); font-size:13.5px}
+    footer{
+      border-top:1px solid var(--line);
+      padding:18px 0 30px;
+      color:var(--muted);
+    }
+    .footRow{display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap}
 
-.sectionHead{
-  margin-bottom:30px;
-}
-
-.card{
-  background:rgba(255,255,255,.05);
-  border:1px solid rgba(255,255,255,.08);
-  border-radius:18px;
-  padding:22px;
-  margin-bottom:16px;
-}
-
-.btn{
-  display:inline-block;
-  padding:10px 18px;
-  border-radius:999px;
-  background:#f2b75e;
-  color:#101522;
-  text-decoration:none;
-  font-weight:600;
-}
-.btn:hover{opacity:.9}
-</style>
+    @media (max-width: 980px){
+      .heroGrid{grid-template-columns:1fr}
+      .grid3{grid-template-columns:1fr}
+      .miniGrid{grid-template-columns:1fr}
+      .articlesGrid{grid-template-columns:1fr}
+      .contactGrid{grid-template-columns:1fr}
+    }
+  </style>
 </head>
 
 <body>
+  <header>
+    <div class="wrap">
+      <div class="topbar">
+        <a class="brand" href="#home">
+          <div class="logo">⚖️</div>
+          <div>
+            <div>Sacks Law Firm</div>
+            <small>Johannesburg Attorneys</small>
+          </div>
+        </a>
 
-<header>
-  <div class="navwrap">
-    <strong>Sacks Law Firm – Johannesburg Attorneys</strong>
-    <nav>
-      <a href="#services">Services</a>
-      <a href="#approach">Approach</a>
-      <a href="#about">About</a>
-      <a href="#articles">Articles</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </div>
-</header>
+        <nav aria-label="Primary navigation">
+          <a href="#services">Services</a>
+          <a href="#approach">Approach</a>
+          <a href="#about">About</a>
+          <a href="#articles">Articles</a>
+          <a href="#contact">Contact</a>
+        </nav>
 
-<section class="wrap">
-  <h1>Lawyer Johannesburg – trusted attorneys for clear legal solutions</h1>
-  <p>
-    Sacks Law Firm is a professional <strong>lawyer Johannesburg</strong> practice offering practical,
-    reliable legal services. If you are looking for an experienced
-    <strong>attorney in Johannesburg</strong>, we provide clear advice and structured legal support.
-  </p>
-</section>
+        <div class="cta">
+          <a class="btn" href="#contact">Get a Call Back</a>
+          <a class="btn primary" href="tel:+27110000000">Call Now</a>
+        </div>
+      </div>
+    </div>
+  </header>
 
-<section id="services" class="wrap">
-  <div class="sectionHead">
-    <h2>Our services</h2>
-    <p>Professional legal support from a lawyer Johannesburg and attorney in Johannesburg.</p>
-  </div>
+  <main>
+    <!-- HERO -->
+    <section id="home" class="hero">
+      <div class="wrap">
+        <div class="heroGrid">
+          <div class="panel heroLeft">
+            <div class="kicker"><b>Lawyer Johannesburg</b> • Attorney in Johannesburg</div>
+            <h1>Practical legal strategy. Professional execution.</h1>
+            <p class="sub">
+              Sacks Law Firm provides client-first legal support across conveyancing, litigation,
+              family law and deceased estates — with clear next steps and responsive updates.
+            </p>
+            <div class="heroActions">
+              <a class="btn primary" href="#contact">Book a Consultation</a>
+              <a class="btn" href="#services">View Services</a>
+              <a class="btn" href="#articles">Read Articles</a>
+            </div>
+          </div>
 
-  <div class="card">
-    <h3>Conveyancing</h3>
-    <p>Property transfers, bond registrations and sectional title matters handled by a lawyer Johannesburg.</p>
-  </div>
+          <div class="panel heroRight">
+            <img class="heroImg"
+              src="https://images.unsplash.com/photo-1528747045269-390fe33c19f2?auto=format&fit=crop&w=2400&q=85"
+              alt="Attorney in Johannesburg consultation"
+              loading="eager" decoding="async" referrerpolicy="no-referrer">
+            <div class="heroBadge">
+              <strong>Serving Johannesburg & Gauteng</strong><br>
+              <small>Consultations by appointment • Call or request a call-back below.</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <div class="card">
-    <h3>Litigation</h3>
-    <p>Dispute resolution and court preparation by an experienced attorney in Johannesburg.</p>
-  </div>
+    <!-- SERVICES -->
+    <section id="services">
+      <div class="wrap">
+        <div class="sectionHead">
+          <div>
+            <h2>Our services</h2>
+            <p>Professional legal support from a lawyer Johannesburg and attorney in Johannesburg.</p>
+          </div>
+          <span class="pill"><i></i> Clear process</span>
+        </div>
 
-  <div class="card">
-    <h3>Family law</h3>
-    <p>Divorce, maintenance and parenting matters managed by a lawyer Johannesburg.</p>
-  </div>
+        <div class="grid3">
+          <div class="card">
+            <img class="card-img"
+              src="https://images.unsplash.com/photo-1528740561666-dc2479dc08ab?auto=format&fit=crop&w=2400&q=85"
+              alt="Conveyancing Johannesburg"
+              loading="lazy" decoding="async" referrerpolicy="no-referrer">
+            <div class="cardBody">
+              <div class="pill"><i></i> Property</div>
+              <h3>Conveyancing</h3>
+              <p>Property transfers, bond registrations and sectional title matters.</p>
+            </div>
+          </div>
 
-  <div class="card">
-    <h3>Deceased estates</h3>
-    <p>Estate administration guided by a professional attorney in Johannesburg.</p>
-  </div>
-</section>
+          <div class="card">
+            <img class="card-img"
+              src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=2400&q=85"
+              alt="Litigation attorney in Johannesburg"
+              loading="lazy" decoding="async" referrerpolicy="no-referrer">
+            <div class="cardBody">
+              <div class="pill"><i></i> Disputes</div>
+              <h3>Litigation</h3>
+              <p>Demand letters, negotiations, dispute strategy and court representation.</p>
+            </div>
+          </div>
 
-<section id="approach" class="wrap">
-  <div class="sectionHead">
-    <h2>Our approach</h2>
-    <p>A simple, clear process from your attorney in Johannesburg.</p>
-  </div>
+          <div class="card">
+            <img class="card-img"
+              src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=2400&q=85"
+              alt="Family law Johannesburg"
+              loading="lazy" decoding="async" referrerpolicy="no-referrer">
+            <div class="cardBody">
+              <div class="pill"><i></i> Family</div>
+              <h3>Family Law</h3>
+              <p>Divorce, maintenance, parenting matters and protection order guidance.</p>
+            </div>
+          </div>
 
-  <div class="card">
-    <h3>1. Understand your matter</h3>
-    <p>Your lawyer Johannesburg reviews the facts and documents and explains your options clearly.</p>
-  </div>
+          <div class="card">
+            <img class="card-img"
+              src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&w=2400&q=85"
+              alt="Deceased estates Johannesburg"
+              loading="lazy" decoding="async" referrerpolicy="no-referrer">
+            <div class="cardBody">
+              <div class="pill"><i></i> Estates</div>
+              <h3>Deceased Estates</h3>
+              <p>Estate administration with clear steps and careful handling.</p>
+            </div>
+          </div>
 
-  <div class="card">
-    <h3>2. Strategy and scope</h3>
-    <p>Your attorney in Johannesburg defines the legal steps, risks and timelines.</p>
-  </div>
+          <div class="card">
+            <img class="card-img"
+              src="https://images.unsplash.com/photo-1453945619913-79ec89a82c51?auto=format&fit=crop&w=2400&q=85"
+              alt="Contracts and drafting"
+              loading="lazy" decoding="async" referrerpolicy="no-referrer">
+            <div class="cardBody">
+              <div class="pill"><i></i> Drafting</div>
+              <h3>Contracts & Agreements</h3>
+              <p>Clear agreements designed to reduce risk and clarify obligations.</p>
+            </div>
+          </div>
 
-  <div class="card">
-    <h3>3. Execution and updates</h3>
-    <p>Your lawyer Johannesburg moves your matter forward and keeps you informed.</p>
-  </div>
-</section>
+          <div class="card">
+            <img class="card-img"
+              src="https://images.unsplash.com/photo-1554224154-22dec7ec8818?auto=format&fit=crop&w=2400&q=85"
+              alt="Legal consultation Johannesburg"
+              loading="lazy" decoding="async" referrerpolicy="no-referrer">
+            <div class="cardBody">
+              <div class="pill"><i></i> Advice</div>
+              <h3>Consultations</h3>
+              <p>Get a clear plan: options, timelines, risks and next steps.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<section id="about" class="wrap">
-  <div class="sectionHead">
-    <h2>About Sacks Law Firm</h2>
-  </div>
+    <!-- APPROACH -->
+    <section id="approach">
+      <div class="wrap">
+        <div class="sectionHead">
+          <div>
+            <h2>Our approach</h2>
+            <p>A structured 3-step method so you always know what’s happening and what comes next.</p>
+          </div>
+        </div>
 
-  <div class="card">
-    <p>
-      Sacks Law Firm is a Johannesburg based legal practice focused on practical outcomes.
-      Our team of lawyers and attorneys in Johannesburg assist individuals and businesses
-      with clear, reliable legal solutions.
-    </p>
-  </div>
-</section>
+        <div class="miniGrid">
+          <div class="panel mini">
+            <h3>1) Understand your matter</h3>
+            <p>We confirm key facts and documents, then outline your strongest path forward.</p>
+          </div>
+          <div class="panel mini">
+            <h3>2) Clear strategy & scope</h3>
+            <p>We define the work, likely outcomes, and risks with practical milestones.</p>
+          </div>
+          <div class="panel mini">
+            <h3>3) Execute & update</h3>
+            <p>We move the matter forward and keep you informed with concise updates.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<!-- ========================= -->
-<!--      ARTICLES SECTION     -->
-<!-- ========================= -->
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="wrap">
+        <div class="sectionHead">
+          <div>
+            <h2>About Sacks Law Firm</h2>
+            <p>Professional, modern legal support focused on clarity, discretion and preparation.</p>
+          </div>
+        </div>
+        <div class="panel" style="padding:18px;">
+          <p style="margin:0;color:var(--muted);">
+            We assist individuals and businesses across Johannesburg and Gauteng. If you need a
+            <strong>lawyer Johannesburg</strong> or an <strong>attorney in Johannesburg</strong>,
+            we provide clear advice, strong documentation, and practical next steps.
+          </p>
+        </div>
+      </div>
+    </section>
 
-<section id="articles" class="wrap">
-  <div class="sectionHead">
-    <h2>Legal articles – lawyer Johannesburg & attorney in Johannesburg</h2>
-    <p>
-      Helpful legal guides written by a lawyer Johannesburg and attorney in Johannesburg.
-    </p>
-  </div>
+    <!-- ARTICLES (BUILT INTO PAGE) -->
+    <section id="articles">
+      <div class="wrap">
+        <div class="sectionHead">
+          <div>
+            <h2>Articles</h2>
+            <p>Guides written for clients searching “lawyer Johannesburg” and “attorney in Johannesburg”.</p>
+          </div>
+          <a class="btn" href="#contact">Ask a question</a>
+        </div>
 
-  <div class="card">
-    <h3>Lawyer Johannesburg – how to choose the right attorney</h3>
-    <p>
-      When searching for a <strong>lawyer Johannesburg</strong>, it is important to focus on experience,
-      communication and practical legal guidance. A professional
-      <strong>attorney in Johannesburg</strong> will explain your legal options, risks and timeframes
-      before you proceed.
-    </p>
-    <p>
-      A reliable <strong>lawyer Johannesburg</strong> should review your documents carefully,
-      explain your rights in plain language and guide you through the correct legal process.
-    </p>
-  </div>
+        <div class="articlesGrid">
 
-  <div class="card">
-    <h3>Attorney in Johannesburg – what to expect from your legal representative</h3>
-    <p>
-      An experienced <strong>attorney in Johannesburg</strong> begins with a structured assessment
-      of your matter. Your <strong>lawyer Johannesburg</strong> should then prepare a clear strategy,
-      outline possible outcomes and keep you informed at every stage.
-    </p>
-    <p>
-      Choosing the right <strong>attorney in Johannesburg</strong> helps avoid unnecessary delays
-      and ensures your legal matter i
+          <details class="article">
+            <summary>
+              <div>
+                <div class="sumTitle">Lawyer Johannesburg: how to choose the right attorney</div>
+                <div class="sumMeta">What to ask • What to expect • How to prepare</div>
+              </div>
+              <div class="chev">⌄</div>
+            </summary>
+            <div class="articleBody">
+              <p>If you’re searching for a <strong>lawyer Johannesburg</strong>, focus on clear communication, experience in your matter, and practical timelines.</p>
+              <h4>Questions to ask your attorney in Johannesburg</h4>
+              <ul>
+                <li>Have you handled similar matters before?</li>
+                <li>What are the next steps and likely timeframes?</li>
+                <li>What documents do you need from me?</li>
+                <li>What risks and costs should I plan for?</li>
+              </ul>
+              <p>A reliable <strong>attorney in Johannesburg</strong> should outline your options in plain language and confirm action steps in writing.</p>
+            </div>
+          </details>
 
+          <details class="article">
+            <summary>
+              <div>
+                <div class="sumTitle">Attorney in Johannesburg: what to expect in your case</div>
+                <div class="sumMeta">Assessment • Strategy • Execution</div>
+              </div>
+              <div class="chev">⌄</div>
+            </summary>
+            <div class="articleBody">
+              <p>An <strong>attorney in Johannesburg</strong> should start with an assessment, then propose a strategy and keep you updated as the matter progresses.</p>
+              <h4>A good process looks like this</h4>
+              <ol>
+                <li>Confirm facts and collect key documents</li>
+                <li>Define strategy and scope (what will be done and why)</li>
+                <li>Execute and provide concise updates</li>
+              </ol>
+              <p>If your matter is time-sensitive, tell your <strong>lawyer Johannesburg</strong> immediately so urgent steps are not missed.</p>
+            </div>
+          </details>
 
+          <details class="article">
+            <summary>
+              <div>
+                <div class="sumTitle">Conveyancing Johannesburg: a simple property transfer guide</div>
+                <div class="sumMeta">Transfers • Bonds • Registration</div>
+              </div>
+              <div class="chev">⌄</div>
+            </summary>
+            <div class="articleBody">
+              <p>Conveyancing involves strict legal steps and deadlines. A <strong>lawyer Johannesburg</strong> experienced in conveyancing helps prevent delays.</p>
+              <h4>Typical steps</h4>
+              <ol>
+                <li>Instruction and document collection</li>
+                <li>Drafting, signing and compliance checks</li>
+                <li>Clearance figures and preparation</li>
+                <li>Submission and registration</li>
+              </ol>
+              <p>For the fastest progress, gather IDs, proof of address, and sale documents before your consultation.</p>
+            </div>
+          </details>
+
+          <details class="article">
+            <summary>
+              <div>
+                <div class="sumTitle">Family law Johannesburg: practical steps for sensitive matters</div>
+                <div class="sumMeta">Divorce • Parenting plans • Maintenance</div>
+              </div>
+              <div class="chev">⌄</div>
+            </summary>
+            <div class="articleBody">
+              <p>Family matters require discretion and structure. An experienced <strong>attorney in Johannesburg</strong> can guide you through the process calmly and clearly.</p>
+              <h4>Common topics</h4>
+              <ul>
+                <li>Divorce and settlement discussions</li>
+                <li>Parenting arrangements and contact</li>
+                <li>Maintenance</li>
+                <li>Protection orders</li>
+              </ul>
+              <p>If there are urgent safety concerns, explain the urgency at the start of the consultation.</p>
+            </div>
+          </details>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="wrap">
+        <div class="sectionHead">
+          <div>
+            <h2>Contact</h2>
+            <p>Send a message and we’ll respond with next steps. Update the phone/email to your real details.</p>
+          </div>
+        </div>
+
+        <div class="contactGrid">
+          <div class="card">
+            <div class="cardBody">
+              <form id="contactForm">
+                <div>
+                  <label for="name">Full name</label>
+                  <input id="name" name="name" autocomplete="name" required placeholder="Your name" />
+                </div>
+
+                <div>
+                  <label for="email">Email</label>
+                  <input id="email" name="email" type="email" autocomplete="email" required placeholder="you@email.com" />
+                </div>
+
+                <div>
+                  <label for="phone">Phone</label>
+                  <input id="phone" name="phone" autocomplete="tel" placeholder="+27 ..." />
+                </div>
+
+                <div>
+                  <label for="matter">Matter type</label>
+                  <select id="matter" name="matter">
+                    <option>Conveyancing</option>
+                    <option>Litigation</option>
+                    <option>Family law</option>
+                    <option>Deceased estates</option>
+                    <option>Contracts</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label for="message">Message</label>
+                  <textarea id="message" name="message" required placeholder="Briefly describe what you need help with..."></textarea>
+                </div>
+
+                <button class="btn primary" type="submit">Send Message</button>
+                <div class="help">This form opens your email client (no backend needed).</div>
+              </form>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="cardBody">
+              <p><strong>Phone:</strong> <a href="tel:+27110000000">+27 11 000 0000</a></p>
+              <p><strong>Email:</strong> <a href="mailto:info@sackattorney.co.za">info@sackattorney.co.za</a></p>
+              <p><strong>Location:</strong> Johannesburg, Gauteng</p>
+              <p class="help">Want a real form that submits to you automatically? Tell me and I’ll wire it to a free endpoint.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="wrap">
+        <div class="footRow">
+          <div>© <span id="year"></span> Sacks Law Firm</div>
+          <div style="display:flex;gap:12px;flex-wrap:wrap;">
+            <a href="#home">Home</a>
+            <a href="#services">Services</a>
+            <a href="#articles">Articles</a>
+            <a href="#contact">Contact</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    document.getElementById('contactForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const matter = document.getElementById('matter').value;
+      const message = document.getElementById('message').value.trim();
+
+      const subject = encodeURIComponent(`Consultation request: ${matter} — ${name}`);
+      const body = encodeURIComponent(
+        `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nMatter: ${matter}\n\nMessage:\n${message}\n`
+      );
+
+      const to = "info@sackattorney.co.za";
+      window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
+    });
+  </script>
+</body>
+</html>

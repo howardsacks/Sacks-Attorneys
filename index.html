@@ -1,6 +1,4 @@
 
-
-
 <!doctype html>
 <html lang="en-ZA">
 <head>
@@ -9,31 +7,33 @@
 
   <title>Johannesburg Attorney & Lawyer | Sacks Law Firm</title>
   <meta name="description" content="Sacks Law Firm is a Johannesburg attorney and lawyer practice offering conveyancing, litigation, family law, and deceased estates services." />
-  <link rel="canonical" href="https://howardsacks.github.io/Sacks-Attorneys/" />
+  <link rel="canonical" href="https://sackattorney.co.za/" />
   <meta name="robots" content="index,follow" />
+
+  <!-- Allow external images if your host is strict -->
+  <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self' https: data:;
+                 img-src 'self' https: data: blob:;
+                 style-src 'self' 'unsafe-inline' https:;
+                 script-src 'self' 'unsafe-inline' https:;">
 
   <!-- Open Graph -->
   <meta property="og:title" content="Johannesburg Attorney & Lawyer | Sacks Law Firm" />
   <meta property="og:description" content="Conveyancing, litigation, family law, deceased estates. Book a consultation." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://howardsacks.github.io/Sacks-Attorneys/" />
-  <meta property="og:image" content="https://images.unsplash.com/photo-1528747045269-390fe33c19f2?auto=format&fit=crop&w=1200&q=70" />
+  <meta property="og:url" content="https://sackattorney.co.za/" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1528747045269-390fe33c19f2?auto=format&fit=crop&w=2400&q=85" />
 
-  <!-- Icons -->
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='0.9em' font-size='90'%3E%E2%9A%96%EF%B8%8F%3C/text%3E%3C/svg%3E">
-
-  <!-- Minimal, modern styling -->
   <style>
     :root{
       --bg:#0b1220;
       --panel:#0f1b33;
-      --card:#0e1730;
       --text:#e9eefb;
       --muted:#b6c2e2;
-      --brand:#f5c25c; /* warm gold */
+      --brand:#f5c25c;
       --brand2:#67b7ff;
       --line:rgba(255,255,255,.12);
-      --shadow: 0 18px 45px rgba(0,0,0,.35);
+      --shadow:0 18px 45px rgba(0,0,0,.35);
       --radius:18px;
       --max:1100px;
     }
@@ -50,10 +50,6 @@
     }
     a{color:inherit; text-decoration:none}
     .wrap{max-width:var(--max); margin:0 auto; padding:0 18px}
-    .skip{position:absolute; left:-9999px; top:auto}
-    .skip:focus{left:18px; top:14px; background:#fff; color:#000; padding:10px 12px; border-radius:10px; z-index:999}
-
-    /* Header */
     header{
       position:sticky; top:0; z-index:50;
       backdrop-filter:saturate(160%) blur(10px);
@@ -66,7 +62,7 @@
     }
     .brand{
       display:flex; align-items:center; gap:10px;
-      font-weight:800; letter-spacing:.2px;
+      font-weight:800;
     }
     .logo{
       width:38px; height:38px; border-radius:12px;
@@ -75,18 +71,16 @@
       display:grid; place-items:center;
       box-shadow: 0 10px 22px rgba(0,0,0,.25);
     }
-    .logo span{font-size:18px}
     nav{display:flex; gap:14px; flex-wrap:wrap; align-items:center; justify-content:flex-end}
     nav a{
       color:var(--muted);
       padding:8px 10px;
       border-radius:12px;
-      transition: .2s ease;
+      transition:.2s ease;
     }
     nav a:hover{color:var(--text); background: rgba(255,255,255,.06)}
-    .cta{
-      display:flex; gap:10px; align-items:center;
-    }
+
+    .cta{display:flex; gap:10px; align-items:center}
     .btn{
       display:inline-flex; align-items:center; justify-content:center;
       gap:10px;
@@ -105,17 +99,9 @@
       color:#1b1406;
       border-color: rgba(245,194,92,.35);
     }
-    .btn.primary:hover{background: linear-gradient(135deg, rgba(245,194,92,1), rgba(245,194,92,.78))}
-    .btn .dot{
-      width:9px; height:9px; border-radius:99px;
-      background: var(--brand2);
-      box-shadow: 0 0 0 5px rgba(103,183,255,.15);
-    }
 
     /* Hero */
-    .hero{
-      padding:34px 0 18px;
-    }
+    .hero{padding:34px 0 18px}
     .heroGrid{
       display:grid;
       grid-template-columns: 1.2fr .8fr;
@@ -134,7 +120,7 @@
       color:var(--muted);
       padding:8px 12px;
       border:1px solid var(--line);
-      border-radius: 999px;
+      border-radius:999px;
       background: rgba(255,255,255,.04);
       font-weight:700;
     }
@@ -145,65 +131,30 @@
       line-height:1.1;
       letter-spacing:-.5px;
     }
-    .sub{
-      color:var(--muted);
-      font-size: 16.5px;
-      max-width: 58ch;
-    }
+    .sub{color:var(--muted); font-size:16.5px; max-width:58ch}
     .heroActions{display:flex; gap:12px; flex-wrap:wrap; margin-top:18px}
-    .trustRow{
-      margin-top:18px;
-      display:flex; gap:14px; flex-wrap:wrap;
-      color: var(--muted);
-      font-weight:650;
-      border-top:1px solid var(--line);
-      padding-top:16px;
-    }
-    .trustItem{
-      display:flex; gap:10px; align-items:flex-start;
-      padding:10px 12px;
-      border-radius: 16px;
-      background: rgba(0,0,0,.12);
-      border:1px solid rgba(255,255,255,.06);
-      flex: 1 1 210px;
-      min-width: 210px;
-    }
-    .trustIcon{
-      width:34px; height:34px; border-radius:14px;
-      display:grid; place-items:center;
-      background: rgba(245,194,92,.12);
-      border:1px solid rgba(245,194,92,.22);
-      color: var(--brand);
-      font-size: 16px;
-      flex: 0 0 auto;
-    }
-    .trustItem b{color:var(--text)}
-    .heroRight{
-      overflow:hidden;
-      position:relative;
-    }
-    .heroRight .img{
+
+    .heroRight{overflow:hidden; position:relative}
+    .heroImg{
+      width:100%;
       height:100%;
-      min-height: 320px;
-      background-size: cover;
-      background-position: center;
-      filter: saturate(1.05) contrast(1.05);
-      transform: scale(1.02);
+      min-height:320px;
+      object-fit:cover;
+      display:block;
+      border-radius: var(--radius);
+      filter:saturate(1.05) contrast(1.05);
     }
     .badge{
-      position:absolute;
-      left:14px; right:14px; bottom:14px;
+      position:absolute; left:14px; right:14px; bottom:14px;
       padding:14px;
-      border-radius: 18px;
+      border-radius:18px;
       background: rgba(11,18,32,.72);
       border:1px solid var(--line);
       backdrop-filter: blur(10px);
       display:flex; gap:12px; align-items:flex-start;
     }
-    .badge strong{display:block}
     .badge small{color:var(--muted)}
 
-    /* Sections */
     section{padding:24px 0}
     .sectionHead{
       display:flex; justify-content:space-between; align-items:flex-end;
@@ -214,28 +165,37 @@
       font-size: clamp(22px, 2.2vw, 30px);
       letter-spacing:-.3px;
     }
-    .sectionHead p{margin:0; color:var(--muted); max-width: 62ch}
+    .sectionHead p{margin:0; color:var(--muted); max-width:62ch}
 
+    /* Services */
     .grid3{
       display:grid;
       grid-template-columns: repeat(3, 1fr);
       gap:14px;
     }
     .card{
-      padding:16px;
       border-radius: var(--radius);
       background: rgba(255,255,255,.05);
       border:1px solid var(--line);
       box-shadow: 0 12px 30px rgba(0,0,0,.22);
+      overflow:hidden;
     }
-    .card h3{margin:8px 0 6px; font-size: 18px}
+    .cardBody{padding:16px}
+    .card h3{margin:8px 0 6px; font-size:18px}
     .card p{margin:0; color:var(--muted)}
+    .card-img{
+      width:100%;
+      height:190px;
+      object-fit:cover;
+      display:block;
+      filter:saturate(1.05) contrast(1.05);
+    }
     .pill{
       display:inline-flex; align-items:center; gap:10px;
       color:var(--muted);
       border:1px solid rgba(255,255,255,.14);
       padding:7px 10px;
-      border-radius: 999px;
+      border-radius:999px;
       background: rgba(0,0,0,.10);
       font-weight:650;
     }
@@ -246,43 +206,40 @@
       display:inline-block;
     }
 
-    /* Gallery */
+    /* Gallery FIX (bigger + less crowded + sharper) */
     .gallery{
       display:grid;
-      grid-template-columns: repeat(12, 1fr);
-      gap: 12px;
+      grid-template-columns: repeat(2, 1fr); /* 2 per row */
+      gap:24px;
     }
     .shot{
-      border-radius: 18px;
-      border:1px solid var(--line);
+      min-height:340px;
+      border-radius:22px;
       overflow:hidden;
-      background: rgba(255,255,255,.04);
-      box-shadow: 0 14px 34px rgba(0,0,0,.24);
       position:relative;
-      min-height: 180px;
+      border:1px solid var(--line);
+      box-shadow: var(--shadow);
+      background: rgba(255,255,255,.04);
     }
-    .shot .bg{
-      position:absolute; inset:0;
-      background-size:cover;
-      background-position:center;
-      filter: saturate(1.05) contrast(1.05);
-      transform: scale(1.03);
+    .shot img{
+      width:100%;
+      height:100%;
+      position:absolute;
+      inset:0;
+      object-fit:cover;
+      display:block;
+      filter:saturate(1.05) contrast(1.05);
     }
     .shot .cap{
-      position:absolute; left:12px; right:12px; bottom:12px;
-      padding:12px;
-      border-radius: 16px;
+      position:absolute; left:14px; right:14px; bottom:14px;
+      padding:14px;
+      border-radius:18px;
       background: rgba(11,18,32,.70);
       border:1px solid var(--line);
       backdrop-filter: blur(10px);
     }
     .cap b{display:block}
     .cap small{color:var(--muted)}
-    .s1{grid-column: span 7;}
-    .s2{grid-column: span 5;}
-    .s3{grid-column: span 4;}
-    .s4{grid-column: span 4;}
-    .s5{grid-column: span 4;}
 
     /* Contact */
     .contactGrid{
@@ -292,24 +249,24 @@
       align-items:start;
     }
     form{display:grid; gap:10px}
-    label{font-weight:700; color:var(--muted); font-size: 14px}
+    label{font-weight:700; color:var(--muted); font-size:14px}
     input, textarea, select{
       width:100%;
       padding:12px 12px;
-      border-radius: 14px;
+      border-radius:14px;
       border:1px solid rgba(255,255,255,.16);
       background: rgba(0,0,0,.12);
       color:var(--text);
       outline:none;
     }
-    textarea{min-height: 110px; resize: vertical}
-    .help{color:var(--muted); font-size: 13.5px}
+    textarea{min-height:110px; resize:vertical}
+    .help{color:var(--muted); font-size:13.5px}
     .note{
       padding:14px;
-      border-radius: 18px;
+      border-radius:18px;
       background: rgba(245,194,92,.10);
       border:1px solid rgba(245,194,92,.22);
-      color: #f6e7c2;
+      color:#f6e7c2;
     }
 
     footer{
@@ -319,25 +276,22 @@
     }
     .footRow{display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap}
 
-    /* Responsive */
     @media (max-width: 920px){
       .heroGrid{grid-template-columns: 1fr}
-      .heroRight .img{min-height: 260px}
       .grid3{grid-template-columns: 1fr}
       .contactGrid{grid-template-columns: 1fr}
-      .s1,.s2,.s3,.s4,.s5{grid-column: span 12;}
+      .gallery{grid-template-columns: 1fr}
+      .shot{min-height:260px}
     }
   </style>
 </head>
 
 <body>
-  <a class="skip" href="#main">Skip to content</a>
-
   <header>
     <div class="wrap">
       <div class="topbar">
-        <a class="brand" href="#home" aria-label="Sacks Law Firm Home">
-          <div class="logo" aria-hidden="true"><span>⚖️</span></div>
+        <a class="brand" href="#home">
+          <div class="logo" aria-hidden="true">⚖️</div>
           <div>
             <div style="font-size:15px; line-height:1.1;">Sacks Law Firm</div>
             <div style="font-size:12px; color:var(--muted); font-weight:700;">Johannesburg Attorneys</div>
@@ -352,19 +306,14 @@
         </nav>
 
         <div class="cta">
-          <a class="btn" href="#contact" aria-label="Jump to contact form">
-            <span class="dot" aria-hidden="true"></span>
-            Get a Call Back
-          </a>
-          <a class="btn primary" href="tel:+27110000000" aria-label="Call Sacks Law Firm">
-            Call Now
-          </a>
+          <a class="btn" href="#contact">Get a Call Back</a>
+          <a class="btn primary" href="tel:+27110000000">Call Now</a>
         </div>
       </div>
     </div>
   </header>
 
-  <main id="main">
+  <main>
     <!-- HERO -->
     <section id="home" class="hero">
       <div class="wrap">
@@ -380,34 +329,19 @@
             <div class="heroActions">
               <a class="btn primary" href="#contact">Book a Consultation</a>
               <a class="btn" href="#services">View Services</a>
-              <a class="btn" href="mailto:info@sackslaw.co.za">Email Us</a>
-            </div>
-
-            <div class="trustRow" aria-label="Trust indicators">
-              <div class="trustItem">
-                <div class="trustIcon" aria-hidden="true">✓</div>
-                <div><b>Clear process</b><br><span style="color:var(--muted)">Plain-language guidance and next steps.</span></div>
-              </div>
-              <div class="trustItem">
-                <div class="trustIcon" aria-hidden="true">⚡</div>
-                <div><b>Responsive</b><br><span style="color:var(--muted)">Fast updates, realistic timelines.</span></div>
-              </div>
-              <div class="trustItem">
-                <div class="trustIcon" aria-hidden="true">🧾</div>
-                <div><b>Transparent</b><br><span style="color:var(--muted)">Upfront scope and fee expectations.</span></div>
-              </div>
+              <a class="btn" href="mailto:info@sackattorney.co.za">Email Us</a>
             </div>
           </div>
 
-          <div class="panel heroRight" aria-label="Hero image">
-            <!-- Free-to-use stock image (hotlinked). No local /images folder needed. -->
-            <div class="img" role="img" aria-label="Law office desk and documents"
-                 style="background-image:url('https://images.unsplash.com/photo-1528747045269-390fe33c19f2?auto=format&fit=crop&w=1600&q=70');"></div>
-
+          <div class="panel heroRight">
+            <img class="heroImg"
+                 src="https://images.unsplash.com/photo-1528747045269-390fe33c19f2?auto=format&fit=crop&w=2400&q=85"
+                 alt="Attorney in Johannesburg consultation and legal documents"
+                 loading="eager" decoding="async" referrerpolicy="no-referrer">
             <div class="badge">
               <div style="width:36px;height:36px;border-radius:14px;background:rgba(103,183,255,.15);border:1px solid rgba(103,183,255,.25);display:grid;place-items:center;flex:0 0 auto;">📍</div>
               <div>
-                <strong>Serving Johannesburg & surrounds</strong>
+                <strong>Serving Johannesburg & surrounds</strong><br>
                 <small>Consultations by appointment • Call or request a call-back below.</small>
               </div>
             </div>
@@ -429,34 +363,75 @@
 
         <div class="grid3">
           <div class="card">
-            <div class="pill"><i aria-hidden="true"></i> Property</div>
-            <h3>Conveyancing</h3>
-            <p>Transfers, deeds office processes, bond registrations, and property-related legal documentation.</p>
+            <img class="card-img"
+                 src="https://images.unsplash.com/photo-1528740561666-dc2479dc08ab?auto=format&fit=crop&w=2400&q=85"
+                 alt="Lawyer Johannesburg conveyancing and property transfers"
+                 loading="lazy" decoding="async" referrerpolicy="no-referrer">
+            <div class="cardBody">
+              <div class="pill"><i aria-hidden="true"></i> Property</div>
+              <h3>Conveyancing</h3>
+              <p>Transfers, deeds office processes, bond registrations, and property documentation.</p>
+            </div>
           </div>
+
           <div class="card">
-            <div class="pill"><i aria-hidden="true"></i> Disputes</div>
-            <h3>Litigation</h3>
-            <p>Strategic dispute resolution: demand letters, negotiations, and court processes where necessary.</p>
+            <img class="card-img"
+                 src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=2400&q=85"
+                 alt="Attorney in Johannesburg litigation and dispute resolution"
+                 loading="lazy" decoding="async" referrerpolicy="no-referrer">
+            <div class="cardBody">
+              <div class="pill"><i aria-hidden="true"></i> Disputes</div>
+              <h3>Litigation</h3>
+              <p>Demand letters, negotiations, dispute strategy, and court representation.</p>
+            </div>
           </div>
+
           <div class="card">
-            <div class="pill"><i aria-hidden="true"></i> Family</div>
-            <h3>Family law</h3>
-            <p>Divorce, parenting plans, maintenance and related matters with professionalism and discretion.</p>
+            <img class="card-img"
+                 src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=2400&q=85"
+                 alt="Family law attorney in Johannesburg professional support"
+                 loading="lazy" decoding="async" referrerpolicy="no-referrer">
+            <div class="cardBody">
+              <div class="pill"><i aria-hidden="true"></i> Family</div>
+              <h3>Family Law</h3>
+              <p>Divorce, parenting plans, maintenance, and protection order guidance.</p>
+            </div>
           </div>
+
           <div class="card">
-            <div class="pill"><i aria-hidden="true"></i> Estates</div>
-            <h3>Deceased estates</h3>
-            <p>Winding up estates, executor support, claims, and guidance through the administration process.</p>
+            <img class="card-img"
+                 src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&w=2400&q=85"
+                 alt="Deceased estates attorney in Johannesburg administration"
+                 loading="lazy" decoding="async" referrerpolicy="no-referrer">
+            <div class="cardBody">
+              <div class="pill"><i aria-hidden="true"></i> Estates</div>
+              <h3>Deceased Estates</h3>
+              <p>Estate administration with clear steps, documents, and careful handling.</p>
+            </div>
           </div>
+
           <div class="card">
-            <div class="pill"><i aria-hidden="true"></i> Drafting</div>
-            <h3>Contracts & agreements</h3>
-            <p>Well-structured agreements that reduce risk and clarify obligations — drafted for real-world use.</p>
+            <img class="card-img"
+                 src="https://images.unsplash.com/photo-1453945619913-79ec89a82c51?auto=format&fit=crop&w=2400&q=85"
+                 alt="Lawyer Johannesburg contracts and agreements drafting"
+                 loading="lazy" decoding="async" referrerpolicy="no-referrer">
+            <div class="cardBody">
+              <div class="pill"><i aria-hidden="true"></i> Drafting</div>
+              <h3>Contracts & Agreements</h3>
+              <p>Clear agreements that reduce risk and clarify obligations in real-world terms.</p>
+            </div>
           </div>
+
           <div class="card">
-            <div class="pill"><i aria-hidden="true"></i> Advice</div>
-            <h3>Consultations</h3>
-            <p>Get a clear plan: what your options are, what it will cost, and what the next steps should be.</p>
+            <img class="card-img"
+                 src="https://images.unsplash.com/photo-1554224154-22dec7ec8818?auto=format&fit=crop&w=2400&q=85"
+                 alt="Attorney in Johannesburg consultation and legal advice"
+                 loading="lazy" decoding="async" referrerpolicy="no-referrer">
+            <div class="cardBody">
+              <div class="pill"><i aria-hidden="true"></i> Advice</div>
+              <h3>Consultations</h3>
+              <p>Get a clear plan: options, timelines, risks, and next steps.</p>
+            </div>
           </div>
         </div>
       </div>
@@ -473,56 +448,59 @@
         </div>
 
         <div class="grid3">
-          <div class="card">
+          <div class="card"><div class="cardBody">
             <h3>1) Understand your matter</h3>
-            <p>We confirm key facts, documents, and timelines, then outline your strongest path forward.</p>
-          </div>
-          <div class="card">
+            <p>We confirm key facts and documents, then outline your strongest path forward.</p>
+          </div></div>
+          <div class="card"><div class="cardBody">
             <h3>2) Clear strategy & scope</h3>
-            <p>We define the work, likely outcomes, and risks — with practical expectations and milestones.</p>
-          </div>
-          <div class="card">
+            <p>We define the work, likely outcomes, and risks with practical milestones.</p>
+          </div></div>
+          <div class="card"><div class="cardBody">
             <h3>3) Execute & update</h3>
-            <p>We move the matter forward and keep you informed with concise, actionable updates.</p>
-          </div>
+            <p>We move the matter forward and keep you informed with concise updates.</p>
+          </div></div>
         </div>
       </div>
     </section>
 
-    <!-- GALLERY (6 images total, all hotlinked) -->
+    <!-- ABOUT / GALLERY (BIGGER + SHARPER) -->
     <section id="about">
       <div class="wrap">
         <div class="sectionHead">
           <div>
-            <h2>Professional, modern presentation</h2>
-            <p>These are free-to-use stock images hosted online — no upload errors, no /images folder issues.</p>
+            <h2>Professional, modern legal support</h2>
+            <p>Clarity, discretion, and preparation — with a process designed to reduce stress and move matters forward.</p>
           </div>
         </div>
 
-        <div class="gallery" aria-label="Image gallery">
-          <div class="shot s1">
-            <div class="bg" style="background-image:url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1600&q=70');"></div>
-            <div class="cap"><b>Clear documentation</b><small>Contracts, opinions, and filings — structured and readable.</small></div>
+        <div class="gallery">
+          <div class="shot">
+            <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=2400&q=85"
+                 alt="Lawyer Johannesburg legal documents prepared professionally"
+                 loading="lazy" decoding="async" referrerpolicy="no-referrer">
+            <div class="cap"><b>Clear documentation</b><small>Structured drafting and careful review.</small></div>
           </div>
 
-          <div class="shot s2">
-            <div class="bg" style="background-image:url('https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1600&q=70');"></div>
+          <div class="shot">
+            <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=2400&q=85"
+                 alt="Attorney in Johannesburg client-first consultations"
+                 loading="lazy" decoding="async" referrerpolicy="no-referrer">
             <div class="cap"><b>Client-first consults</b><small>Practical advice and next steps.</small></div>
           </div>
 
-          <div class="shot s3">
-            <div class="bg" style="background-image:url('https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1400&q=70');"></div>
-            <div class="cap"><b>Professional setting</b><small>Discreet, business-ready.</small></div>
+          <div class="shot">
+            <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=2400&q=85"
+                 alt="Professional office setting for attorney in Johannesburg"
+                 loading="lazy" decoding="async" referrerpolicy="no-referrer">
+            <div class="cap"><b>Professional setting</b><small>Discreet and business-ready.</small></div>
           </div>
 
-          <div class="shot s4">
-            <div class="bg" style="background-image:url('https://images.unsplash.com/photo-1528740561666-dc2479dc08ab?auto=format&fit=crop&w=1400&q=70');"></div>
+          <div class="shot">
+            <img src="https://images.unsplash.com/photo-1528740561666-dc2479dc08ab?auto=format&fit=crop&w=2400&q=85"
+                 alt="Property transfers and conveyancing lawyer Johannesburg"
+                 loading="lazy" decoding="async" referrerpolicy="no-referrer">
             <div class="cap"><b>Property matters</b><small>Conveyancing and transfers.</small></div>
-          </div>
-
-          <div class="shot s5">
-            <div class="bg" style="background-image:url('https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&w=1400&q=70');"></div>
-            <div class="cap"><b>Research & preparation</b><small>Strong groundwork for better outcomes.</small></div>
           </div>
         </div>
       </div>
@@ -534,65 +512,65 @@
         <div class="sectionHead">
           <div>
             <h2>Contact</h2>
-            <p>Send a message and we’ll respond with next steps. (Update the phone/email below to your real details.)</p>
+            <p>Send a message and we’ll respond with next steps. (Update the phone/email to your real details.)</p>
           </div>
         </div>
 
         <div class="contactGrid">
           <div class="card">
-            <form id="contactForm">
-              <div>
-                <label for="name">Full name</label>
-                <input id="name" name="name" autocomplete="name" required placeholder="Your name" />
-              </div>
+            <div class="cardBody">
+              <form id="contactForm">
+                <div>
+                  <label for="name">Full name</label>
+                  <input id="name" name="name" autocomplete="name" required placeholder="Your name" />
+                </div>
 
-              <div>
-                <label for="email">Email</label>
-                <input id="email" name="email" type="email" autocomplete="email" required placeholder="you@email.com" />
-              </div>
+                <div>
+                  <label for="email">Email</label>
+                  <input id="email" name="email" type="email" autocomplete="email" required placeholder="you@email.com" />
+                </div>
 
-              <div>
-                <label for="phone">Phone</label>
-                <input id="phone" name="phone" autocomplete="tel" placeholder="+27 ..." />
-              </div>
+                <div>
+                  <label for="phone">Phone</label>
+                  <input id="phone" name="phone" autocomplete="tel" placeholder="+27 ..." />
+                </div>
 
-              <div>
-                <label for="matter">Matter type</label>
-                <select id="matter" name="matter">
-                  <option>Conveyancing</option>
-                  <option>Litigation</option>
-                  <option>Family law</option>
-                  <option>Deceased estates</option>
-                  <option>Contracts</option>
-                  <option>Other</option>
-                </select>
-              </div>
+                <div>
+                  <label for="matter">Matter type</label>
+                  <select id="matter" name="matter">
+                    <option>Conveyancing</option>
+                    <option>Litigation</option>
+                    <option>Family law</option>
+                    <option>Deceased estates</option>
+                    <option>Contracts</option>
+                    <option>Other</option>
+                  </select>
+                </div>
 
-              <div>
-                <label for="message">Message</label>
-                <textarea id="message" name="message" required placeholder="Briefly describe what you need help with..."></textarea>
-              </div>
+                <div>
+                  <label for="message">Message</label>
+                  <textarea id="message" name="message" required placeholder="Briefly describe what you need help with..."></textarea>
+                </div>
 
-              <button class="btn primary" type="submit">Send Message</button>
-              <div class="help">This form opens your email client (no backend needed for GitHub Pages).</div>
-            </form>
+                <button class="btn primary" type="submit">Send Message</button>
+                <div class="help">This form opens your email client (no backend needed).</div>
+              </form>
+            </div>
           </div>
 
           <div class="card">
-            <div class="note">
-              <b>Tip:</b> Because you’re hosting on GitHub Pages, the easiest “working” contact form is mailto.
-              If you want a real form that sends submissions to you, tell me and I’ll wire it to a free form endpoint.
+            <div class="cardBody">
+              <div class="note">
+                <b>Note:</b> If you want a “real” form that sends submissions to you without email,
+                tell me and I’ll wire it to a free form endpoint (works on normal hosting).
+              </div>
+
+              <div style="height:12px"></div>
+
+              <p><b>Phone:</b> <a href="tel:+27110000000">+27 11 000 0000</a></p>
+              <p><b>Email:</b> <a href="mailto:info@sackattorney.co.za">info@sackattorney.co.za</a></p>
+              <p><b>Address:</b> Johannesburg, Gauteng</p>
             </div>
-
-            <div style="height:12px"></div>
-
-            <p><b>Phone:</b> <a href="tel:+27110000000">+27 11 000 0000</a></p>
-            <p><b>Email:</b> <a href="mailto:info@sackslaw.co.za">info@sackslaw.co.za</a></p>
-            <p><b>Address:</b> Johannesburg, Gauteng</p>
-
-            <div style="height:14px"></div>
-
-            <div class="pill"><i aria-hidden="true"></i> Office hours by appointment</div>
           </div>
         </div>
       </div>
@@ -613,10 +591,9 @@
   </main>
 
   <script>
-    // Year
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Mailto form (works on GitHub Pages without a backend)
+    // Mailto form
     document.getElementById('contactForm').addEventListener('submit', function (e) {
       e.preventDefault();
       const name = document.getElementById('name').value.trim();
@@ -630,13 +607,12 @@
         `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nMatter: ${matter}\n\nMessage:\n${message}\n`
       );
 
-      // Change this to your real receiving email:
-      const to = "info@sackslaw.co.za";
-
+      const to = "info@sackattorney.co.za";
       window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
     });
   </script>
 </body>
 </html>
+
 
 

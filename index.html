@@ -1,212 +1,642 @@
+
+
+
 <!doctype html>
 <html lang="en-ZA">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+
   <title>Johannesburg Attorney & Lawyer | Sacks Law Firm</title>
   <meta name="description" content="Sacks Law Firm is a Johannesburg attorney and lawyer practice offering conveyancing, litigation, family law, and deceased estates services." />
-  <link rel="canonical" href="https://sacksattorney.co.za/" />
+  <link rel="canonical" href="https://howardsacks.github.io/Sacks-Attorneys/" />
   <meta name="robots" content="index,follow" />
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"LegalService",
-    "name":"Sacks Law Firm",
-    "url":"https://sacksattorney.co.za/",
-    "telephone":"+27100075151",
-    "areaServed":[{"@type":"City","name":"Johannesburg"},{"@type":"City","name":"Bedfordview"},{"@type":"City","name":"Germiston"}],
-    "address":{
-      "@type":"PostalAddress",
-      "streetAddress":"Amr Office Park, 3 Concorde E Rd",
-      "addressLocality":"Bedfordview",
-      "addressRegion":"Gauteng",
-      "postalCode":"2008",
-      "addressCountry":"ZA"
+  <!-- Open Graph -->
+  <meta property="og:title" content="Johannesburg Attorney & Lawyer | Sacks Law Firm" />
+  <meta property="og:description" content="Conveyancing, litigation, family law, deceased estates. Book a consultation." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://howardsacks.github.io/Sacks-Attorneys/" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1528747045269-390fe33c19f2?auto=format&fit=crop&w=1200&q=70" />
+
+  <!-- Icons -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='0.9em' font-size='90'%3E%E2%9A%96%EF%B8%8F%3C/text%3E%3C/svg%3E">
+
+  <!-- Minimal, modern styling -->
+  <style>
+    :root{
+      --bg:#0b1220;
+      --panel:#0f1b33;
+      --card:#0e1730;
+      --text:#e9eefb;
+      --muted:#b6c2e2;
+      --brand:#f5c25c; /* warm gold */
+      --brand2:#67b7ff;
+      --line:rgba(255,255,255,.12);
+      --shadow: 0 18px 45px rgba(0,0,0,.35);
+      --radius:18px;
+      --max:1100px;
     }
-  }
-  </script>
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Helvetica Neue", sans-serif;
+      background: radial-gradient(1200px 600px at 10% 0%, rgba(103,183,255,.18), transparent 60%),
+                  radial-gradient(900px 500px at 85% 10%, rgba(245,194,92,.18), transparent 55%),
+                  var(--bg);
+      color:var(--text);
+      line-height:1.55;
+    }
+    a{color:inherit; text-decoration:none}
+    .wrap{max-width:var(--max); margin:0 auto; padding:0 18px}
+    .skip{position:absolute; left:-9999px; top:auto}
+    .skip:focus{left:18px; top:14px; background:#fff; color:#000; padding:10px 12px; border-radius:10px; z-index:999}
+
+    /* Header */
+    header{
+      position:sticky; top:0; z-index:50;
+      backdrop-filter:saturate(160%) blur(10px);
+      background: rgba(11,18,32,.55);
+      border-bottom:1px solid var(--line);
+    }
+    .topbar{
+      display:flex; align-items:center; justify-content:space-between;
+      gap:14px; padding:14px 0;
+    }
+    .brand{
+      display:flex; align-items:center; gap:10px;
+      font-weight:800; letter-spacing:.2px;
+    }
+    .logo{
+      width:38px; height:38px; border-radius:12px;
+      background: linear-gradient(135deg, rgba(245,194,92,.22), rgba(103,183,255,.18));
+      border:1px solid var(--line);
+      display:grid; place-items:center;
+      box-shadow: 0 10px 22px rgba(0,0,0,.25);
+    }
+    .logo span{font-size:18px}
+    nav{display:flex; gap:14px; flex-wrap:wrap; align-items:center; justify-content:flex-end}
+    nav a{
+      color:var(--muted);
+      padding:8px 10px;
+      border-radius:12px;
+      transition: .2s ease;
+    }
+    nav a:hover{color:var(--text); background: rgba(255,255,255,.06)}
+    .cta{
+      display:flex; gap:10px; align-items:center;
+    }
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      gap:10px;
+      padding:10px 12px;
+      border-radius:14px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.06);
+      color:var(--text);
+      font-weight:700;
+      transition:.2s ease;
+      white-space:nowrap;
+    }
+    .btn:hover{transform: translateY(-1px); background: rgba(255,255,255,.09)}
+    .btn.primary{
+      background: linear-gradient(135deg, rgba(245,194,92,.95), rgba(245,194,92,.70));
+      color:#1b1406;
+      border-color: rgba(245,194,92,.35);
+    }
+    .btn.primary:hover{background: linear-gradient(135deg, rgba(245,194,92,1), rgba(245,194,92,.78))}
+    .btn .dot{
+      width:9px; height:9px; border-radius:99px;
+      background: var(--brand2);
+      box-shadow: 0 0 0 5px rgba(103,183,255,.15);
+    }
+
+    /* Hero */
+    .hero{
+      padding:34px 0 18px;
+    }
+    .heroGrid{
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap:18px;
+      align-items:stretch;
+    }
+    .panel{
+      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+    .heroLeft{padding:26px}
+    .kicker{
+      display:inline-flex; align-items:center; gap:10px;
+      color:var(--muted);
+      padding:8px 12px;
+      border:1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(255,255,255,.04);
+      font-weight:700;
+    }
+    .kicker b{color:var(--brand)}
+    h1{
+      margin:14px 0 10px;
+      font-size: clamp(28px, 3.2vw, 46px);
+      line-height:1.1;
+      letter-spacing:-.5px;
+    }
+    .sub{
+      color:var(--muted);
+      font-size: 16.5px;
+      max-width: 58ch;
+    }
+    .heroActions{display:flex; gap:12px; flex-wrap:wrap; margin-top:18px}
+    .trustRow{
+      margin-top:18px;
+      display:flex; gap:14px; flex-wrap:wrap;
+      color: var(--muted);
+      font-weight:650;
+      border-top:1px solid var(--line);
+      padding-top:16px;
+    }
+    .trustItem{
+      display:flex; gap:10px; align-items:flex-start;
+      padding:10px 12px;
+      border-radius: 16px;
+      background: rgba(0,0,0,.12);
+      border:1px solid rgba(255,255,255,.06);
+      flex: 1 1 210px;
+      min-width: 210px;
+    }
+    .trustIcon{
+      width:34px; height:34px; border-radius:14px;
+      display:grid; place-items:center;
+      background: rgba(245,194,92,.12);
+      border:1px solid rgba(245,194,92,.22);
+      color: var(--brand);
+      font-size: 16px;
+      flex: 0 0 auto;
+    }
+    .trustItem b{color:var(--text)}
+    .heroRight{
+      overflow:hidden;
+      position:relative;
+    }
+    .heroRight .img{
+      height:100%;
+      min-height: 320px;
+      background-size: cover;
+      background-position: center;
+      filter: saturate(1.05) contrast(1.05);
+      transform: scale(1.02);
+    }
+    .badge{
+      position:absolute;
+      left:14px; right:14px; bottom:14px;
+      padding:14px;
+      border-radius: 18px;
+      background: rgba(11,18,32,.72);
+      border:1px solid var(--line);
+      backdrop-filter: blur(10px);
+      display:flex; gap:12px; align-items:flex-start;
+    }
+    .badge strong{display:block}
+    .badge small{color:var(--muted)}
+
+    /* Sections */
+    section{padding:24px 0}
+    .sectionHead{
+      display:flex; justify-content:space-between; align-items:flex-end;
+      gap:14px; margin-bottom:12px;
+    }
+    .sectionHead h2{
+      margin:0;
+      font-size: clamp(22px, 2.2vw, 30px);
+      letter-spacing:-.3px;
+    }
+    .sectionHead p{margin:0; color:var(--muted); max-width: 62ch}
+
+    .grid3{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:14px;
+    }
+    .card{
+      padding:16px;
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.05);
+      border:1px solid var(--line);
+      box-shadow: 0 12px 30px rgba(0,0,0,.22);
+    }
+    .card h3{margin:8px 0 6px; font-size: 18px}
+    .card p{margin:0; color:var(--muted)}
+    .pill{
+      display:inline-flex; align-items:center; gap:10px;
+      color:var(--muted);
+      border:1px solid rgba(255,255,255,.14);
+      padding:7px 10px;
+      border-radius: 999px;
+      background: rgba(0,0,0,.10);
+      font-weight:650;
+    }
+    .pill i{
+      width:10px; height:10px; border-radius:99px;
+      background: var(--brand);
+      box-shadow: 0 0 0 5px rgba(245,194,92,.14);
+      display:inline-block;
+    }
+
+    /* Gallery */
+    .gallery{
+      display:grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 12px;
+    }
+    .shot{
+      border-radius: 18px;
+      border:1px solid var(--line);
+      overflow:hidden;
+      background: rgba(255,255,255,.04);
+      box-shadow: 0 14px 34px rgba(0,0,0,.24);
+      position:relative;
+      min-height: 180px;
+    }
+    .shot .bg{
+      position:absolute; inset:0;
+      background-size:cover;
+      background-position:center;
+      filter: saturate(1.05) contrast(1.05);
+      transform: scale(1.03);
+    }
+    .shot .cap{
+      position:absolute; left:12px; right:12px; bottom:12px;
+      padding:12px;
+      border-radius: 16px;
+      background: rgba(11,18,32,.70);
+      border:1px solid var(--line);
+      backdrop-filter: blur(10px);
+    }
+    .cap b{display:block}
+    .cap small{color:var(--muted)}
+    .s1{grid-column: span 7;}
+    .s2{grid-column: span 5;}
+    .s3{grid-column: span 4;}
+    .s4{grid-column: span 4;}
+    .s5{grid-column: span 4;}
+
+    /* Contact */
+    .contactGrid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:14px;
+      align-items:start;
+    }
+    form{display:grid; gap:10px}
+    label{font-weight:700; color:var(--muted); font-size: 14px}
+    input, textarea, select{
+      width:100%;
+      padding:12px 12px;
+      border-radius: 14px;
+      border:1px solid rgba(255,255,255,.16);
+      background: rgba(0,0,0,.12);
+      color:var(--text);
+      outline:none;
+    }
+    textarea{min-height: 110px; resize: vertical}
+    .help{color:var(--muted); font-size: 13.5px}
+    .note{
+      padding:14px;
+      border-radius: 18px;
+      background: rgba(245,194,92,.10);
+      border:1px solid rgba(245,194,92,.22);
+      color: #f6e7c2;
+    }
+
+    footer{
+      border-top:1px solid var(--line);
+      padding:18px 0 30px;
+      color:var(--muted);
+    }
+    .footRow{display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap}
+
+    /* Responsive */
+    @media (max-width: 920px){
+      .heroGrid{grid-template-columns: 1fr}
+      .heroRight .img{min-height: 260px}
+      .grid3{grid-template-columns: 1fr}
+      .contactGrid{grid-template-columns: 1fr}
+      .s1,.s2,.s3,.s4,.s5{grid-column: span 12;}
+    }
+  </style>
 </head>
+
 <body>
+  <a class="skip" href="#main">Skip to content</a>
 
-<header class="topbar" role="banner">
-  <div class="container navwrap">
-    <a class="brand" href="index.html" aria-label="Sacks Law Firm Home">
-      <div class="brandMark">SL</div>
-      <div class="brandText">
-        <div class="brandName">Sacks Law Firm</div>
-        <div class="brandTag">Johannesburg Attorneys & Conveyancers</div>
-      </div>
-    </a>
+  <header>
+    <div class="wrap">
+      <div class="topbar">
+        <a class="brand" href="#home" aria-label="Sacks Law Firm Home">
+          <div class="logo" aria-hidden="true"><span>⚖️</span></div>
+          <div>
+            <div style="font-size:15px; line-height:1.1;">Sacks Law Firm</div>
+            <div style="font-size:12px; color:var(--muted); font-weight:700;">Johannesburg Attorneys</div>
+          </div>
+        </a>
 
-    <nav class="menu" aria-label="Main menu">
-      <a class="active" href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="contact.html" class="btn btnGold">Book a Consultation</a>
-    </nav>
-  </div>
-</header>
+        <nav aria-label="Primary navigation">
+          <a href="#services">Services</a>
+          <a href="#approach">Approach</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </nav>
 
-<main>
-  <section class="hero">
-    <div class="heroMedia" aria-hidden="true"></div>
-
-    <div class="container heroGrid">
-      <div class="heroCopy">
-        <p class="kicker">Trusted guidance • Clear strategy • Professional execution</p>
-        <h1>Johannesburg Attorney & Lawyer</h1>
-        <p class="lead">
-          Sacks Law Firm is a Johannesburg-based attorney and lawyer practice in Bedfordview offering conveyancing, litigation, family law, and deceased estates services.
-        </p>
-
-        <div class="heroCtas">
-          <a class="btn btnGold" href="contact.html">Request a Call Back</a>
-          <a class="btn btnGhost" href="services.html">Explore Services</a>
-        </div>
-
-        <div class="trustRow" aria-label="Highlights">
-          <div class="pill">15+ years experience</div>
-          <div class="pill">Client-focused advice</div>
-          <div class="pill">Fast, clear communication</div>
+        <div class="cta">
+          <a class="btn" href="#contact" aria-label="Jump to contact form">
+            <span class="dot" aria-hidden="true"></span>
+            Get a Call Back
+          </a>
+          <a class="btn primary" href="tel:+27110000000" aria-label="Call Sacks Law Firm">
+            Call Now
+          </a>
         </div>
       </div>
-
-      <aside class="heroCard" aria-label="Quick contact">
-        <h3>Quick Contact</h3>
-        <p class="muted">Tell us what you need — we’ll respond as soon as possible.</p>
-
-        <div class="cardGrid">
-          <div class="cardMini">
-            <div class="miniTitle">Phone</div>
-            <div class="miniValue">010 007 5151</div>
-            <div class="miniHint">Mon–Fri</div>
-          </div>
-          <div class="cardMini">
-            <div class="miniTitle">Email</div>
-            <div class="miniValue">sacksattorney@atomicmail.io</div>
-            <div class="miniHint">Email us anytime</div>
-          </div>
-          <div class="cardMini">
-            <div class="miniTitle">Office</div>
-            <div class="miniValue">Bedfordview</div>
-            <div class="miniHint">By appointment</div>
-          </div>
-          <div class="cardMini">
-            <div class="miniTitle">Address</div>
-            <div class="miniValue">Amr Office Park</div>
-            <div class="miniHint">3 Concorde E Rd, 2008</div>
-          </div>
-        </div>
-
-        <a class="btn btnPrimary full" href="contact.html">Book a Consultation</a>
-      </aside>
     </div>
-  </section>
+  </header>
 
-  <section class="section">
-    <div class="container">
-      <div class="sectionHead">
-        <div>
-          <h2>Our Services</h2>
-          <p class="muted">Practical legal solutions across Johannesburg and Gauteng.</p>
+  <main id="main">
+    <!-- HERO -->
+    <section id="home" class="hero">
+      <div class="wrap">
+        <div class="heroGrid">
+          <div class="panel heroLeft">
+            <div class="kicker"><b>Johannesburg</b> • Attorney & Lawyer Services</div>
+            <h1>Practical legal strategy. Professional execution.</h1>
+            <p class="sub">
+              Sacks Law Firm provides clear, client-first legal support across conveyancing, litigation, family law,
+              and deceased estates — with transparent next steps and responsive communication.
+            </p>
+
+            <div class="heroActions">
+              <a class="btn primary" href="#contact">Book a Consultation</a>
+              <a class="btn" href="#services">View Services</a>
+              <a class="btn" href="mailto:info@sackslaw.co.za">Email Us</a>
+            </div>
+
+            <div class="trustRow" aria-label="Trust indicators">
+              <div class="trustItem">
+                <div class="trustIcon" aria-hidden="true">✓</div>
+                <div><b>Clear process</b><br><span style="color:var(--muted)">Plain-language guidance and next steps.</span></div>
+              </div>
+              <div class="trustItem">
+                <div class="trustIcon" aria-hidden="true">⚡</div>
+                <div><b>Responsive</b><br><span style="color:var(--muted)">Fast updates, realistic timelines.</span></div>
+              </div>
+              <div class="trustItem">
+                <div class="trustIcon" aria-hidden="true">🧾</div>
+                <div><b>Transparent</b><br><span style="color:var(--muted)">Upfront scope and fee expectations.</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel heroRight" aria-label="Hero image">
+            <!-- Free-to-use stock image (hotlinked). No local /images folder needed. -->
+            <div class="img" role="img" aria-label="Law office desk and documents"
+                 style="background-image:url('https://images.unsplash.com/photo-1528747045269-390fe33c19f2?auto=format&fit=crop&w=1600&q=70');"></div>
+
+            <div class="badge">
+              <div style="width:36px;height:36px;border-radius:14px;background:rgba(103,183,255,.15);border:1px solid rgba(103,183,255,.25);display:grid;place-items:center;flex:0 0 auto;">📍</div>
+              <div>
+                <strong>Serving Johannesburg & surrounds</strong>
+                <small>Consultations by appointment • Call or request a call-back below.</small>
+              </div>
+            </div>
+          </div>
         </div>
-        <a class="textLink" href="services.html">View all services →</a>
       </div>
+    </section>
 
-      <div class="grid4">
-        <article class="serviceCard">
-          <div class="serviceImg imgConvey" aria-hidden="true"></div>
-          <div class="serviceBody">
+    <!-- SERVICES -->
+    <section id="services">
+      <div class="wrap">
+        <div class="sectionHead">
+          <div>
+            <h2>Legal services</h2>
+            <p>Focused practice areas with practical advice, clean documentation, and strong follow-through.</p>
+          </div>
+          <span class="pill"><i aria-hidden="true"></i> Client-first approach</span>
+        </div>
+
+        <div class="grid3">
+          <div class="card">
+            <div class="pill"><i aria-hidden="true"></i> Property</div>
             <h3>Conveyancing</h3>
-            <p>Transfers, bond registrations, sectional title conveyancing.</p>
-            <a href="services.html#conveyancing">Learn more</a>
+            <p>Transfers, deeds office processes, bond registrations, and property-related legal documentation.</p>
           </div>
-        </article>
-
-        <article class="serviceCard">
-          <div class="serviceImg imgLit" aria-hidden="true"></div>
-          <div class="serviceBody">
+          <div class="card">
+            <div class="pill"><i aria-hidden="true"></i> Disputes</div>
             <h3>Litigation</h3>
-            <p>Disputes, claims, court preparation and representation.</p>
-            <a href="services.html#litigation">Learn more</a>
+            <p>Strategic dispute resolution: demand letters, negotiations, and court processes where necessary.</p>
           </div>
-        </article>
-
-        <article class="serviceCard">
-          <div class="serviceImg imgFam" aria-hidden="true"></div>
-          <div class="serviceBody">
-            <h3>Family Law</h3>
-            <p>Divorce, maintenance, parenting matters and protection orders.</p>
-            <a href="services.html#family">Learn more</a>
+          <div class="card">
+            <div class="pill"><i aria-hidden="true"></i> Family</div>
+            <h3>Family law</h3>
+            <p>Divorce, parenting plans, maintenance and related matters with professionalism and discretion.</p>
           </div>
-        </article>
-
-        <article class="serviceCard">
-          <div class="serviceImg imgEst" aria-hidden="true"></div>
-          <div class="serviceBody">
-            <h3>Deceased Estates</h3>
-            <p>Estate administration with clear steps and careful handling.</p>
-            <a href="services.html#estates">Learn more</a>
+          <div class="card">
+            <div class="pill"><i aria-hidden="true"></i> Estates</div>
+            <h3>Deceased estates</h3>
+            <p>Winding up estates, executor support, claims, and guidance through the administration process.</p>
           </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section alt">
-    <div class="container split">
-      <div class="splitImg" aria-hidden="true"></div>
-      <div class="splitCopy">
-        <h2>A firm built on clarity and results</h2>
-        <p class="muted">
-          We focus on direct communication, realistic timelines, and disciplined execution.
-          You’ll always know what’s happening, what’s needed, and what comes next.
-        </p>
-        <ul class="checklist">
-          <li>Clear advice & documented next steps</li>
-          <li>Professional handling of sensitive matters</li>
-          <li>Efficient turnaround where possible</li>
-        </ul>
-        <div class="row">
-          <a class="btn btnPrimary" href="about.html">About the firm</a>
-          <a class="btn" style="border:1px solid var(--line); background:#fff" href="contact.html">Speak to us</a>
+          <div class="card">
+            <div class="pill"><i aria-hidden="true"></i> Drafting</div>
+            <h3>Contracts & agreements</h3>
+            <p>Well-structured agreements that reduce risk and clarify obligations — drafted for real-world use.</p>
+          </div>
+          <div class="card">
+            <div class="pill"><i aria-hidden="true"></i> Advice</div>
+            <h3>Consultations</h3>
+            <p>Get a clear plan: what your options are, what it will cost, and what the next steps should be.</p>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="cta">
-    <div class="container ctaBox">
-      <div>
-        <h2>Ready to move forward?</h2>
-        <p class="muted">Send a short message and we’ll guide you on the best next step.</p>
+    <!-- APPROACH -->
+    <section id="approach">
+      <div class="wrap">
+        <div class="sectionHead">
+          <div>
+            <h2>How we work</h2>
+            <p>A simple 3-step method so you always know what’s happening and what comes next.</p>
+          </div>
+        </div>
+
+        <div class="grid3">
+          <div class="card">
+            <h3>1) Understand your matter</h3>
+            <p>We confirm key facts, documents, and timelines, then outline your strongest path forward.</p>
+          </div>
+          <div class="card">
+            <h3>2) Clear strategy & scope</h3>
+            <p>We define the work, likely outcomes, and risks — with practical expectations and milestones.</p>
+          </div>
+          <div class="card">
+            <h3>3) Execute & update</h3>
+            <p>We move the matter forward and keep you informed with concise, actionable updates.</p>
+          </div>
+        </div>
       </div>
-      <a class="btn btnGold" href="contact.html">Book a Consultation</a>
-    </div>
-  </section>
-</main>
+    </section>
 
-<footer class="footer">
-  <div class="container footGrid">
-    <div class="muted tiny">© <span id="yr"></span> Sacks Law Firm</div>
-    <div class="footLinks">
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="contact.html">Contact</a>
-    </div>
-  </div>
-</footer>
+    <!-- GALLERY (6 images total, all hotlinked) -->
+    <section id="about">
+      <div class="wrap">
+        <div class="sectionHead">
+          <div>
+            <h2>Professional, modern presentation</h2>
+            <p>These are free-to-use stock images hosted online — no upload errors, no /images folder issues.</p>
+          </div>
+        </div>
 
-<script>
-  document.getElementById('yr').textContent = new Date().getFullYear();
-</script>
+        <div class="gallery" aria-label="Image gallery">
+          <div class="shot s1">
+            <div class="bg" style="background-image:url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1600&q=70');"></div>
+            <div class="cap"><b>Clear documentation</b><small>Contracts, opinions, and filings — structured and readable.</small></div>
+          </div>
+
+          <div class="shot s2">
+            <div class="bg" style="background-image:url('https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1600&q=70');"></div>
+            <div class="cap"><b>Client-first consults</b><small>Practical advice and next steps.</small></div>
+          </div>
+
+          <div class="shot s3">
+            <div class="bg" style="background-image:url('https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1400&q=70');"></div>
+            <div class="cap"><b>Professional setting</b><small>Discreet, business-ready.</small></div>
+          </div>
+
+          <div class="shot s4">
+            <div class="bg" style="background-image:url('https://images.unsplash.com/photo-1528740561666-dc2479dc08ab?auto=format&fit=crop&w=1400&q=70');"></div>
+            <div class="cap"><b>Property matters</b><small>Conveyancing and transfers.</small></div>
+          </div>
+
+          <div class="shot s5">
+            <div class="bg" style="background-image:url('https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&w=1400&q=70');"></div>
+            <div class="cap"><b>Research & preparation</b><small>Strong groundwork for better outcomes.</small></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="wrap">
+        <div class="sectionHead">
+          <div>
+            <h2>Contact</h2>
+            <p>Send a message and we’ll respond with next steps. (Update the phone/email below to your real details.)</p>
+          </div>
+        </div>
+
+        <div class="contactGrid">
+          <div class="card">
+            <form id="contactForm">
+              <div>
+                <label for="name">Full name</label>
+                <input id="name" name="name" autocomplete="name" required placeholder="Your name" />
+              </div>
+
+              <div>
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" autocomplete="email" required placeholder="you@email.com" />
+              </div>
+
+              <div>
+                <label for="phone">Phone</label>
+                <input id="phone" name="phone" autocomplete="tel" placeholder="+27 ..." />
+              </div>
+
+              <div>
+                <label for="matter">Matter type</label>
+                <select id="matter" name="matter">
+                  <option>Conveyancing</option>
+                  <option>Litigation</option>
+                  <option>Family law</option>
+                  <option>Deceased estates</option>
+                  <option>Contracts</option>
+                  <option>Other</option>
+                </select>
+              </div>
+
+              <div>
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required placeholder="Briefly describe what you need help with..."></textarea>
+              </div>
+
+              <button class="btn primary" type="submit">Send Message</button>
+              <div class="help">This form opens your email client (no backend needed for GitHub Pages).</div>
+            </form>
+          </div>
+
+          <div class="card">
+            <div class="note">
+              <b>Tip:</b> Because you’re hosting on GitHub Pages, the easiest “working” contact form is mailto.
+              If you want a real form that sends submissions to you, tell me and I’ll wire it to a free form endpoint.
+            </div>
+
+            <div style="height:12px"></div>
+
+            <p><b>Phone:</b> <a href="tel:+27110000000">+27 11 000 0000</a></p>
+            <p><b>Email:</b> <a href="mailto:info@sackslaw.co.za">info@sackslaw.co.za</a></p>
+            <p><b>Address:</b> Johannesburg, Gauteng</p>
+
+            <div style="height:14px"></div>
+
+            <div class="pill"><i aria-hidden="true"></i> Office hours by appointment</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="wrap">
+        <div class="footRow">
+          <div>© <span id="year"></span> Sacks Law Firm. All rights reserved.</div>
+          <div style="display:flex; gap:12px; flex-wrap:wrap;">
+            <a href="#home">Home</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mailto form (works on GitHub Pages without a backend)
+    document.getElementById('contactForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const matter = document.getElementById('matter').value;
+      const message = document.getElementById('message').value.trim();
+
+      const subject = encodeURIComponent(`Consultation request: ${matter} — ${name}`);
+      const body = encodeURIComponent(
+        `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nMatter: ${matter}\n\nMessage:\n${message}\n`
+      );
+
+      // Change this to your real receiving email:
+      const to = "info@sackslaw.co.za";
+
+      window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
+    });
+  </script>
 </body>
 </html>
-
 
 

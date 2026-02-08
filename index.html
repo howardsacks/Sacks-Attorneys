@@ -486,3 +486,81 @@
 
 </body>
 </html>
+<!doctype html>
+<html lang="en-ZA">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sacks Law Firm – Diagnostic</title>
+  <style>
+    body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#0b1220;color:#fff}
+    .wrap{max-width:1000px;margin:0 auto;padding:18px}
+    .box{background:#121b2c;border:1px solid rgba(255,255,255,.15);border-radius:14px;padding:14px;margin:12px 0}
+    h1,h2{margin:0 0 10px}
+    code{background:rgba(255,255,255,.08);padding:2px 6px;border-radius:8px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+    img{width:100%;height:160px;object-fit:cover;border-radius:12px;border:1px solid rgba(255,255,255,.18);background:#0b1220}
+    a{color:#ffd27a}
+    .ok{color:#7CFF9B;font-weight:bold}
+    .bad{color:#FF8A8A;font-weight:bold}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="box">
+      <h1>Sacks Law Firm – Diagnostic Home Page</h1>
+      <p>If you can see this, GitHub Pages is serving <code>/index.html</code> correctly.</p>
+      <p>Now we test image paths below (from <code>/images/</code>).</p>
+    </div>
+
+    <div class="box">
+      <h2>Image tests</h2>
+      <div class="grid">
+        <div>
+          <div>images/convetencing.jpg</div>
+          <img src="images/convetencing.jpg" alt="convetencing"
+               onload="this.previousElementSibling.innerHTML += ' — <span class=ok>LOADED</span>'"
+               onerror="this.previousElementSibling.innerHTML += ' — <span class=bad>NOT FOUND</span>'">
+        </div>
+
+        <div>
+          <div>images/litigation-meeting.jpg</div>
+          <img src="images/litigation-meeting.jpg" alt="litigation"
+               onload="this.previousElementSibling.innerHTML += ' — <span class=ok>LOADED</span>'"
+               onerror="this.previousElementSibling.innerHTML += ' — <span class=bad>NOT FOUND</span>'">
+        </div>
+
+        <div>
+          <div>images/gavel-library.jpg</div>
+          <img src="images/gavel-library.jpg" alt="gavel"
+               onload="this.previousElementSibling.innerHTML += ' — <span class=ok>LOADED</span>'"
+               onerror="this.previousElementSibling.innerHTML += ' — <span class=bad>NOT FOUND</span>'">
+        </div>
+
+        <div>
+          <div>images/estates.jpg</div>
+          <img src="images/estates.jpg" alt="estates"
+               onload="this.previousElementSibling.innerHTML += ' — <span class=ok>LOADED</span>'"
+               onerror="this.previousElementSibling.innerHTML += ' — <span class=bad>NOT FOUND</span>'">
+        </div>
+      </div>
+    </div>
+
+    <div class="box">
+      <h2>Next step</h2>
+      <p>
+        If the page is visible but images show <span class="bad">NOT FOUND</span>, then your filenames
+        inside <code>/images</code> don’t match (spelling/capital letters) — we’ll fix the names in the main site.
+      </p>
+      <p>
+        If this page is still blank, then GitHub Pages is serving a different repo/branch/folder than the one you edited.
+      </p>
+    </div>
+
+    <div class="box">
+      <p><a href="robots.txt">robots.txt</a> · <a href="sitemap.xml">sitemap.xml</a></p>
+    </div>
+  </div>
+</body>
+</html>
+

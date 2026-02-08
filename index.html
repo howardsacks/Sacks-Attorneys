@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en-ZA">
 <head>
@@ -13,7 +14,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
     :root{
@@ -29,32 +30,24 @@
       --shadow: 0 10px 30px rgba(0,0,0,.45);
     }
 
-    /* ===== Make fonts CRISP (fix “blurry” look) ===== */
+    /* crisp text */
     html,body{
+      margin:0;
       background:var(--bg);
       color:var(--text);
-      margin:0;
       font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-
-      /* crisp text */
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
       text-rendering: optimizeLegibility;
-
-      /* IMPORTANT: avoid transforms on body/wrappers (can blur text) */
-      transform: none !important;
-      filter: none !important;
     }
-
     a{ color:inherit; text-decoration:none; }
     .wrap{ max-width:1180px; margin:0 auto; padding:0 18px; }
 
-    /* header */
     header{
       position:sticky; top:0; z-index:999;
       background:rgba(7,11,18,.88);
       border-bottom:1px solid var(--line);
-      backdrop-filter: blur(10px); /* ok on header only */
+      backdrop-filter: blur(10px);
     }
     .topbar{
       display:flex; align-items:center; justify-content:space-between;
@@ -62,7 +55,7 @@
     }
     .brand{
       display:flex; align-items:center; gap:12px;
-      min-width: 220px;
+      min-width: 240px;
     }
     .logo{
       width:42px; height:42px; border-radius:12px;
@@ -70,15 +63,9 @@
       border:1px solid var(--line);
       display:grid; place-items:center;
       box-shadow: 0 6px 16px rgba(0,0,0,.35);
-      flex:0 0 auto;
-      font-weight:800;
+      font-weight:900;
     }
-    .brand h1{
-      margin:0;
-      font-size:18px;
-      letter-spacing:.2px;
-      font-weight:800;
-    }
+    .brand h1{ margin:0; font-size:18px; font-weight:900; letter-spacing:.2px; }
     .brand p{ margin:2px 0 0; color:var(--muted); font-size:13px; }
 
     nav{
@@ -86,11 +73,9 @@
       justify-content:center;
     }
     nav a{
-      padding:10px 12px;
-      border-radius:999px;
-      color:var(--muted);
+      padding:10px 12px; border-radius:999px;
+      color:var(--muted); font-weight:700;
       border:1px solid transparent;
-      font-weight:600;
     }
     nav a:hover{ color:var(--text); border-color:var(--line); background:rgba(255,255,255,.03); }
 
@@ -106,7 +91,7 @@
       border:1px solid var(--line);
       background:rgba(255,255,255,.04);
       color:var(--text);
-      font-weight:800;
+      font-weight:900;
       letter-spacing:.2px;
       box-shadow: 0 8px 20px rgba(0,0,0,.25);
     }
@@ -118,69 +103,105 @@
     }
     .btn-gold:hover{ filter: brightness(1.02); }
 
-    /* sections */
     section{ padding:44px 0; }
     .card{
-      background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+      background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
       border:1px solid var(--line);
       border-radius:var(--radius);
       box-shadow: var(--shadow);
     }
+    .hero{
+      padding:54px 0 30px;
+      background:
+        radial-gradient(900px 500px at 15% 15%, rgba(210,164,74,.18), transparent 55%),
+        radial-gradient(900px 500px at 80% 10%, rgba(130,170,255,.12), transparent 60%);
+    }
+    .hero-grid{
+      display:grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap:14px;
+      align-items:stretch;
+    }
+    .hero h2{
+      margin:0 0 10px;
+      font-family:"Playfair Display", serif;
+      font-size:44px;
+      line-height:1.05;
+      letter-spacing:.2px;
+    }
+    .hero p{ margin:0 0 16px; color:var(--muted); font-size:16px; line-height:1.6; }
+    .hero-actions{ display:flex; gap:10px; flex-wrap:wrap; }
+    .quick{
+      padding:18px;
+      display:grid; gap:10px;
+    }
+    .quick .k{ color:var(--muted); font-weight:700; font-size:13px; }
+    .quick .v{ font-weight:900; font-size:16px; }
+    .quick hr{ border:0; border-top:1px solid var(--line); margin:6px 0; }
+
     .section-title{
       display:flex; align-items:flex-end; justify-content:space-between; gap:12px;
       margin-bottom:14px;
     }
-    .section-title h2{
+    .section-title h3{
       margin:0;
-      font-family: "Playfair Display", serif;
+      font-family:"Playfair Display", serif;
       font-size:34px;
       letter-spacing:.2px;
     }
-    .section-title p{ margin:0; color:var(--muted); max-width:720px; }
+    .section-title p{ margin:0; color:var(--muted); max-width:760px; }
 
-    /* Articles list (clean + clear) */
+    .grid-4{
+      display:grid;
+      grid-template-columns:repeat(4, minmax(0,1fr));
+      gap:14px;
+      margin-top:14px;
+    }
+    .svc{
+      padding:18px;
+      min-height: 170px;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+    }
+    .svc h4{ margin:0 0 8px; font-size:18px; font-weight:900; }
+    .svc p{ margin:0; color:var(--muted); line-height:1.55; }
+    .svc a{ margin-top:14px; color:var(--gold2); font-weight:900; }
+
+    .grid-3{
+      display:grid;
+      grid-template-columns:repeat(3, minmax(0,1fr));
+      gap:14px;
+      margin-top:14px;
+    }
+    .step{ padding:18px; }
+    .step .n{ font-weight:900; color:var(--gold2); }
+    .step h4{ margin:8px 0 8px; font-size:18px; font-weight:900; }
+    .step p{ margin:0; color:var(--muted); line-height:1.55; }
+
     .articles-grid{
       display:grid;
       grid-template-columns:repeat(2, minmax(0,1fr));
       gap:14px;
       margin-top:14px;
     }
-    .article-item{
-      padding:16px 16px;
-    }
-    .article-item h3{
-      margin:0 0 8px 0;
-      font-size:18px;
-      line-height:1.25;
-      font-weight:900;
-      color:var(--text);
-    }
-    .article-item .meta{
-      color:var(--muted);
-      font-size:13px;
-      margin:0 0 12px 0;
-    }
-    .article-item .row{
-      display:flex; align-items:center; justify-content:space-between; gap:10px;
-    }
+    .article-item{ padding:16px; }
+    .article-item h4{ margin:0 0 8px; font-size:18px; line-height:1.25; font-weight:900; }
+    .article-item .meta{ margin:0 0 12px; color:var(--muted); font-size:13px; }
     .pill{
-      font-size:12px;
-      padding:6px 10px;
-      border-radius:999px;
-      border:1px solid var(--line);
-      background:rgba(255,255,255,.03);
-      color:var(--muted);
-      font-weight:700;
+      font-size:12px; padding:6px 10px;
+      border-radius:999px; border:1px solid var(--line);
+      background:rgba(255,255,255,.03); color:var(--muted); font-weight:800;
     }
+    .row{ display:flex; align-items:center; justify-content:space-between; gap:10px; }
 
-    /* Contact */
     .contact-grid{
       display:grid;
       grid-template-columns: 1.2fr .8fr;
       gap:14px;
       margin-top:14px;
     }
-    label{ display:block; margin:0 0 6px; color:var(--muted); font-size:13px; font-weight:700; }
+    label{ display:block; margin:0 0 6px; color:var(--muted); font-size:13px; font-weight:800; }
     input, textarea{
       width:100%;
       background:rgba(0,0,0,.25);
@@ -189,26 +210,35 @@
       color:var(--text);
       padding:12px 12px;
       outline:none;
-      font-size:16px; /* prevents iOS zoom */
+      font-size:16px;
     }
     textarea{ min-height:120px; resize:vertical; }
     .form-row{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
     .form-actions{ margin-top:12px; display:flex; gap:10px; flex-wrap:wrap; }
 
+    footer{
+      border-top:1px solid var(--line);
+      padding:18px 0;
+      color:var(--muted);
+    }
+
     /* Mobile */
-    @media (max-width: 900px){
+    @media (max-width: 980px){
       .topbar{ flex-direction:column; align-items:flex-start; }
-      .cta{ min-width:0; width:100%; justify-content:flex-start; }
+      .cta{ width:100%; justify-content:flex-start; min-width:0; }
       nav{ justify-content:flex-start; }
-      .articles-grid{ grid-template-columns: 1fr; }
-      .contact-grid{ grid-template-columns: 1fr; }
-      .section-title h2{ font-size:28px; }
+      .hero-grid{ grid-template-columns:1fr; }
+      .hero h2{ font-size:36px; }
+      .grid-4{ grid-template-columns:1fr; }
+      .grid-3{ grid-template-columns:1fr; }
+      .articles-grid{ grid-template-columns:1fr; }
+      .contact-grid{ grid-template-columns:1fr; }
+      section{ padding:36px 0; }
     }
   </style>
 </head>
 
 <body>
-
 <header>
   <div class="wrap">
     <div class="topbar">
@@ -221,11 +251,12 @@
       </div>
 
       <nav aria-label="Primary">
+        <a href="#home">Home</a>
         <a href="#services">Services</a>
         <a href="#approach">Approach</a>
         <a href="about.html">About</a>
         <a href="#articles">Articles</a>
-        <a href="contact.html">Contact</a>
+        <a href="#contact">Contact</a>
       </nav>
 
       <div class="cta">
@@ -237,102 +268,171 @@
 </header>
 
 <main>
-  <!-- SERVICES (keep your existing content if you have it; this is a placeholder anchor) -->
+
+  <!-- HOME / HERO -->
+  <section id="home" class="hero">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div class="card" style="padding:22px;">
+          <h2>Practical legal support in Johannesburg</h2>
+          <p>
+            Sacks Law Firm provides clear, professional assistance in conveyancing, litigation,
+            family law and deceased estates. We focus on preparation, straightforward advice and
+            steady progress.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-gold" href="tel:+27100075151">Call 010 007 5151</a>
+            <a class="btn" href="#articles">Read Articles</a>
+            <a class="btn" href="#services">View Services</a>
+          </div>
+        </div>
+
+        <div class="card quick">
+          <div>
+            <div class="k">Phone</div>
+            <div class="v"><a href="tel:+27100075151">010 007 5151</a></div>
+          </div>
+          <hr>
+          <div>
+            <div class="k">Email</div>
+            <div class="v"><a href="mailto:sacksattorney@atomicmail.io">sacksattorney@atomicmail.io</a></div>
+          </div>
+          <hr>
+          <div>
+            <div class="k">Location</div>
+            <div class="v">Johannesburg, Gauteng</div>
+          </div>
+          <hr>
+          <div style="color:var(--muted); font-size:13px; line-height:1.5;">
+            Need a consultation? Call now or send a brief message below and we’ll respond with next steps.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
   <section id="services">
     <div class="wrap">
       <div class="section-title">
         <div>
-          <h2>Services</h2>
-          <p>Practical legal support across Johannesburg and Gauteng. Clear next steps, prepared documents, and steady progress.</p>
+          <h3>Services</h3>
+          <p>Clear next steps, prepared documents, and steady progress across Johannesburg and Gauteng.</p>
         </div>
       </div>
 
-      <div class="card" style="padding:18px;">
-        <p style="margin:0;color:var(--muted);">
-          (Keep your existing Services section content here. This update focuses on: <strong>Articles</strong> + crisp fonts.)
-        </p>
+      <div class="grid-4">
+        <div class="card svc">
+          <div>
+            <h4>Conveyancing</h4>
+            <p>Property transfers, bond registrations and sectional title matters handled with careful preparation.</p>
+          </div>
+          <a href="services.html">Learn more →</a>
+        </div>
+
+        <div class="card svc">
+          <div>
+            <h4>Litigation</h4>
+            <p>Dispute resolution, claims, court preparation and representation with practical strategy.</p>
+          </div>
+          <a href="services.html">Learn more →</a>
+        </div>
+
+        <div class="card svc">
+          <div>
+            <h4>Family Law</h4>
+            <p>Divorce, maintenance, parenting matters and protection orders approached with discretion.</p>
+          </div>
+          <a href="services.html">Learn more →</a>
+        </div>
+
+        <div class="card svc">
+          <div>
+            <h4>Deceased Estates</h4>
+            <p>Estate administration with clear steps, careful handling and consistent communication.</p>
+          </div>
+          <a href="services.html">Learn more →</a>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- APPROACH (placeholder anchor) -->
+  <!-- APPROACH -->
   <section id="approach">
     <div class="wrap">
       <div class="section-title">
         <div>
-          <h2>Approach</h2>
-          <p>A straightforward process to understand the matter, define strategy, and execute with clear updates.</p>
+          <h3>Approach</h3>
+          <p>A simple process so you always know what’s happening and what comes next.</p>
         </div>
       </div>
 
-      <div class="card" style="padding:18px;">
-        <p style="margin:0;color:var(--muted);">
-          (Keep your existing Approach content here.)
-        </p>
+      <div class="grid-3">
+        <div class="card step">
+          <div class="n">1) Understand your matter</div>
+          <h4>Confirm facts & documents</h4>
+          <p>We confirm key facts and documents, then outline your strongest path forward.</p>
+        </div>
+
+        <div class="card step">
+          <div class="n">2) Clear strategy & scope</div>
+          <h4>Define work and outcomes</h4>
+          <p>We define the work, likely outcomes and risks with practical milestones.</p>
+        </div>
+
+        <div class="card step">
+          <div class="n">3) Execute & update</div>
+          <h4>Steady progress</h4>
+          <p>We move the matter forward and keep you informed with concise updates.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ✅ ARTICLES (now included + linked properly) -->
+  <!-- ARTICLES -->
   <section id="articles">
     <div class="wrap">
       <div class="section-title">
         <div>
-          <h2>Articles</h2>
-          <p>Guides written for clients in Johannesburg: conveyancing, family law, and how to work with an attorney effectively.</p>
+          <h3>Articles</h3>
+          <p>Client-friendly guides on conveyancing and family law in Johannesburg.</p>
         </div>
       </div>
 
       <div class="articles-grid">
         <a class="card article-item" href="articles/lawyer-johannesburg.html">
-          <h3>Lawyer Johannesburg: how to choose the right attorney</h3>
-          <p class="meta">What to expect, what to bring, costs and practical next steps.</p>
-          <div class="row">
-            <span class="pill">Johannesburg</span>
-            <span class="pill">Read →</span>
-          </div>
+          <h4>Lawyer Johannesburg: how to choose the right attorney</h4>
+          <p class="meta">What to ask • What to expect • How to prepare</p>
+          <div class="row"><span class="pill">Johannesburg</span><span class="pill">Read →</span></div>
         </a>
 
         <a class="card article-item" href="articles/attorney-in-johannesburg.html">
-          <h3>Attorney in Johannesburg: your first consultation explained</h3>
-          <p class="meta">How consultations work, what information helps, and what happens next.</p>
-          <div class="row">
-            <span class="pill">Consultations</span>
-            <span class="pill">Read →</span>
-          </div>
+          <h4>Attorney in Johannesburg: what to expect in your case</h4>
+          <p class="meta">Assessment • Strategy • Execution</p>
+          <div class="row"><span class="pill">Consultations</span><span class="pill">Read →</span></div>
         </a>
 
         <a class="card article-item" href="articles/conveyancing-johannesburg.html">
-          <h3>Conveyancing Johannesburg: a simple property transfer guide</h3>
-          <p class="meta">Transfers, bond registrations, timelines, and document checklists.</p>
-          <div class="row">
-            <span class="pill">Conveyancing</span>
-            <span class="pill">Read →</span>
-          </div>
+          <h4>Conveyancing Johannesburg: a simple property transfer guide</h4>
+          <p class="meta">Transfers • Bonds • Registration</p>
+          <div class="row"><span class="pill">Conveyancing</span><span class="pill">Read →</span></div>
         </a>
 
         <a class="card article-item" href="articles/family-law-in-johannesburg.html">
-          <h3>Family law Johannesburg: practical steps for sensitive matters</h3>
-          <p class="meta">Divorce, parenting plans, maintenance and protection orders.</p>
-          <div class="row">
-            <span class="pill">Family Law</span>
-            <span class="pill">Read →</span>
-          </div>
+          <h4>Family law Johannesburg: practical steps for sensitive matters</h4>
+          <p class="meta">Divorce • Parenting plans • Maintenance</p>
+          <div class="row"><span class="pill">Family Law</span><span class="pill">Read →</span></div>
         </a>
-      </div>
-
-      <div style="margin-top:12px; color:var(--muted); font-size:13px;">
-        Tip: These links will work only if the files live at <code>/articles/...</code> (no nested folders like <code>articles/articles</code>).
       </div>
     </div>
   </section>
 
-  <!-- CONTACT (embedded on homepage) -->
+  <!-- CONTACT -->
   <section id="contact">
     <div class="wrap">
       <div class="section-title">
         <div>
-          <h2>Contact</h2>
+          <h3>Contact</h3>
           <p>Send a message and we’ll respond with next steps.</p>
         </div>
       </div>
@@ -379,10 +479,9 @@
         </div>
 
         <div class="card" style="padding:18px;">
-          <p style="margin:0 0 8px;font-weight:900;">Phone: <a href="tel:+27100075151" style="color:var(--text);">010 007 5151</a></p>
-          <p style="margin:0 0 8px;font-weight:900;">Email: <a href="mailto:sacksattorney@atomicmail.io" style="color:var(--text);">sacksattorney@atomicmail.io</a></p>
+          <p style="margin:0 0 8px;font-weight:900;">Phone: <a href="tel:+27100075151">010 007 5151</a></p>
+          <p style="margin:0 0 8px;font-weight:900;">Email: <a href="mailto:sacksattorney@atomicmail.io">sacksattorney@atomicmail.io</a></p>
           <p style="margin:0;color:var(--muted);">Location: Johannesburg, Gauteng</p>
-
           <hr style="border:0;border-top:1px solid var(--line);margin:14px 0;">
           <p style="margin:0;color:var(--muted);font-size:13px;">
             Prefer a quick response? Call now or email your documents and we’ll advise on next steps.
@@ -391,9 +490,10 @@
       </div>
     </div>
   </section>
+
 </main>
 
-<footer style="border-top:1px solid var(--line); padding:18px 0; color:var(--muted);">
+<footer>
   <div class="wrap" style="display:flex; gap:12px; justify-content:space-between; flex-wrap:wrap;">
     <span>© <span id="y"></span> Sacks Law Firm</span>
     <span><a href="robots.txt">robots.txt</a> · <a href="sitemap.xml">sitemap.xml</a></span>
@@ -406,6 +506,7 @@
 
 </body>
 </html>
+
 
 
 

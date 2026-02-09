@@ -1,4 +1,4 @@
+
 User-agent: *
 Allow: /
-
 Sitemap: https://sacksattorney.co.za/sitemap.xml

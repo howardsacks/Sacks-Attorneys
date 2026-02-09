@@ -1,5 +1,4 @@
 User-agent: *
-Disallow:
+Allow: /
 
-Sitemap: https://howardsacks.github.io/Sacks-Attorneys/sitemap.xml
-Host: howardsacks.github.io
+Sitemap: https://sacksattorney.co.za/sitemap.xml

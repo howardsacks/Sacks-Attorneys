@@ -19,93 +19,94 @@
 
 <body>
 <header class="site-header">
-  <div class="wrap topbar">
-    <a class="brand" href="index.html">
-      <div class="logo">⚖</div>
-      <div class="brand-text">
-        <div class="brand-name">Sacks Law Firm</div>
-        <div class="brand-sub">Johannesburg Attorneys</div>
-      </div>
+  <div class="wrap header-row">
+    <a class="brand" href="index.html#home" aria-label="Sacks Law Firm home">
+      <span class="logo" aria-hidden="true">⚖</span>
+      <span class="brand-text">
+        <span class="brand-name">Sacks Law Firm</span>
+        <span class="brand-sub">Johannesburg Attorneys</span>
+      </span>
     </a>
 
-    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">☰</button>
+    <button class="menu-btn" type="button" aria-label="Open menu" aria-expanded="false" data-menu-btn>
+      ☰
+    </button>
 
-    <nav id="site-nav" class="nav">
+    <nav class="nav" data-nav>
       <a href="#home">Home</a>
       <a href="#services">Services</a>
       <a href="#approach">Approach</a>
       <a href="#articles">Articles</a>
       <a href="#contact">Contact</a>
-      <a class="nav-link" href="about.html">About</a>
+      <a href="about.html">About</a>
     </nav>
 
     <div class="cta">
       <a class="btn" href="#contact">Get a Call Back</a>
-      <a class="btn btn-gold" href="tel:+27100075151">Call Now</a>
+      <a class="btn btn-gold" href="tel:0100075151">Call Now</a>
     </div>
   </div>
 </header>
 
 <main>
+  <!-- HERO -->
   <section id="home" class="hero">
     <div class="wrap hero-grid">
       <div class="card panel">
-        <h1 class="hero-title">Practical legal support in Johannesburg</h1>
-        <p class="hero-lead">
+        <h1 class="h-hero">Practical legal support in Johannesburg</h1>
+        <p class="lead">
           Clear next steps and steady progress in conveyancing, litigation, family law, labour law,
           commercial law and deceased estates.
         </p>
         <div class="hero-actions">
-          <a class="btn btn-gold" href="tel:+27100075151">Call 010 007 5151</a>
+          <a class="btn btn-gold" href="tel:0100075151">Call 010 007 5151</a>
           <a class="btn" href="#articles">Read Articles</a>
           <a class="btn" href="#services">View Services</a>
         </div>
       </div>
 
       <aside class="card quick">
-        <div>
+        <div class="kv">
           <div class="k">Phone</div>
-          <div class="v"><a href="tel:+27100075151">010 007 5151</a></div>
+          <div class="v"><a href="tel:0100075151">010 007 5151</a></div>
         </div>
         <hr>
-        <div>
+        <div class="kv">
           <div class="k">Email</div>
           <div class="v"><a href="mailto:sacksattorney@atomicmail.io">sacksattorney@atomicmail.io</a></div>
         </div>
         <hr>
-        <div>
+        <div class="kv">
           <div class="k">Location</div>
           <div class="v">Johannesburg, Gauteng</div>
         </div>
         <hr>
-        <p class="muted small">
-          Send a short message below and we’ll respond with next steps.
-        </p>
+        <p class="note">Send a short message below and we’ll respond with next steps.</p>
       </aside>
     </div>
   </section>
 
-  <section id="services">
+  <!-- SERVICES -->
+  <section id="services" class="section">
     <div class="wrap">
       <div class="section-title">
         <h2>Services</h2>
         <p>Delivered with clear strategy, careful preparation, and consistent communication.</p>
       </div>
 
+      <!-- IMPORTANT: these images are at ROOT (same folder as index.html) -->
       <div class="grid-4">
         <article class="card svc">
-          <img class="svc-img" src="convetencing.jpg" alt="Conveyancing Johannesburg"
-               onerror="this.style.display='none'">
+          <img class="svc-img" src="convetencing.jpg" alt="Conveyancing Johannesburg" loading="lazy">
           <div class="svc-body">
             <h3>Conveyancing</h3>
             <p>Transfers, bond registrations and sectional title matters handled with careful preparation.</p>
-            <a class="more" href="conveyancing-johannesburg.html">Learn more →</a>
+            <a class="more" href="services.html#conveyancing">Learn more →</a>
           </div>
         </article>
 
         <article class="card svc">
-          <img class="svc-img" src="litigation-meeting.jpg" alt="Litigation attorney Johannesburg"
-               onerror="this.style.display='none'">
+          <img class="svc-img" src="litigation-meeting.jpg" alt="Litigation attorney Johannesburg" loading="lazy">
           <div class="svc-body">
             <h3>Litigation</h3>
             <p>Disputes, claims, court preparation and representation with practical strategy.</p>
@@ -114,8 +115,7 @@
         </article>
 
         <article class="card svc">
-          <img class="svc-img" src="gavel-library.jpg" alt="Family law attorney Johannesburg"
-               onerror="this.style.display='none'">
+          <img class="svc-img" src="gavel-library.jpg" alt="Family law attorney Johannesburg" loading="lazy">
           <div class="svc-body">
             <h3>Family Law</h3>
             <p>Divorce, maintenance, parenting matters and protection orders approached with discretion.</p>
@@ -124,8 +124,7 @@
         </article>
 
         <article class="card svc">
-          <img class="svc-img" src="estates.jpg" alt="Deceased estates Johannesburg"
-               onerror="this.style.display='none'">
+          <img class="svc-img" src="estates.jpg" alt="Deceased estates Johannesburg" loading="lazy">
           <div class="svc-body">
             <h3>Deceased Estates</h3>
             <p>Estate administration with clear steps and careful handling.</p>
@@ -133,15 +132,11 @@
           </div>
         </article>
       </div>
-
-      <div class="mini-links">
-        <a class="pill" href="services.html">Full services page →</a>
-        <a class="pill" href="about.html">About the firm →</a>
-      </div>
     </div>
   </section>
 
-  <section id="approach">
+  <!-- APPROACH -->
+  <section id="approach" class="section">
     <div class="wrap">
       <div class="section-title">
         <h2>Approach</h2>
@@ -152,12 +147,12 @@
         <div class="card step">
           <div class="n">1) Understand your matter</div>
           <h3>Confirm facts & documents</h3>
-          <p>We confirm key facts and documents, then outline your strongest practical path forward.</p>
+          <p>We confirm key facts and documents, then outline your strongest path forward.</p>
         </div>
         <div class="card step">
           <div class="n">2) Clear strategy & scope</div>
           <h3>Define work and outcomes</h3>
-          <p>We define the scope, timeframes, costs and risks, with clear milestones.</p>
+          <p>We define the work, likely outcomes and risks with practical milestones.</p>
         </div>
         <div class="card step">
           <div class="n">3) Execute & update</div>
@@ -168,26 +163,15 @@
     </div>
   </section>
 
-  <section id="articles">
+  <!-- ARTICLES -->
+  <section id="articles" class="section">
     <div class="wrap">
       <div class="section-title">
         <h2>Articles</h2>
-        <p>Helpful guides for clients searching for a lawyer in Johannesburg or attorney in Johannesburg.</p>
+        <p>Helpful guides for clients searching for a lawyer in Johannesburg.</p>
       </div>
 
       <div class="articles-grid">
-        <a class="card article" href="attorney-in-johannesburg.html">
-          <h3>Attorney in Johannesburg: what to expect in your case</h3>
-          <p>Assessment • Strategy • Documents • Timelines</p>
-          <span class="pill">Read →</span>
-        </a>
-
-        <a class="card article" href="conveyancing-johannesburg.html">
-          <h3>Conveyancing Johannesburg: a simple property transfer guide</h3>
-          <p>Transfers • Bonds • Registration • Costs</p>
-          <span class="pill">Read →</span>
-        </a>
-
         <a class="card article" href="commercial-law-attorney-johannesburg.html">
           <h3>Commercial law attorney Johannesburg: practical business protection</h3>
           <p>Contracts • Collections • Disputes • Risk management</p>
@@ -215,7 +199,8 @@
     </div>
   </section>
 
-  <section id="contact">
+  <!-- CONTACT -->
+  <section id="contact" class="section">
     <div class="wrap">
       <div class="section-title">
         <h2>Contact</h2>
@@ -223,8 +208,8 @@
       </div>
 
       <div class="contact-grid">
-        <div class="card pad">
-          <form action="#" method="post">
+        <div class="card form-card">
+          <form id="contactForm">
             <div class="form-row">
               <div>
                 <label for="name">Full name</label>
@@ -236,7 +221,7 @@
               </div>
             </div>
 
-            <div class="form-row" style="margin-top:12px;">
+            <div class="form-row">
               <div>
                 <label for="phone">Phone</label>
                 <input id="phone" name="phone" placeholder="010 007 5151" autocomplete="tel">
@@ -247,28 +232,28 @@
               </div>
             </div>
 
-            <div style="margin-top:12px;">
+            <div>
               <label for="msg">Message</label>
               <textarea id="msg" name="message" placeholder="Briefly describe what you need help with."></textarea>
             </div>
 
             <div class="form-actions">
               <button class="btn btn-gold" type="submit">Request a Call Back</button>
-              <a class="btn" href="tel:+27100075151">Call 010 007 5151</a>
-              <a class="btn" href="contact.html">Open contact page</a>
+              <a class="btn" href="tel:0100075151">Call 010 007 5151</a>
+              <a class="btn" href="contact.html">Open Contact Page</a>
             </div>
 
-            <p class="muted small" style="margin-top:10px;">
-              (This form is a placeholder unless you connect it to an endpoint.)
+            <p class="small-note">
+              This sends an email draft (no server needed). If you want a real submit-to-email form, tell me and I’ll wire it.
             </p>
           </form>
         </div>
 
-        <aside class="card pad">
-          <p class="strong">Phone: <a href="tel:+27100075151">010 007 5151</a></p>
-          <p class="strong">Email: <a href="mailto:sacksattorney@atomicmail.io">sacksattorney@atomicmail.io</a></p>
+        <aside class="card info-card">
+          <p class="info-line"><strong>Phone:</strong> <a href="tel:0100075151">010 007 5151</a></p>
+          <p class="info-line"><strong>Email:</strong> <a href="mailto:sacksattorney@atomicmail.io">sacksattorney@atomicmail.io</a></p>
           <p class="muted">Johannesburg, Gauteng</p>
-          <hr style="border:0;border-top:1px solid var(--line);margin:14px 0;">
+          <hr>
           <p class="muted small">
             Prefer a quick response? Call now or email your documents and we’ll advise on next steps.
           </p>
@@ -278,16 +263,13 @@
   </section>
 </main>
 
-<footer class="site-footer">
-  <div class="wrap foot">
+<footer class="footer">
+  <div class="wrap footer-row">
     <span>© <span id="y"></span> Sacks Law Firm</span>
     <span><a href="robots.txt">robots.txt</a> · <a href="sitemap.xml">sitemap.xml</a></span>
   </div>
 </footer>
 
-<script src="app.js"></script>
-<script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+<script src="script.js"></script>
 </body>
 </html>
-
-

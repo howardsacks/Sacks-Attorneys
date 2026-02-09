@@ -38,3 +38,5 @@
     window.location.href = `mailto:sacksattorney@atomicmail.io?subject=${subject}&body=${body}`;
   });
 })();
+<script src="/script.js" defer></script>
+

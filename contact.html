@@ -4,117 +4,93 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Contact a Johannesburg Attorney | Sacks Law Firm</title>
-  <meta name="description" content="Contact Sacks Law Firm — Johannesburg attorneys. Call 010 007 5151 or email to request a consultation." />
+  <meta name="description" content="Contact Sacks Law Firm — Johannesburg attorneys. Call 010 007 5151 to request a consultation." />
   <link rel="canonical" href="https://sacksattorney.co.za/contact.html" />
   <meta name="robots" content="index,follow" />
-  <link rel="sitemap" type="application/xml" href="https://sacksattorney.co.za/sitemap.xml" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 <header class="site-header">
-  <div class="wrap topbar">
-    <a class="brand" href="index.html"><div class="logo">⚖</div><div class="brand-text"><div class="brand-name">Sacks Law Firm</div><div class="brand-sub">Johannesburg Attorneys</div></div></a>
-    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">☰</button>
-    <nav id="site-nav" class="nav">
+  <div class="wrap header-row">
+    <a class="brand" href="index.html#home"><span class="logo">⚖</span><span class="brand-text"><span class="brand-name">Sacks Law Firm</span><span class="brand-sub">Johannesburg Attorneys</span></span></a>
+    <button class="menu-btn" type="button" aria-label="Open menu" aria-expanded="false" data-menu-btn>☰</button>
+    <nav class="nav" data-nav>
       <a href="index.html#home">Home</a>
       <a href="index.html#services">Services</a>
+      <a href="index.html#approach">Approach</a>
       <a href="index.html#articles">Articles</a>
-      <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
+      <a href="about.html">About</a>
     </nav>
     <div class="cta">
-      <a class="btn" href="tel:+27100075151">Call Now</a>
-      <a class="btn btn-gold" href="index.html#contact">Get a Call Back</a>
+      <a class="btn" href="#contact">Get a Call Back</a>
+      <a class="btn btn-gold" href="tel:0100075151">Call Now</a>
     </div>
   </div>
 </header>
 
-<main>
-  <section class="hero">
-    <div class="wrap hero-grid">
-      <div class="card panel">
-        <h1 class="hero-title">Contact</h1>
-        <p class="hero-lead">Call, email, or send a short message and we’ll respond with next steps.</p>
-        <div class="hero-actions">
-          <a class="btn btn-gold" href="tel:+27100075151">Call 010 007 5151</a>
-          <a class="btn" href="mailto:sacksattorney@atomicmail.io">Email Us</a>
-        </div>
+<main class="section" id="contact">
+  <div class="wrap">
+    <div class="section-title">
+      <h2>Contact</h2>
+      <p>Send a message and we’ll respond with next steps.</p>
+    </div>
+
+    <div class="contact-grid">
+      <div class="card form-card">
+        <form id="contactForm">
+          <div class="form-row">
+            <div>
+              <label for="name">Full name</label>
+              <input id="name" name="name" placeholder="Your name" autocomplete="name">
+            </div>
+            <div>
+              <label for="email">Email</label>
+              <input id="email" name="email" placeholder="you@email.com" autocomplete="email">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div>
+              <label for="phone">Phone</label>
+              <input id="phone" name="phone" placeholder="010 007 5151" autocomplete="tel">
+            </div>
+            <div>
+              <label for="topic">Matter type</label>
+              <input id="topic" name="topic" placeholder="Conveyancing / Family / Labour / Litigation">
+            </div>
+          </div>
+
+          <div>
+            <label for="msg">Message</label>
+            <textarea id="msg" name="message" placeholder="Briefly describe what you need help with."></textarea>
+          </div>
+
+          <div class="form-actions">
+            <button class="btn btn-gold" type="submit">Request a Call Back</button>
+            <a class="btn" href="tel:0100075151">Call 010 007 5151</a>
+          </div>
+
+          <p class="small-note">This sends an email draft (no server needed).</p>
+        </form>
       </div>
 
-      <aside class="card quick">
-        <div><div class="k">Phone</div><div class="v"><a href="tel:+27100075151">010 007 5151</a></div></div>
-        <hr>
-        <div><div class="k">Email</div><div class="v"><a href="mailto:sacksattorney@atomicmail.io">sacksattorney@atomicmail.io</a></div></div>
-        <hr>
-        <div><div class="k">Location</div><div class="v">Johannesburg, Gauteng</div></div>
+      <aside class="card info-card">
+        <p class="info-line"><strong>Phone:</strong> <a href="tel:0100075151">010 007 5151</a></p>
+        <p class="info-line"><strong>Email:</strong> <a href="mailto:sacksattorney@atomicmail.io">sacksattorney@atomicmail.io</a></p>
+        <p class="muted">Johannesburg, Gauteng</p>
       </aside>
     </div>
-  </section>
-
-  <section>
-    <div class="wrap">
-      <div class="contact-grid">
-        <div class="card pad">
-          <form action="#" method="post">
-            <div class="form-row">
-              <div>
-                <label for="name">Full name</label>
-                <input id="name" name="name" placeholder="Your name" autocomplete="name">
-              </div>
-              <div>
-                <label for="email">Email</label>
-                <input id="email" name="email" placeholder="you@email.com" autocomplete="email">
-              </div>
-            </div>
-
-            <div class="form-row" style="margin-top:12px;">
-              <div>
-                <label for="phone">Phone</label>
-                <input id="phone" name="phone" placeholder="010 007 5151" autocomplete="tel">
-              </div>
-              <div>
-                <label for="topic">Matter type</label>
-                <input id="topic" name="topic" placeholder="Conveyancing / Family / Labour / Litigation">
-              </div>
-            </div>
-
-            <div style="margin-top:12px;">
-              <label for="msg">Message</label>
-              <textarea id="msg" name="message" placeholder="Briefly describe what you need help with."></textarea>
-            </div>
-
-            <div class="form-actions">
-              <button class="btn btn-gold" type="submit">Request a Call Back</button>
-              <a class="btn" href="tel:+27100075151">Call 010 007 5151</a>
-            </div>
-
-            <p class="muted small" style="margin-top:10px;">
-              (This form is a placeholder unless connected to an endpoint.)
-            </p>
-          </form>
-        </div>
-
-        <aside class="card pad">
-          <p class="strong">Phone: <a href="tel:+27100075151">010 007 5151</a></p>
-          <p class="strong">Email: <a href="mailto:sacksattorney@atomicmail.io">sacksattorney@atomicmail.io</a></p>
-          <p class="muted">Johannesburg, Gauteng</p>
-        </aside>
-      </div>
-    </div>
-  </section>
+  </div>
 </main>
 
-<footer class="site-footer">
-  <div class="wrap foot">
+<footer class="footer">
+  <div class="wrap footer-row">
     <span>© <span id="y"></span> Sacks Law Firm</span>
     <span><a href="robots.txt">robots.txt</a> · <a href="sitemap.xml">sitemap.xml</a></span>
   </div>
 </footer>
 
-<script src="app.js"></script>
-<script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+<script src="script.js"></script>
 </body>
 </html>
